@@ -1,0 +1,12 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+profiles:
+  fuckup:
+    dotfiles:
+    - f_vimrc
