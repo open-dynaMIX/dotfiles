@@ -3,10 +3,30 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_bira_custom.zsh-theme:
+    dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
+    src: oh-my-zsh/themes/bira_custom.zsh-theme
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
+  f_xinitrc:
+    dst: ~/.xinitrc
+    src: xinitrc
+  f_zsh_arch:
+    dst: ~/.zsh_arch
+    src: zsh_arch
+  f_zsh_defaults:
+    dst: ~/.zsh_defaults
+    src: zsh_defaults
+  f_zshrc:
+    dst: ~/.zshrc
+    src: zshrc
 profiles:
   fuckup:
     dotfiles:
     - f_vimrc
+    - f_xinitrc
+    - f_zshrc
+    - f_zsh_arch
+    - f_zsh_defaults
+    - f_bira_custom.zsh-theme

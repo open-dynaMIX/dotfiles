@@ -1,0 +1,22 @@
+#
+# ~/.zshrc
+#
+
+# imports
+if [ -f ~/.zsh_defaults ]; then
+    . ~/.zsh_defaults
+fi
+
+if [ -f ~/.zsh_arch ]; then
+    . ~/.zsh_arch
+fi
+
+#aliases
+alias janosch='/home/fabio/gcompris/janosch.sh'
+alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
+alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
+alias xkill='xkill -button 1'
+alias worms='worms -d 40 -l 16 -n 6'
+
+# xterm transparency
+[ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null
