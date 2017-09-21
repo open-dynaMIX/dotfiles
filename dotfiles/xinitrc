@@ -41,7 +41,7 @@ fi
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-/usr/bin/xcalib -d :0 /home/fabio/.color/icc/TPLCD95.icm
+/usr/bin/xcalib -d :0 ~/.color/icc/TPLCD95.icm
 
 setxkbmap ch
 lxqt-policykit-agent &

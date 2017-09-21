@@ -1,0 +1,86 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+" Fix copy/paste
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
+
+" switch Ctrl+i & Ctrl+o
+noremap <C-o> <C-i>
+noremap <C-i> <C-o>
+
+" mark all
+noremap <C-a> <Ins><C-a><Ins>
+
+" faster scroll with j & k
+noremap j 3j
+noremap k 3k
+source! ~/.vimperatorrc.local
+" to prevent d on the last tab from closing the window:
+set! browser.tabs.closeWindowWithLastTab=false
+cd ~/Downloads
+
+" remove titlestring
+set titlestring=
+
+" switch tabs
+map ä H
+map $ L
+
+" Styles
+hi StatusLine color: white; background: black; font-weight: normal;
+hi ContentSeparator border-top: 0px dotted gray; display: -moz-box;
+highlight CmdLine background: black; color: white; transition: all 0.25s;
+highlight CompResult background: black; color: white;
+highlight CompTitle background: black; color: white;
+highlight CompDesc background: black; color: white;
+highlight CompItem background: black; color: white;
+highlight CompMsg background: black; color: white;
+highlight Normal color: white; background: black;
+highlight CmdOutput white-space: pre; background: black; color: white;
+hi InfoMsg color: green; background: black;
+hi CompTitle>* color: #green; border-top: 0px solid gray; border-bottom: 0px solid #BBB; padding: 0px 0.5ex; text-shadow: 0px 0px 0px #E0E0E0;
+hi ErrorMsg color: red; background: black; font-weight: bold;
+
+" Editor
+" set editor="subl3 -n"
+
+" vim: set ft=vimperator:
+
+"javascript to hide statusbar
+
+noremap <silent> <F8> :js toggle_bottombar()<CR>
+noremap : :js toggle_bottombar('on')<CR>:
+noremap b :js toggle_bottombar('on')<CR>b
+noremap o :js toggle_bottombar('on')<CR>o
+noremap O :js toggle_bottombar('on')<CR>O
+noremap t :js toggle_bottombar('on')<CR>t
+noremap T :js toggle_bottombar('on')<CR>T
+noremap / :js toggle_bottombar('on')<CR>/
+noremap <Esc> <Esc>:js toggle_bottombar('off')<CR>
+" cnoremap <CR> <CR>:js toggle_bottombar('off')<CR>
+" cnoremap ü <CR> g<
+
+:js << EOF
+function toggle_bottombar(p) {
+     var bb = document.getElementById('liberator-bottombar');
+     if (!bb)
+         return;
+    if (p == 'on'){
+        bb.style.height = '';
+        bb.style.overflow = '';
+        return;
+    }
+    if (p == 'off'){
+        bb.style.height = '0px';
+        bb.style.overflow = 'hidden';
+        return;
+      }
+
+     bb.style.height = (bb.style.height == '') ? '0px' : '';
+     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+}
+toggle_bottombar();
+EOF
+
+" fix history search
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
