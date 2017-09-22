@@ -42,14 +42,14 @@ eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
 {%@@ if profile == "fuckup" @@%}
-/usr/bin/xcalib -d :0 ~/.color/icc/TPLCD95.icm
+/usr/bin/xcalib -d :0 $HOME/.color/icc/TPLCD95.icm
 {%@@ endif @@%}
 
 setxkbmap ch
 
 lxqt-policykit-agent &
 
-# /home/fabio/.screenlayout/default.sh
+# $HOME/.screenlayout/default.sh
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
