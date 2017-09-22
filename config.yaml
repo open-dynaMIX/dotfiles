@@ -29,6 +29,9 @@ dotfiles:
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
+  f_screenrc:
+    dst: ~/.screenrc
+    src: screenrc
   f_vimperatorrc:
     dst: ~/.vimperatorrc
     src: vimperatorrc
@@ -66,6 +69,7 @@ profiles:
     - f_i3status.conf
     - f_i3status2.conf
     - f_i3exit.py
+    - f_screenrc
   fuckup:
     dotfiles:
     - f_zshrc
