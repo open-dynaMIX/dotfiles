@@ -14,7 +14,7 @@ fi
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle :compinstall filename '/home/fabio/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -151,6 +151,7 @@ alias amiinscreen='echo $STY'
 alias fuck='sudo $(fc -ln -1)'
 alias bpython='clear && bpython'
 alias pa='pacaur'
+alias radio='~/scripts/radio/radio.sh'
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi
@@ -166,7 +167,7 @@ set_abbrevations() {
       "So"    "| sort"
       "Cm"    "git commit -am \"__CURSOR__\""
       "Cml"   "${last_commit%?}__CURSOR__\""
-      "Pu"    "${last_push}__CURSOR__"
+      "Pu"    "${push_command}__CURSOR__"
     )
 }
 
@@ -177,16 +178,28 @@ get_last_commit_cmd() {
     fi
 }
 
-get_last_push_cmd() {
-    last_push=$(fc -nlr 1 -1 | egrep -m 1 "^git push")
-    if ! [ -n "$last_push" ]; then
-        last_push='git push origin master'
+get_git_push_cmd() {
+    if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+        git_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+        if [ $? != 0 ]; then
+            git_branch="master"
+        fi
+        push_command="git push origin $git_branch"
+    else
+        push_command='Pu '
     fi
 }
 
+# get_last_push_cmd() {
+#    last_push=$(fc -nlr 1 -1 | egrep -m 1 "^git push")
+#    if ! [ -n "$last_push" ]; then
+#        last_push='git push origin master'
+#    fi
+# }
+
 magic-abbrev-expand() {
     get_last_commit_cmd
-    get_last_push_cmd
+    get_git_push_cmd
     set_abbrevations
     local MATCH
     LBUFFER=${LBUFFER%%(#m)[_a-zA-Z0-9]#}

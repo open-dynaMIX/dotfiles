@@ -6,6 +6,9 @@ dotfiles:
   f_bira_custom.zsh-theme:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
     src: oh-my-zsh/themes/bira_custom.zsh-theme
+  f_radio.sh:
+    dst: ~/scripts/radio/radio.sh
+    src: scripts/radio/radio.sh
   f_vimperatorrc:
     dst: ~/.vimperatorrc
     src: vimperatorrc
@@ -28,13 +31,24 @@ dotfiles:
     dst: ~/.zshrc
     src: zshrc
 profiles:
+  ant:
+    dotfiles:
+    - f_zshrc
+    - f_zsh_defaults
+    - f_zsh_arch
+    - f_bira_custom.zsh-theme
+    - f_vimrc
+    - f_vimperatorrc
+    - f_radio.sh
+    - f_xinitrc
+    - f_xresources
   fuckup:
     dotfiles:
+    - f_zshrc
+    - f_zsh_defaults
+    - f_zsh_arch
+    - f_bira_custom.zsh-theme
     - f_vimrc
     - f_xinitrc
-    - f_zshrc
-    - f_zsh_arch
-    - f_zsh_defaults
-    - f_bira_custom.zsh-theme
     - f_xresources
     - f_vimperatorrc

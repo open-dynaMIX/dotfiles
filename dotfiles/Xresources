@@ -1,20 +1,21 @@
-xterm*VT100.geometry:       80x25
-XTerm*locale:               true
-Xterm*saveLines:            10000000
-XTerm*reverseVideo:         on
-xterm*scrollBar:            false
-xterm*rightScrollBar:       true
-xterm*font:                 *-fixed-*-*-*-10-*
+XTerm*allowBoldFonts:       true
+xterm*borderWidth:          0
+XTerm*cursorBlink:          true
+xterm*dynamicColors:        true
 xterm*faceName:             monospace
 XTerm*faceSize:             12
-xterm*dynamicColors:        true
-xterm*toolBar:              true
-XTerm*allowBoldFonts:       true
+xterm*font:                 *-fixed-*-*-*-10-*
+XTerm*locale:               true
+XTerm*reverseVideo:         on
+xterm*rightScrollBar:       true
+Xterm*saveLines:            10000000
+xterm*scrollBar:            false
 xterm*selectToClipboard:    true
-XTerm*cursorBlink:          true
-XTerm*utf8:                 1
 xterm*termName:             xterm-256color
-xterm*borderWidth:          0
+xterm*toolBar:              true
+XTerm*utf8:                 1
+xterm*VT100.geometry:       80x25
+XTerm.vt100.metaSendsEscape: true
 
 ! double-click to select whole URLs :D
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
