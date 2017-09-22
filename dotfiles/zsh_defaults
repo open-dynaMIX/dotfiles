@@ -152,6 +152,7 @@ alias fuck='sudo $(fc -ln -1)'
 alias bpython='clear && bpython'
 alias pa='pacaur'
 alias radio='~/scripts/radio/radio.sh'
+alias dotdrop='~/dotfiles/dotdrop.sh'
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi
