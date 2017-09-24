@@ -1,0 +1,32 @@
+########################################################################
+#
+# /etc/screenrc
+# Konfigurationsdatei fuer screen
+#
+########################################################################
+
+########################################################################
+# Scrolling
+#termcapinfo xterm* ti@:te@
+defscrollback 30000
+
+########################################################################
+# Allgemein
+startup_message  off   # Keine Willkommensnachricht
+vbell            off   # Kein visuelles Blinken
+#msgwait 1              # Nachrichten für 1 Sekunden anzeigen
+#defutf8          on    # utf8 bei neuen fenstern
+#autodetach       on    # on = default
+#shelltitle   'bash'    # Fenstertitel
+#hardcopydir $HOME      # Screenshots ins Homeverzeichnis
+
+########################################################################
+# Farbtiefe
+term screen-256color
+
+########################################################################
+# Statuszeile
+#caption always "%{= wk} %-w%{= KW} [%n %t] %{-}%+w %= | @%H | %l | %Y-%m-%d %c "
+hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][ %{= b}%S%{= g} ][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
+
+#EOF
