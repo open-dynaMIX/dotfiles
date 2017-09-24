@@ -80,3 +80,8 @@ profiles:
     - f_xinitrc
     - f_xresources
     - f_vimperatorrc
+    - f_i3exit.py
+    - f_screenrc
+    - f_radio.sh
+    - f_i3status.conf
+    - f_i3status2.conf
