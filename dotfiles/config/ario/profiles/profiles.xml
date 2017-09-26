@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ario-profiles>
+  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd1_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" {%@@ if profile == "fuckup" @@%}current="true" {%@@ endif @@%}type="0">{{@@ env['mpd1_name'] @@}}</profile>
+  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd2_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" {%@@ if profile == "ant" @@%}current="true" {%@@ endif @@%}type="0">{{@@ env['mpd2_name'] @@}}</profile>
+  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd3_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" type="0">{{@@ env['mpd3_name'] @@}}</profile>
+</ario-profiles>

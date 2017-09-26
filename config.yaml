@@ -26,12 +26,18 @@ dotfiles:
     - i3-restart
     dst: ~/.i3/i3status2.conf
     src: i3/i3status2.conf
+  f_profiles.xml:
+    dst: ~/.config/ario/profiles/profiles.xml
+    src: config/ario/profiles/profiles.xml
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
   f_screenrc:
     dst: ~/.screenrc
     src: screenrc
+  f_viewnior.conf:
+    dst: ~/.config/viewnior/viewnior.conf
+    src: config/viewnior/viewnior.conf
   f_vimperatorrc:
     dst: ~/.vimperatorrc
     src: vimperatorrc
@@ -70,6 +76,8 @@ profiles:
     - f_i3status2.conf
     - f_i3exit.py
     - f_screenrc
+    - f_viewnior.conf
+    - f_profiles.xml
   fuckup:
     dotfiles:
     - f_zshrc
