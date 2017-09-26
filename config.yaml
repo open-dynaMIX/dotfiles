@@ -14,6 +14,12 @@ dotfiles:
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
+  f_gtk_theme:
+    dst: ~/.themes/My_Fancy_Theme/
+    src: themes/My_Fancy_Theme/
+  f_i3:
+    dst: ~/.i3/
+    src: i3/
   f_i3_config:
     actions:
     - i3-restart
@@ -74,14 +80,12 @@ profiles:
     - f_radio.sh
     - f_xinitrc
     - f_xresources
-    - f_i3_config
-    - f_i3status.conf
-    - f_i3status2.conf
-    - f_i3exit.py
+    - f_i3
     - f_screenrc
     - f_viewnior.conf
     - f_ario_profiles.xml
     - f_gitconfig
+    - f_gtk_theme
   fuckup:
     dotfiles:
     - f_zshrc
