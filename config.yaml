@@ -5,6 +5,9 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  d_syncit:
+    dst: ~/scripts/syncit/
+    src: scripts/syncit/
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: config/ario/profiles/profiles.xml
@@ -86,6 +89,7 @@ profiles:
     - f_ario_profiles.xml
     - f_gitconfig
     - f_gtk_theme
+    - d_syncit
   fuckup:
     dotfiles:
     - f_zshrc

@@ -1,0 +1,8 @@
+{%@@ if profile == 'ant' @@%}
+.cache/
+.atom/
+Music/
+Downloads/
+Videos/
+.local/share/Trash/
+{%@@ endif @@%}
