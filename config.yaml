@@ -26,7 +26,7 @@ dotfiles:
     - i3-restart
     dst: ~/.i3/i3status2.conf
     src: i3/i3status2.conf
-  f_profiles.xml:
+  f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: config/ario/profiles/profiles.xml
   f_radio.sh:
@@ -77,7 +77,7 @@ profiles:
     - f_i3exit.py
     - f_screenrc
     - f_viewnior.conf
-    - f_profiles.xml
+    - f_ario_profiles.xml
   fuckup:
     dotfiles:
     - f_zshrc
