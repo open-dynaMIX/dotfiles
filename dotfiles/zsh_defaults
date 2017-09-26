@@ -152,7 +152,7 @@ alias fuck='sudo $(fc -ln -1)'
 alias bpython='clear && bpython'
 alias pa='pacaur'
 alias radio='~/scripts/radio/radio.sh'
-alias dotdrop='env $(cat ~/dotfiles/.env ~/dotfiles/.env_private | egrep -v "^#" | xargs) ~/dotfiles/dotdrop.sh'
+alias dotdrop='eval $(cat ~/dotfiles/.env ~/dotfiles/.env_private | egrep -v "^#") ~/dotfiles/dotdrop.sh'
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi

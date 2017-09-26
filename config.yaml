@@ -5,9 +5,15 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_ario_profiles.xml:
+    dst: ~/.config/ario/profiles/profiles.xml
+    src: config/ario/profiles/profiles.xml
   f_bira_custom.zsh-theme:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
     src: oh-my-zsh/themes/bira_custom.zsh-theme
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
   f_i3_config:
     actions:
     - i3-restart
@@ -26,9 +32,6 @@ dotfiles:
     - i3-restart
     dst: ~/.i3/i3status2.conf
     src: i3/i3status2.conf
-  f_ario_profiles.xml:
-    dst: ~/.config/ario/profiles/profiles.xml
-    src: config/ario/profiles/profiles.xml
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
@@ -78,6 +81,7 @@ profiles:
     - f_screenrc
     - f_viewnior.conf
     - f_ario_profiles.xml
+    - f_gitconfig
   fuckup:
     dotfiles:
     - f_zshrc
