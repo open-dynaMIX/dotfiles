@@ -1,0 +1,7 @@
+[user]
+	email = {{@@ env[profile + '_git_email'] @@}}
+	name = {{@@ env[profile + '_git_name'] @@}}
+[color]
+	ui = true
+[alias]
+	lfa = "!f() { git diff --name-status -r "HEAD~$1"; }; f"
