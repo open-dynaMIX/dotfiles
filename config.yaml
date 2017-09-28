@@ -20,6 +20,9 @@ dotfiles:
   f_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
     src: themes/My_Fancy_Theme/
+  f_hedgewars.desktop:
+    dst: ~/.local/share/applications/hedgewars.desktop
+    src: local/share/applications/hedgewars.desktop
   f_i3:
     dst: ~/.i3/
     src: i3/
@@ -56,6 +59,9 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
+  f_wrapper.sh:
+    dst: ~/scripts/wrapper.sh
+    src: scripts/wrapper.sh
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
@@ -90,6 +96,8 @@ profiles:
     - f_gitconfig
     - f_gtk_theme
     - d_syncit
+    - f_wrapper.sh
+    - f_hedgewars.desktop
   fuckup:
     dotfiles:
     - f_zshrc
