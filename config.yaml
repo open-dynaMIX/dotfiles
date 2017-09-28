@@ -23,7 +23,7 @@ dotfiles:
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
     src: local/share/applications/hedgewars.desktop
-  f_i3:
+  d_i3:
     dst: ~/.i3/
     src: i3/
   f_i3_config:
@@ -89,7 +89,7 @@ profiles:
     - f_radio.sh
     - f_xinitrc
     - f_xresources
-    - f_i3
+    - d_i3
     - f_screenrc
     - f_viewnior.conf
     - f_ario_profiles.xml
