@@ -1,10 +1,13 @@
 actions:
-  i3-restart: i3-msg restart
+  i3-restart: ~/.i3/i3restart.sh
 config:
   backup: true
   create: true
   dotpath: dotfiles
 dotfiles:
+  d_i3:
+    dst: ~/.i3/
+    src: i3/
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
@@ -23,9 +26,6 @@ dotfiles:
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
     src: local/share/applications/hedgewars.desktop
-  d_i3:
-    dst: ~/.i3/
-    src: i3/
   f_i3_config:
     actions:
     - i3-restart
@@ -34,6 +34,9 @@ dotfiles:
   f_i3exit.py:
     dst: ~/.i3/i3exit.py
     src: i3/i3exit.py
+  f_i3restart.sh:
+    dst: ~/.i3/i3restart.sh
+    src: i3/i3restart.sh
   f_i3status.conf:
     actions:
     - i3-restart
