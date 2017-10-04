@@ -83,37 +83,42 @@ dotfiles:
 profiles:
   ant:
     dotfiles:
-    - f_zshrc
-    - f_zsh_defaults
-    - f_zsh_arch
-    - f_bira_custom.zsh-theme
-    - f_vimrc
-    - f_vimperatorrc
-    - f_radio.sh
-    - f_xinitrc
-    - f_xresources
     - d_i3
-    - f_screenrc
-    - f_viewnior.conf
+    - d_syncit
     - f_ario_profiles.xml
+    - f_bira_custom.zsh-theme
     - f_gitconfig
     - f_gtk_theme
-    - d_syncit
-    - f_wrapper.sh
     - f_hedgewars.desktop
+    - f_radio.sh
+    - f_screenrc
+    - f_viewnior.conf
+    - f_vimperatorrc
+    - f_vimrc
+    - f_wrapper.sh
+    - f_xinitrc
+    - f_xresources
+    - f_zsh_arch
+    - f_zsh_defaults
+    - f_zshrc
   fuckup:
     dotfiles:
-    - f_zshrc
-    - f_zsh_defaults
-    - f_zsh_arch
+    - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
+    - f_gitconfig
+    - f_gtk_theme
+    - f_hedgewars.desktop
+    - f_i3exit.py
+    - f_i3restart.sh
+    - f_i3status.conf
+    - f_i3status2.conf
+    - f_radio.sh
+    - f_screenrc
+    - f_viewnior.conf
+    - f_vimperatorrc
     - f_vimrc
     - f_xinitrc
     - f_xresources
-    - f_vimperatorrc
-    - f_i3exit.py
-    - f_screenrc
-    - f_radio.sh
-    - f_i3status.conf
-    - f_i3status2.conf
-    - f_i3restart.sh
+    - f_zsh_arch
+    - f_zsh_defaults
+    - f_zshrc

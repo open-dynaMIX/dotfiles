@@ -17,7 +17,7 @@ GenericName[cs]=Bojující ježci
 GenericName[sv]=Stridande igelkottar
 GenericName[tr]=Dövüşen Kirpiler
 Icon=hedgewars
-Exec=export SDL_MOUSE_RELATIVE=0; /home/{{@@ env['USER'] @@}}/scripts/wrapper.sh --unclut hedgewars %U
+Exec=export SDL_MOUSE_RELATIVE=0; /home/{{@@ env['USER'] @@}}/scripts/wrapper.sh {%@@ if profile == "ant" @@%}--unclut{%@@ elif profile == "fuckup" @@%}--both{%@@ endif @@%} hedgewars %U
 Terminal=false
 StartupNotify=false
 Categories=Game;StrategyGame;

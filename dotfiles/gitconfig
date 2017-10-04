@@ -1,6 +1,6 @@
 [user]
-	email = {{@@ env[profile + '_git_email'] @@}}
-	name = {{@@ env[profile + '_git_name'] @@}}
+	email = {{@@ env['git_email'] @@}}
+	name = {{@@ env['git_name'] @@}}
 [color]
 	ui = true
 [alias]
