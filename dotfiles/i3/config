@@ -68,6 +68,17 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move workspace to another output
+bindsym Ctrl+$mod+j move workspace to output left
+bindsym Ctrl+$mod+k move workspace to output down
+bindsym Ctrl+$mod+l move workspace to output up
+bindsym Ctrl+$mod+odiaeresis move workspace to output right
+
+bindsym Ctrl+$mod+Left move workspace to output left
+bindsym Ctrl+$mod+Down move workspace to output down
+bindsym Ctrl+$mod+Up move workspace to output up
+bindsym Ctrl+$mod+Right move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -217,8 +228,6 @@ bindsym $mod+Prior workspace prev
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 bindsym $mod+x [urgent=latest] focus
-bindsym Ctrl+$mod+Left move workspace to output left
-bindsym Ctrl+$mod+Right move workspace to output right
 bindsym $mod+Mod1+Left focus output left
 bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
