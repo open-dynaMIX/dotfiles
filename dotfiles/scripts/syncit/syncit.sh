@@ -20,7 +20,7 @@ echo "
 scriptlocation=$(readlink -f $0)
 scriptdir=$(dirname $scriptlocation)
 rsynccmd="rsync -avxe ssh --delete --delete-excluded --include-from=/home/{{@@ env['USER'] @@}}/scripts/syncit/include --exclude-from=/home/{{@@ env['USER'] @@}}/scripts/syncit/exclude"
-serverdir="{{@@ env['USER'] @@}}@{{@@ env['backup_host'] @@}}:/var/disk/{{@@ env['USER'] @@}}/backup_{{@@ env[profile + '_model'] @@}}/"
+serverdir="{{@@ env['USER'] @@}}@{{@@ env['backup_host'] @@}}:/var/disk/{{@@ env['USER'] @@}}/backup_{{@@ env['model'] @@}}/"
 localdir="/home/{{@@ env['USER'] @@}}/"
 
 rm -f "$scriptdir"/.pyoutput
@@ -40,7 +40,7 @@ function usage {
 }
 
 # handle missing slash at the end of localdir
-if ! echo "$localdir" | egrep -q "/$"; then
+if ! echo "$localdir" | grep -E -q "/$"; then
   localdir="$localdir/"
 fi
 
