@@ -69,11 +69,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # move workspace to another output
-bindsym Ctrl+$mod+j move workspace to output left
-bindsym Ctrl+$mod+k move workspace to output down
-bindsym Ctrl+$mod+l move workspace to output up
-bindsym Ctrl+$mod+odiaeresis move workspace to output right
-
 bindsym Ctrl+$mod+Left move workspace to output left
 bindsym Ctrl+$mod+Down move workspace to output down
 bindsym Ctrl+$mod+Up move workspace to output up
@@ -299,6 +294,7 @@ for_window [title="Developer Tools - "] floating disable
 
 # Damn IntelliJ
 for_window [class="jetbrains-pycharm"] focus_on_window_activation none
+no_focus [class="jetbrains-pycharm"]
 
 # borders
 for_window [class="(?i)xterm"] border none
@@ -378,8 +374,10 @@ bar {
   workspace_buttons yes
   strip_workspace_numbers no
   tray_output primary
-  wheel_up_cmd none
-  wheel_down_cmd none
+  # wheel_up_cmd none
+  # wheel_down_cmd none
+  bindsym button4 none
+  bindsym button5 none
   output edp1
   output dp1
   output dp2-2
