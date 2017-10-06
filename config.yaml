@@ -6,6 +6,8 @@ config:
   dotpath: dotfiles
 dotfiles:
   d_i3:
+    actions:
+    - i3-restart
     dst: ~/.i3/
     src: i3/
   d_syncit:
