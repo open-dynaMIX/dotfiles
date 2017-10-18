@@ -155,7 +155,7 @@ alias radio='~/scripts/radio/radio.sh'
 alias syncit='~/scripts/syncit/syncit.sh'
 alias cal='cal -m'
 alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
-alias dotdrop='eval $(egrep -v "^#" ~/dotfiles/.env) ~/dotfiles/dotdrop.sh'
+alias dotdrop='eval $(grep -v "^#" ~/dotfiles/.env) ~/dotfiles/dotdrop.sh'
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi
