@@ -1,0 +1,12 @@
+# This file is managed by dotdrop, do not edit!
+
+[Desktop Entry]
+Version=0.1
+Name=syncit
+Terminal=false
+Type=Application
+MimeType=application;
+Categories=Application;System;
+Exec=~/scripts/syncit/syncit.sh
+Icon=~/scripts/syncit/icon.png
+Name[en_US]=syncit
