@@ -1,4 +1,5 @@
 # ZSH Theme - Preview: http://gyazo.com/8becc8a7ed5ab54a0262a470555c3eed.png
+# This file is managed by dotdrop, do not edit!
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 if [[ -z "$SSH_CLIENT" ]]; then

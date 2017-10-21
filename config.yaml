@@ -28,33 +28,15 @@ dotfiles:
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
     src: local/share/applications/hedgewars.desktop
-  f_i3_config:
-    actions:
-    - i3-restart
-    dst: ~/.i3/config
-    src: i3/config
-  f_i3exit.py:
-    dst: ~/.i3/i3exit.py
-    src: i3/i3exit.py
-  f_i3restart.sh:
-    dst: ~/.i3/i3restart.sh
-    src: i3/i3restart.sh
-  f_i3status.conf:
-    actions:
-    - i3-restart
-    dst: ~/.i3/i3status.conf
-    src: i3/i3status.conf
-  f_i3status2.conf:
-    actions:
-    - i3-restart
-    dst: ~/.i3/i3status2.conf
-    src: i3/i3status2.conf
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
   f_screenrc:
     dst: ~/.screenrc
     src: screenrc
+  f_syncit.desktop:
+    dst: ~/.local/share/applications/syncit.desktop
+    src: local/share/applications/syncit.desktop
   f_viewnior.conf:
     dst: ~/.config/viewnior/viewnior.conf
     src: config/viewnior/viewnior.conf
@@ -105,20 +87,20 @@ profiles:
     - f_zshrc
   fuckup:
     dotfiles:
+    - d_i3
+    - d_syncit
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_gitconfig
     - f_gtk_theme
     - f_hedgewars.desktop
-    - f_i3exit.py
-    - f_i3restart.sh
-    - f_i3status.conf
-    - f_i3status2.conf
     - f_radio.sh
     - f_screenrc
+    - f_syncit.desktop
     - f_viewnior.conf
     - f_vimperatorrc
     - f_vimrc
+    - f_wrapper.sh
     - f_xinitrc
     - f_xresources
     - f_zsh_arch

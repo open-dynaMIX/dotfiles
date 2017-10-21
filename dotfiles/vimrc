@@ -1,3 +1,5 @@
+" This file is managed by dotdrop, do not edit!
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 let mapleader = " "
@@ -92,7 +94,7 @@ set title           " show title in console title bar
 set autoindent      " always set autoindenting on
 set smartindent     " smart indent
 set showtabline=2   " always show tabbar
-map t <Esc>:tabnew 
+map t <Esc>:tabnew
 map <C-n> :NERDTreeToggle<CR>
 
 au BufNewFile,BufRead *.py
@@ -105,11 +107,11 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>                                                          
+nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-nmap <silent> <c-up> :wincmd k<CR> 
+nmap <silent> <c-up> :wincmd k<CR>
 nmap <silent> <c-down> :wincmd j<CR>
 nmap <silent> <c-left> :wincmd h<CR>
 nmap <silent> <c-right> :wincmd l<CR>

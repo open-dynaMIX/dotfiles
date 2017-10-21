@@ -1,4 +1,5 @@
 #!/bin/bash
+# This file is managed by dotdrop, do not edit!
 #
 
 # handling arguments
@@ -18,7 +19,9 @@ fi
 # pre command
 if [[ "$1" =~ ^(--swap|--both)$ ]]; then
     echo "Switching mouse-buttons"
-    # xmodmap -e "pointer = 1 2 3"
+    {%@@ if profile == "fuckup" @@%}
+    xmodmap -e "pointer = 1 2 3"
+    {%@@ endif @@%}
     synclient TapButton1=1 TapButton2=3 TapButton3=2
 fi
 
@@ -40,14 +43,15 @@ echo "Running command..."
 # post command
 if [[ "$1" =~ ^(--swap|--both)$ ]]; then
     echo "Switching back mouse-buttons"
-    # xmodmap -e "pointer = 3 2 1"
+    {%@@ if profile == "fuckup" @@%}
+    xmodmap -e "pointer = 3 2 1"
+    {%@@ endif @@%}
     synclient TapButton1=3 TapButton2=1 TapButton3=2
 fi
 
 if [[ "$1" =~ ^(--unclut|--both)$ ]]; then
     if $unclutrun; then
         echo "Start unclutter"
-        unclutter -notclass -noevents Nemo Main.py Atom Feh Thunderbird Skype Pidgin \
-        Hedgewars Keepassx GCompris XTerm i3bar &
+        unclutter {{@@ env['unclutter_args'] @@}} &
     fi
 fi

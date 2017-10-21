@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# This file is managed by dotdrop, do not edit!
 
 
 SOURCE="${BASH_SOURCE[0]}"

@@ -1,3 +1,5 @@
+! This file is managed by dotdrop, do not edit!
+
 XTerm*allowBoldFonts:       true
 xterm*borderWidth:          0
 XTerm*cursorBlink:          true

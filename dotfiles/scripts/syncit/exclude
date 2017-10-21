@@ -1,8 +1,10 @@
-{%@@ if profile == 'ant' @@%}
-.cache/
 .atom/
-Music/
-Downloads/
-Videos/
+.cache/
 .local/share/Trash/
-{%@@ endif @@%}
+.VirtualBox/
+Downloads/
+lynis.log
+Music/
+TEMP/
+Videos/
+VirtualBox VMs/

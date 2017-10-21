@@ -1,4 +1,5 @@
 #!/bin/bash
+# This file is managed by dotdrop, do not edit!
 #
 ## syncit
 ## Version 0.1

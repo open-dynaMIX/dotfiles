@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+# This file is managed by dotdrop, do not edit!
 
 # based on cb-exit used in CrunchBang Linux <http://crunchbanglinux.org/>
 
