@@ -1,5 +1,5 @@
 #!/bin/bash
-# This file is managed by dotdrop, do not edit!
+# This file is managed by dotdrop, only edit it in your dotdrop files!
 #
 
 # handling arguments

@@ -1,5 +1,5 @@
 "3.9 (created: 2015/02/15 15:49:05)
-" This file is managed by dotdrop, do not edit!"
+" This file is managed by dotdrop, only edit it in your dotdrop files!"
 
 " Fix copy/paste
 noremap <C-c> <C-v><C-c>
