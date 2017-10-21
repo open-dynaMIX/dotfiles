@@ -7,6 +7,6 @@ Terminal=false
 Type=Application
 MimeType=application;
 Categories=Application;System;
-Exec=~/scripts/syncit/syncit.sh
+Exec=~/scripts/syncit/syncit.sh --zenity
 Icon=~/scripts/syncit/icon.png
 Name[en_US]=syncit

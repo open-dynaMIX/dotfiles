@@ -1,7 +1,9 @@
+# This file is managed by dotdrop, only edit it in your dotdrop files!
 .atom/
 .cache/
 .local/share/Trash/
 .VirtualBox/
+Desktop/
 Downloads/
 lynis.log
 Music/
