@@ -141,7 +141,7 @@ alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -la'
 alias mynload='nload -t 1000 -i 500 -o 100 -u K'
 alias whereami='pwd'
-alias nano='nano -c'
+alias nano='nano -cw'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -155,8 +155,11 @@ alias pa='pacaur'
 alias radio='~/scripts/radio/radio.sh'
 alias syncit='~/scripts/syncit/syncit.sh'
 alias cal='cal -m'
-alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
 alias dotdrop='eval $(cat ~/dotfiles/env.defaults ~/dotfiles/.env | grep -v "^#") ~/dotfiles/dotdrop.sh'
+if which docker > /dev/null 2>&1; then
+  alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
+  alias djoin='cont=$(docker ps --format="{{.ID}}" | head -n 1) && docker exec -it "$cont" bash'
+fi
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi

@@ -106,3 +106,12 @@ profiles:
     - f_zsh_arch
     - f_zsh_defaults
     - f_zshrc
+  baldur:
+    dotfiles:
+    - f_bira_custom.zsh-theme
+    - f_gitconfig
+    - f_screenrc
+    - f_vimrc
+    - f_zsh_arch
+    - f_zsh_defaults
+    - f_zshrc
