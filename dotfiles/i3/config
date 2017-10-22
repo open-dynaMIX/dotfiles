@@ -211,7 +211,7 @@ bindsym $mod+Mod1+Left focus output left
 bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
-{%@@ if env['intellij'] == 1 @@%}
+{%@@ if env['intellij'] == "1" @@%}
 bindsym $mod+p exec --no-startup-id $raiseorlaunch -w PY -c jetbrains-pycharm -e pycharm
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace PY; workspace PY
