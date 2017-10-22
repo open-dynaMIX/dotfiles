@@ -354,13 +354,15 @@ exec --no-startup-id xset b off
 exec --no-startup-id xset s off    # disable screen blanking
 exec --no-startup-id xset -dpms    # disable screen blanking
 exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
+exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
 
-
+{%@@ if env['has_dropbox'] == "true" @@%}
 exec --no-startup-id dropbox
-{%@@ if profile == "ant" @@%}
-exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Init7/Administration/tracker.txt'
 {%@@ endif @@%}
 
+{%@@ if profile == "ant" @@%}
+#exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Init7/Administration/tracker.txt'
+{%@@ endif @@%}
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id owncloud
