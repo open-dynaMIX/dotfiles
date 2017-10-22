@@ -383,15 +383,6 @@ bar {
   tray_output primary
   bindsym button4 none
   bindsym button5 none
-  output edp1
-  {%@@ if profile == "fuckup" @@%}
-  output hdmi1
-  {%@@ elif profile == "ant" @@%}
-  output dp1
-  output dp2-2
-  output dp2-3
-  output hdmi2
-  {%@@ endif @@%}
   colors {
     separator #666666
     background #000000
@@ -405,31 +396,6 @@ bar {
   }
 }
 
-bar {
-  position top
-  #status_command i3status --config ~/.i3/i3status2.conf
-  status_command py3status -c ~/.i3/i3status2.conf
-  workspace_buttons yes
-  strip_workspace_numbers no
-  tray_output primary
-  bindsym button4 none
-  bindsym button5 none
-  output dp2
-  {%@@ if profile == "ant" @@%}
-  output hdmi1
-  {%@@ endif @@%}
-  colors {
-    separator #666666
-    background #000000
-    statusline #ffffff
-    ## colorclass <border> <background> <text>
-    #focused_workspace #4c7899 #285577 #ffffff
-    focused_workspace #333333 #5d5d5d #ffffff
-    active_workspace #333333 #5f676a #ffffff
-    inactive_workspace #333333 #222222 #888888
-    urgent_workspace #2f343a #900000 #ffffff
-  }
-}
 ## colorclass <border> <background> <text> <indicator>
 client.focused #000000 #000000 #ffffff #000000
 client.focused_inactive #3e3e3e #3e3e3e #ffffff #484e50
