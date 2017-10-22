@@ -21,7 +21,7 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 alias xkill='xkill -button 1'
 {%@@ endif @@%}
 
-{%@@ if env['has_x'] == "1" @@%}
+{%@@ if env['has_x'] == "true" @@%}
 # xterm transparency
 [ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null
 {%@@ endif @@%}
