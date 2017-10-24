@@ -165,7 +165,7 @@ set $scrot scrot -m '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/screensho
 set $raiseorlaunch ~/Linux/git/raiseorlaunch/raiseorlaunch.py
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
-bindsym $mod+ctrl+l exec --no-startup-id i3lock -te -c 000000 -i ~/.i3/wallpaper/makepkgnotwarallblack2.png
+bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
 bindsym XF86PowerOff exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
 bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device'] @@}} +4db
