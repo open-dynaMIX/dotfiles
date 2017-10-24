@@ -1,6 +1,6 @@
 actions:
   i3-restart: ~/.i3/i3restart.sh
-  dunst-restart: killall dunst; notify-send -t 3 -i face-sick "Dunst restarted" "¯\_(ツ)_/¯"
+  dunst-restart: killall dunst; notify-send -t 2000 -i face-sick "Dunst restarted" "¯\\\_(ツ)_/¯"
 config:
   backup: true
   create: true
