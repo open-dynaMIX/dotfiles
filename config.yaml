@@ -19,6 +19,9 @@ dotfiles:
   f_bira_custom.zsh-theme:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
     src: oh-my-zsh/themes/bira_custom.zsh-theme
+  f_dunstrc:
+    dst: ~/.config/dunst/dunstrc
+    src: config/dunst/dunstrc
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
@@ -71,32 +74,12 @@ profiles:
     - d_syncit
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
+    - f_dunstrc
     - f_gitconfig
     - f_gtk_theme
     - f_hedgewars.desktop
     - f_radio.sh
     - f_screenrc
-    - f_viewnior.conf
-    - f_vimperatorrc
-    - f_vimrc
-    - f_wrapper.sh
-    - f_xinitrc
-    - f_xresources
-    - f_zsh_arch
-    - f_zsh_defaults
-    - f_zshrc
-  fuckup:
-    dotfiles:
-    - d_i3
-    - d_syncit
-    - f_ario_profiles.xml
-    - f_bira_custom.zsh-theme
-    - f_gitconfig
-    - f_gtk_theme
-    - f_hedgewars.desktop
-    - f_radio.sh
-    - f_screenrc
-    - f_syncit.desktop
     - f_viewnior.conf
     - f_vimperatorrc
     - f_vimrc
@@ -112,6 +95,28 @@ profiles:
     - f_gitconfig
     - f_screenrc
     - f_vimrc
+    - f_zsh_arch
+    - f_zsh_defaults
+    - f_zshrc
+  fuckup:
+    dotfiles:
+    - d_i3
+    - d_syncit
+    - f_ario_profiles.xml
+    - f_bira_custom.zsh-theme
+    - f_dunstrc
+    - f_gitconfig
+    - f_gtk_theme
+    - f_hedgewars.desktop
+    - f_radio.sh
+    - f_screenrc
+    - f_syncit.desktop
+    - f_viewnior.conf
+    - f_vimperatorrc
+    - f_vimrc
+    - f_wrapper.sh
+    - f_xinitrc
+    - f_xresources
     - f_zsh_arch
     - f_zsh_defaults
     - f_zshrc
