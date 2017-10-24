@@ -1,5 +1,6 @@
 actions:
   i3-restart: ~/.i3/i3restart.sh
+  dunst-restart: killall dunst; notify-send -t 3 "Dunst restarted"
 config:
   backup: true
   create: true
@@ -20,6 +21,8 @@ dotfiles:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
     src: oh-my-zsh/themes/bira_custom.zsh-theme
   f_dunstrc:
+    actions:
+    - dunst-restart
     dst: ~/.config/dunst/dunstrc
     src: config/dunst/dunstrc
   f_gitconfig:
