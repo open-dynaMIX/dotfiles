@@ -1,6 +1,6 @@
 #
 # ~/.zsh_arch
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 #
 
 # enable command-not-found hook

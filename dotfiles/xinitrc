@@ -1,5 +1,5 @@
 #!/bin/sh
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap

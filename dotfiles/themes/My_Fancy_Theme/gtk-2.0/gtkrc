@@ -1,5 +1,5 @@
 # Numix GTK Theme
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 
 gtk-color-scheme = "bg_color:#242424\nfg_color:#CCCCCC\nbase_color:#303030\ntext_color:#CCCCCC\nselected_bg_color:#4C4C4C\nselected_fg_color:#FFFFFF\ntooltip_bg_color:#4C4C4C\ntooltip_fg_color:#FFFFFF\ntitlebar_bg_color:#242424\ntitlebar_fg_color:#CCCCCC\nmenubar_bg_color:#242424\nmenubar_fg_color:#CCCCCC\ntoolbar_bg_color:#242424\ntoolbar_fg_color:#CCCCCC\nmenu_bg_color:#242424\nmenu_fg_color:#CCCCCC\npanel_bg_color:#242424\npanel_fg_color:#CCCCCC\nlink_color:#1E90FF"
 

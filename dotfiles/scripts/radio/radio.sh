@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 
 
 SOURCE="${BASH_SOURCE[0]}"
