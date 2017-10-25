@@ -176,7 +176,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = dmenu -h 25 -i -nb "#262626" -nf "#ababab" -sb "#000000" -sf "#ffffff" -fn "Droid Sans Mono-12" -p dunst:
+    dmenu = /usr/bin/dmenu -h 25 -i -nb "#262626" -nf "#ababab" -sb "#000000" -sf "#ffffff" -fn "Droid Sans Mono-12" -p dunst:
     #dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
