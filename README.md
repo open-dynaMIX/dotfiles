@@ -1,8 +1,8 @@
 # Dotfiles
 I Manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
 
-# Dependencies
-A not exhaustive list of dependencies for my GUI systems:
+# Packages
+A not exhaustive list of packages I use for my GUI systems:
  - [Ario](http://ario-player.sourceforge.net/)
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
  - [dmenu2](https://bitbucket.org/melek/dmenu2)
