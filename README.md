@@ -1,5 +1,5 @@
 # Dotfiles
-I Manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
+I manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
 
 # Packages
 A not exhaustive list of packages I use for my GUI systems:
