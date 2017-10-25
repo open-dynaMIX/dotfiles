@@ -161,7 +161,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/AwOkenWhite/clear/24x24/status/:/usr/share/icons/AwOkenWhite/clear/24x24/devices/:/usr/share/icons/AwOkenWhite/clear/24x24/emotes/:/usr/share/icons/AwOkenWhite/clear/24x24/stock/:/usr/share/icons/AwOkenWhite/clear/24x24/apps/:/usr/share/icons/AwOkenWhite/clear/24x24/actions/:/usr/share/icons/AwOkenWhite/clear/24x24/emblems/
+    icon_folders = /home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/actions/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/apps/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/categories/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/devices/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/drive-harddisk/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/emblems/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/emotes/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/mimetypes/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/places/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/start-here/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/status/:/home/{{@@ env['USER'] @@}}/.icons/AwOkenWhite/clear/24x24/stock/
     #icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
@@ -234,7 +234,8 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+    history = ctrl+section
+    #history = ctrl+grave
 
     # Context menu.
     context = ctrl+shift+period

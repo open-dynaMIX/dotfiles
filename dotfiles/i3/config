@@ -376,7 +376,6 @@ focus_follows_mouse no
 # finds out, if available)
 bar {
   position top
-  #status_command i3status --config ~/.i3/i3status.conf
   status_command py3status --dbus-notify -c ~/.i3/i3status.conf
   workspace_buttons yes
   strip_workspace_numbers no
