@@ -6,6 +6,9 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  d_gtk_theme:
+    dst: ~/.themes/My_Fancy_Theme/
+    src: themes/My_Fancy_Theme/
   d_i3:
     actions:
     - i3-restart
@@ -31,9 +34,6 @@ dotfiles:
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
-  f_gtk_theme:
-    dst: ~/.themes/My_Fancy_Theme/
-    src: themes/My_Fancy_Theme/
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
     src: local/share/applications/hedgewars.desktop
@@ -79,6 +79,7 @@ dotfiles:
 profiles:
   ant:
     dotfiles:
+    - d_gtk_theme
     - d_i3
     - d_syncit
     - f_ant.png
@@ -86,7 +87,6 @@ profiles:
     - f_bira_custom.zsh-theme
     - f_dunstrc
     - f_gitconfig
-    - f_gtk_theme
     - f_hedgewars.desktop
     - f_radio.sh
     - f_screenrc
@@ -110,13 +110,13 @@ profiles:
     - f_zshrc
   fuckup:
     dotfiles:
+    - d_gtk_theme
     - d_i3
     - d_syncit
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc
     - f_gitconfig
-    - f_gtk_theme
     - f_hedgewars.desktop
     - f_makepkgnotwarallblack.png
     - f_radio.sh
