@@ -1,13 +1,3 @@
-[distutils]
-index-servers =
-  pypi
-  testpypi
-
 [pypi]
-username={{@@ env['pypi_user'] @@}}
-password={{@@ env['pypi_password'] @@}}
-
-[testpypi]
-repository=https://testpypi.python.org/pypi
-username={{@@ env['pypi_user'] @@}}
-password={{@@ env['pypi_password'] @@}}
+username = {{@@ env['pypi_user'] @@}}
+password = {{@@ env['pypi_password'] @@}}
