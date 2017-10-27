@@ -6,9 +6,6 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  d_gtk-2.0:
-    dst: ~/.config/gtk-2.0
-    src: config/gtk-2.0
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
     src: themes/My_Fancy_Theme/
@@ -85,7 +82,6 @@ dotfiles:
 profiles:
   ant:
     dotfiles:
-    - d_gtk-2.0
     - d_gtk_theme
     - d_i3
     - d_syncit
@@ -118,7 +114,6 @@ profiles:
     - f_zshrc
   fuckup:
     dotfiles:
-    - d_gtk-2.0
     - d_gtk_theme
     - d_i3
     - d_syncit
