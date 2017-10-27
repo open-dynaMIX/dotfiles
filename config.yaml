@@ -43,6 +43,9 @@ dotfiles:
   f_makepkgnotwarallblack.png:
     dst: ~/.i3/wallpapers/makepkgnotwarallblack.png
     src: i3/wallpapers/makepkgnotwarallblack.png
+  f_pypirc:
+    dst: ~/.pypirc
+    src: pypirc
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
@@ -92,6 +95,7 @@ profiles:
     - f_gitconfig
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
+    - f_pypirc
     - f_radio.sh
     - f_screenrc
     - f_viewnior.conf
@@ -124,6 +128,7 @@ profiles:
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
     - f_makepkgnotwarallblack.png
+    - f_pypirc
     - f_radio.sh
     - f_screenrc
     - f_syncit.desktop
