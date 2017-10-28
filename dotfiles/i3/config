@@ -162,7 +162,6 @@ bindsym $mod+r mode "resize"
 
 # Variables
 set $scrot scrot -m '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots/'
-set $raiseorlaunch ~/Linux/git/raiseorlaunch/raiseorlaunch.py
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
 bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
@@ -176,29 +175,29 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 bindsym XF86HomePage exec --no-startup-id systemctl suspend
-bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
-bindsym XF86Explorer exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
-bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
+bindsym $mod+F12 exec --no-startup-id raiseorlaunch -r -c SpeedCrunch
+bindsym XF86Explorer exec --no-startup-id raiseorlaunch -r -c SpeedCrunch
+bindsym XF86Calculator exec --no-startup-id raiseorlaunch -r -c SpeedCrunch
 bindsym $mod+y exec --no-startup-id ~/Skripte/keylayouttoggle.sh
 bindsym $mod+Greek_zeta exec --no-startup-id ~/Skripte/keylayouttoggle.sh
 bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 
-bindsym $mod+c exec --no-startup-id $raiseorlaunch -w CM -c Chromium
+bindsym $mod+c exec --no-startup-id raiseorlaunch -w CM -c Chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
 bindsym $mod+shift+c move container to workspace CM; workspace CM
-bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w TB -c Thunderbird -s Mail
-bindsym $mod+t exec --no-startup-id $raiseorlaunch -w TB -c Thunderbird -s Mail
+bindsym XF86Mail exec --no-startup-id raiseorlaunch -w TB -c Thunderbird -s Mail
+bindsym $mod+t exec --no-startup-id raiseorlaunch -w TB -c Thunderbird -s Mail
 bindsym $mod+shift+t move container to workspace TB; workspace TB
-bindsym $mod+n exec --no-startup-id $raiseorlaunch -w NEMO -c Nemo -s nemo -e "nemo"
+bindsym $mod+n exec --no-startup-id raiseorlaunch -w NEMO -c Nemo -s nemo -e "nemo"
 bindsym $mod+Mod1+n exec --no-startup-id dbus-launch nemo
 bindsym $mod+shift+n move container to workspace NEMO; workspace NEMO
 bindsym $mod+shift+i move container to workspace IM; workspace IM
-bindsym $mod+s exec --no-startup-id $raiseorlaunch -w SL -c Sublime_text -s sublime_text -e subl
+bindsym $mod+s exec --no-startup-id raiseorlaunch -w SL -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace SL; workspace SL
-bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes
+bindsym $mod+period exec --no-startup-id raiseorlaunch -r -c Scribes
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
 bindsym $mod+g exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox https://www.google.com/search?q="%s"' -P 'Searchterm: '
@@ -212,24 +211,24 @@ bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
 {%@@ if env['intellij'] == "true" @@%}
-bindsym $mod+p exec --no-startup-id $raiseorlaunch -w PY -c jetbrains-pycharm -e pycharm
+bindsym $mod+p exec --no-startup-id raiseorlaunch -w PY -c jetbrains-pycharm -e pycharm
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace PY; workspace PY
 {%@@ endif @@%}
 
 {%@@ if profile == "fuckup" @@%}
-bindsym $mod+m exec --no-startup-id $raiseorlaunch -w MIXXX -c Mixxx
+bindsym $mod+m exec --no-startup-id raiseorlaunch -w MIXXX -c Mixxx
 bindsym $mod+shift+m move container to workspace MIXXX; workspace MIXXX
 bindsym $mod+i workspace IM
 {%@@ elif profile == "ant" @@%}
-bindsym $mod+i exec --no-startup-id $raiseorlaunch -w IM -c Rambox
+bindsym $mod+i exec --no-startup-id raiseorlaunch -w IM -c Rambox
 {%@@ endif @@%}
 
-#bindsym $mod+f exec --no-startup-id $raiseorlaunch -w FF -c Firefox -s Navigator
+#bindsym $mod+f exec --no-startup-id raiseorlaunch -w FF -c Firefox -s Navigator
 #bindsym $mod+Mod1+f exec --no-startup-id firefox
 #bindsym $mod+shift+f move container to workspace FF; workspace FF
-#bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
-#bindsym $mod+n exec --no-startup-id $raiseorlaunch -w NEMO -c Nemo -s nemo -e "dbus-launch nemo"
+#bindsym $mod+c exec --no-startup-id raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
+#bindsym $mod+n exec --no-startup-id raiseorlaunch -w NEMO -c Nemo -s nemo -e "dbus-launch nemo"
 #bindsym $mod+p exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # mouse bindings
@@ -354,14 +353,14 @@ exec --no-startup-id xset b off
 exec --no-startup-id xset s off    # disable screen blanking
 exec --no-startup-id xset -dpms    # disable screen blanking
 exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
-exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
+exec --no-startup-id raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
 
 {%@@ if env['has_dropbox'] == "true" @@%}
 exec --no-startup-id dropbox
 {%@@ endif @@%}
 
 {%@@ if profile == "ant" @@%}
-#exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Init7/Administration/tracker.txt'
+#exec --no-startup-id raiseorlaunch -r -c Scribes -e 'scribes ~/Init7/Administration/tracker.txt'
 {%@@ endif @@%}
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet
