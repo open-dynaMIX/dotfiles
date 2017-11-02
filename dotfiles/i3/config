@@ -200,7 +200,7 @@ bindsym $mod+shift+i move container to workspace IM; workspace IM
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -w SL -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace SL; workspace SL
-bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes
+bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
 bindsym $mod+g exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox https://www.google.com/search?q="%s"' -P 'Searchterm: '
