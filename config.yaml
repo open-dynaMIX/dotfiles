@@ -40,6 +40,9 @@ dotfiles:
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
     src: local/share/applications/hedgewars.desktop
+  f_keylayouttoggle.sh:
+    dst: ~/scripts/keylayouttoggle.sh
+    src: scripts/keylayouttoggle.sh
   f_makepkgnotwarallblack.png:
     dst: ~/.i3/wallpapers/makepkgnotwarallblack.png
     src: i3/wallpapers/makepkgnotwarallblack.png
@@ -127,6 +130,7 @@ profiles:
     - f_gitconfig
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
+    - f_keylayouttoggle.sh
     - f_makepkgnotwarallblack.png
     - f_pypirc
     - f_radio.sh

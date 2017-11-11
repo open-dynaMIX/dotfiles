@@ -181,8 +181,6 @@ bindsym XF86HomePage exec --no-startup-id systemctl suspend
 bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
 bindsym XF86Explorer exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
 bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
-bindsym $mod+y exec --no-startup-id ~/Skripte/keylayouttoggle.sh
-bindsym $mod+Greek_zeta exec --no-startup-id ~/Skripte/keylayouttoggle.sh
 bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
@@ -217,6 +215,11 @@ bindsym $mod+Shift+period sticky toggle
 bindsym $mod+p exec --no-startup-id $raiseorlaunch -w PY -c jetbrains-pycharm -e pycharm
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace PY; workspace PY
+{%@@ endif @@%}
+
+{%@@ if env['multiple_keylayouts'] == "true" @@%}
+bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
+bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 {%@@ endif @@%}
 
 {%@@ if profile == "fuckup" @@%}
