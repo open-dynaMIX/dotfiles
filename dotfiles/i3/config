@@ -110,7 +110,7 @@ set $ws_files 
 set $ws_gimp 6:
 set $ws_ff 
 set $ws_pycharm PY
-set $ws_subl 
+set $ws_subl 
 set $ws_mixxx MIXXX
 
 # switch to workspace
