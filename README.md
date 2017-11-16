@@ -7,6 +7,7 @@ A not exhaustive list of packages I use for my GUI systems:
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
  - [dmenu2](https://bitbucket.org/melek/dmenu2)
  - [dunst](https://github.com/dunst-project/dunst)
+ - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
  - [i3-py](https://github.com/ziberna/i3-py)
  - [i3](https://github.com/i3/i3)
  - [i3lock](https://github.com/i3/i3lock)
