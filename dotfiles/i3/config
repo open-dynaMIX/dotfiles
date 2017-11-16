@@ -18,7 +18,8 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono, Icons 14
+#font pango:DejaVu Sans Mono, Icons, 14
+font pango: Droid Sans Mono 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -100,6 +101,17 @@ bindsym $mod+space focus mode_toggle
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# custom workspaces
+set $ws_chromium 
+set $ws_im 
+set $ws_mail 
+set $ws_files 
+set $ws_gimp 6:
+set $ws_ff 
+set $ws_pycharm PY
+set $ws_subl SL
+set $ws_mixxx MIXXX
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -185,19 +197,21 @@ bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 
-bindsym $mod+c exec --no-startup-id $raiseorlaunch -w CM -c Chromium
+bindsym $mod+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c Firefox -s Navigator
+bindsym $mod+Mod1+f exec --no-startup-id firefox
+bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
+bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
-bindsym $mod+shift+c move container to workspace CM; workspace CM
-bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w TB -c Thunderbird -s Mail
-bindsym $mod+t exec --no-startup-id $raiseorlaunch -w TB -c Thunderbird -s Mail
-bindsym $mod+shift+t move container to workspace TB; workspace TB
-bindsym $mod+n exec --no-startup-id $raiseorlaunch -w NEMO -c Nemo -s nemo -e "nemo"
+bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
+bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
+bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
+bindsym $mod+shift+t move container to workspace $ws_mail; workspace $ws_mail
+bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e "nemo"
 bindsym $mod+Mod1+n exec --no-startup-id dbus-launch nemo
-bindsym $mod+shift+n move container to workspace NEMO; workspace NEMO
-bindsym $mod+shift+i move container to workspace IM; workspace IM
-bindsym $mod+s exec --no-startup-id $raiseorlaunch -w SL -c Sublime_text -s sublime_text -e subl
+bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
+bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
-bindsym $mod+shift+s move container to workspace SL; workspace SL
+bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
 bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
@@ -212,9 +226,9 @@ bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
 {%@@ if env['intellij'] == "true" @@%}
-bindsym $mod+p exec --no-startup-id $raiseorlaunch -w PY -c jetbrains-pycharm -e pycharm
+bindsym $mod+p exec --no-startup-id $raiseorlaunch -w $ws_pycharm -c jetbrains-pycharm -e pycharm
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
-bindsym $mod+shift+p move container to workspace PY; workspace PY
+bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
 {%@@ endif @@%}
 
 {%@@ if env['multiple_keylayouts'] == "true" @@%}
@@ -223,18 +237,16 @@ bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 {%@@ endif @@%}
 
 {%@@ if profile == "fuckup" @@%}
-bindsym $mod+m exec --no-startup-id $raiseorlaunch -w MIXXX -c Mixxx
-bindsym $mod+shift+m move container to workspace MIXXX; workspace MIXXX
-bindsym $mod+i workspace IM
+bindsym $mod+m exec --no-startup-id $raiseorlaunch -w $ws_mixxx -c Mixxx
+bindsym $mod+shift+m move container to workspace $ws_mixxx; workspace $ws_mixxx
+bindsym $mod+i workspace $ws_im
+bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 {%@@ elif profile == "ant" @@%}
-bindsym $mod+i exec --no-startup-id $raiseorlaunch -w IM -c Rambox
+bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox
 {%@@ endif @@%}
 
-#bindsym $mod+f exec --no-startup-id $raiseorlaunch -w FF -c Firefox -s Navigator
-#bindsym $mod+Mod1+f exec --no-startup-id firefox
-#bindsym $mod+shift+f move container to workspace FF; workspace FF
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
-#bindsym $mod+n exec --no-startup-id $raiseorlaunch -w NEMO -c Nemo -s nemo -e "dbus-launch nemo"
+#bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e "dbus-launch nemo"
 #bindsym $mod+p exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # mouse bindings
@@ -325,17 +337,17 @@ for_window [class="I3exit" instance="i3exit"] exec --no-startup-id transset-df -
 bindsym $mod+b border toggle
 
 # force to workspace and (in some cases, if it works) directly focus new windows
-assign [class="Thunderbird"] TB
+assign [class="Thunderbird"] $ws_mail
 for_window [class="Thunderbird"] focus
 for_window [class="Atom"] focus
 for_window [class="Firefox"] focus
-assign [class="Skype"] IM
+assign [class="Skype"] $ws_im
 for_window [class="Skype"] focus
-assign [class="Pidgin"] IM
-assign [class="Gimp"] 6:GIMP
-for_window [class="Gimp"] focus
-assign [class="Rambox"] IM
+assign [class="Pidgin"] $ws_im
+assign [class="Rambox"] $ws_im
 for_window [class="Rambox"] focus
+assign [class="Gimp"] $ws_gimp
+for_window [class="Gimp"] focus
 
 # Scratchpad
 # Make the currently focused window a scratchpad
@@ -365,16 +377,12 @@ exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
 exec --no-startup-id dropbox
 {%@@ endif @@%}
 
-{%@@ if profile == "ant" @@%}
-#exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Init7/Administration/tracker.txt'
-{%@@ endif @@%}
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id owncloud
 
 # custom config
 workspace_auto_back_and_forth yes # switch to a workspace and with the same key back
-font pango: Droid Sans Mono 12
 focus_follows_mouse no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
