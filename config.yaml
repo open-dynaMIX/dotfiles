@@ -47,8 +47,8 @@ dotfiles:
     dst: ~/.i3/wallpapers/makepkgnotwarallblack.png
     src: i3/wallpapers/makepkgnotwarallblack.png
   f_mfixx_custom.ttf:
-    dst: ~/.fonts/MFixx_custom.ttf
-    src: fonts/MFixx_custom.ttf
+    dst: ~/.local/share/fonts/MFixx_custom.ttf
+    src: local/share/fonts/MFixx_custom.ttf
   f_pypirc:
     dst: ~/.pypirc
     src: pypirc
