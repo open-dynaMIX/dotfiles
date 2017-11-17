@@ -206,8 +206,8 @@ bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chr
 bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+shift+t move container to workspace $ws_mail; workspace $ws_mail
-bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e "nemo"
-bindsym $mod+Mod1+n exec --no-startup-id dbus-launch nemo
+bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e nemo
+bindsym $mod+Mod1+n exec --no-startup-id nemo
 bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
@@ -380,6 +380,7 @@ exec --no-startup-id dropbox
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id owncloud
+exec --no-startup-id i3-msg workspace 1
 
 # custom config
 workspace_auto_back_and_forth yes # switch to a workspace and with the same key back
