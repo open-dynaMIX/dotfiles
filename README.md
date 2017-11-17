@@ -13,6 +13,7 @@ A not exhaustive list of packages I use for my GUI systems:
  - [i3lock](https://github.com/i3/i3lock)
  - [i3status](https://github.com/i3/i3status)
  - [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop)
+ - [MFixx](https://github.com/file-icons/MFixx) (edited version: moved all glyphs to private area in order to avoid conflicts with font-awesome)
  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [py3status](https://github.com/ultrabug/py3status)
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
