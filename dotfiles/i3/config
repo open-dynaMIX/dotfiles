@@ -106,7 +106,7 @@ bindsym $mod+space focus mode_toggle
 set $ws_chromium 
 set $ws_im 
 set $ws_mail 
-set $ws_files 
+set $ws_files 
 set $ws_gimp 6:
 set $ws_ff 
 set $ws_pycharm 
