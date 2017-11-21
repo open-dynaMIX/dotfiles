@@ -1,18 +1,26 @@
 #!/usr/bin/bash
 
-repo=$(checkupdates)
-aur=$(pacaur -k)
+IFS=$'\n'
+repo=($(checkupdates))
+aur=($(pacaur -k | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"))
+unset IFS
 
-if [ -n "$repo" ]; then
+if [ "${#repo[@]}" -gt 0 ]; then
     echo "Repo:"
-    echo "$repo"
+    echo "====="
+    for package in "${repo[@]}"; do
+        echo "$package" | awk '{print $1}'
+    done
 fi
 
-if [ -n "$aur" ]; then
-    echo "Aur:"
-    pacaur -k
+if [ "${#aur[@]}" -gt 0 ]; then
+    echo -e "\nAur:"
+    echo "===="
+    for package in "${aur[@]}"; do
+        echo "$package" | awk '{print $3}'
+    done
 fi
 
-if ! [ -n "$repo" ] && ! [ -n "$aur" ]; then
+if [ "${#repo[@]}" -lt 1 ] && [ "${#aur[@]}" -lt 1 ]; then
     echo "No updates available."
 fi
