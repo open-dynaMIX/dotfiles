@@ -1,7 +1,7 @@
 actions:
   dunst-restart: killall dunst; notify-send -t 2000 -i face-sick "Dunst restarted"
-  i3-restart: ~/.i3/i3restart.sh
   font-cache-refresh: fc-cache -f -v
+  i3-restart: ~/.i3/i3restart.sh
 config:
   backup: true
   create: true
