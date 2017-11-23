@@ -137,7 +137,11 @@ source $ZSH/oh-my-zsh.sh
 # Pure prompt
 autoload -U promptinit; promptinit
 # PURE_CMD_MAX_EXEC_TIME=5
-PURE_PROMPT_SYMBOL="$"
+if [[ $EUID -eq 0 ]]; then
+    PURE_PROMPT_SYMBOL="#"
+else
+    PURE_PROMPT_SYMBOL="$"
+fi
 prompt pure
 
 #aliases
