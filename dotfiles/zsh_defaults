@@ -43,7 +43,8 @@ ZSH=/usr/share/oh-my-zsh/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira_custom"
+# ZSH_THEME="bira_custom"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -132,6 +133,12 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# Pure prompt
+autoload -U promptinit; promptinit
+# PURE_CMD_MAX_EXEC_TIME=5
+PURE_PROMPT_SYMBOL="$"
+prompt pure
 
 #aliases
 if [[ $EUID -ne 0 ]]; then
