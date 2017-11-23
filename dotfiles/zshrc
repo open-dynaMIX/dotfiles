@@ -22,5 +22,5 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 
 {%@@ if env['has_x'] == "true" @@%}
 # xterm transparency
-[ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null
+[ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null || true
 {%@@ endif @@%}
