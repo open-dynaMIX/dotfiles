@@ -18,9 +18,6 @@ dotfiles:
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
-  f_ant.png:
-    dst: ~/.i3/wallpapers/ant.png
-    src: i3/wallpapers/ant.png
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: config/ario/profiles/profiles.xml
@@ -44,9 +41,6 @@ dotfiles:
   f_keylayouttoggle.sh:
     dst: ~/scripts/keylayouttoggle.sh
     src: scripts/keylayouttoggle.sh
-  f_makepkgnotwarallblack.png:
-    dst: ~/.i3/wallpapers/makepkgnotwarallblack.png
-    src: i3/wallpapers/makepkgnotwarallblack.png
   f_mfixx_custom.ttf:
     actions:
     - font-cache-refresh
@@ -97,7 +91,6 @@ profiles:
     - d_gtk_theme
     - d_i3
     - d_syncit
-    - f_ant.png
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc
@@ -138,7 +131,6 @@ profiles:
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
     - f_keylayouttoggle.sh
-    - f_makepkgnotwarallblack.png
     - f_mfixx_custom.ttf
     - f_pypirc
     - f_radio.sh
