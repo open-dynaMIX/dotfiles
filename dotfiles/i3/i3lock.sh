@@ -8,8 +8,3 @@ killall -SIGUSR1 dunst
 
 # resume message display
 killall -SIGUSR2 dunst
-
-{%@@ if env['multiple_keylayouts'] == 'true' @@%}
-sleep 1.5
-/usr/bin/setxkbmap ch
-{%@@ endif @@%}
