@@ -366,7 +366,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id keepassx
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id nemo -n
-exec --no-startup-id conky -c ~/.conky/conkyrc
+#exec --no-startup-id conky -c ~/.conky/conkyrc
 exec --no-startup-id xcompmgr -c -n # real transparency (this needs xcompmgr to be installed)
 exec --no-startup-id xset b off
 exec --no-startup-id xset s off    # disable screen blanking
