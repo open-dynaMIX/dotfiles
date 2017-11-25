@@ -19,8 +19,3 @@ alias janosch='~/Skripte/wrapper.sh --both gcompris --disable-quit --disable-con
 alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
 alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
 {%@@ endif @@%}
-
-{%@@ if env['has_x'] == "true" @@%}
-# xterm transparency
-[ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null || true
-{%@@ endif @@%}

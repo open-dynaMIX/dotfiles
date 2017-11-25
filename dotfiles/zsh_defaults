@@ -141,8 +141,8 @@ PURE_GIT_UP_ARROW="↑"
 PURE_GIT_DOWN_ARROW="↓"
 if [[ $EUID -eq 0 ]]; then
     PURE_PROMPT_SYMBOL="#"
-else
-    PURE_PROMPT_SYMBOL="$"
+# else
+#     PURE_PROMPT_SYMBOL="$"
 fi
 prompt pure
 
@@ -240,3 +240,13 @@ zle -N no-magic-abbrev-expand
 bindkey " " magic-abbrev-expand
 bindkey "^x " no-magic-abbrev-expand
 bindkey -M isearch " " self-insert
+
+{%@@ if env['has_x'] == "true" @@%}
+# xterm transparency
+[ -n "$XTERM_VERSION" ] && transset-df 0.9 -a >/dev/null || true
+{%@@ endif @@%}
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
