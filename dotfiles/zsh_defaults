@@ -170,6 +170,7 @@ alias pa='pacaur'
 alias radio='~/scripts/radio/radio.sh'
 alias syncit='~/scripts/syncit/syncit.sh'
 alias cal='cal -m'
+alias seconds='while true; do; date +"%H:%m:%S"; sleep 1; done'
 alias dotdrop='eval $(cat ~/dotfiles/env.defaults ~/dotfiles/.env | grep -v "^#") ~/dotfiles/dotdrop.sh'
 if which docker > /dev/null 2>&1; then
   alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
