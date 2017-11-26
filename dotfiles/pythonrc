@@ -1,0 +1,10 @@
+# {{@@ env['dotdrop_warning'] @@}}
+'''
+Save this file and add the following line to your ~/.zshrc"
+export PYTHONSTARTUP="~/.pythonrc"
+'''
+
+
+import os
+import sys
+import re

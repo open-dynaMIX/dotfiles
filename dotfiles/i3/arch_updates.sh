@@ -1,4 +1,6 @@
 #!/usr/bin/bash
+# {{@@ env['dotdrop_warning'] @@}}
+
 
 IFS=$'\n'
 repo=($(checkupdates))

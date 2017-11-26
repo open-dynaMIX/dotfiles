@@ -49,6 +49,9 @@ dotfiles:
   f_pypirc:
     dst: ~/.pypirc
     src: pypirc
+  f_pythonrc:
+    dst: ~/.pythonrc
+    src: pythonrc
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
@@ -99,6 +102,7 @@ profiles:
     - f_hedgewars.desktop
     - f_mfixx_custom.ttf
     - f_pypirc
+    - f_pypirc
     - f_radio.sh
     - f_screenrc
     - f_viewnior.conf
@@ -114,6 +118,8 @@ profiles:
     dotfiles:
     - f_bira_custom.zsh-theme
     - f_gitconfig
+    - f_pypirc
+    - f_pythonrc
     - f_screenrc
     - f_vimrc
     - f_zsh_arch
@@ -133,6 +139,7 @@ profiles:
     - f_keylayouttoggle.sh
     - f_mfixx_custom.ttf
     - f_pypirc
+    - f_pythonrc
     - f_radio.sh
     - f_screenrc
     - f_syncit.desktop

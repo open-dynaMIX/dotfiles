@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# {{@@ env['dotdrop_warning'] @@}}
 """
 Turn on and off dbus notifications.
 
