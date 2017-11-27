@@ -361,7 +361,7 @@ bindsym $mod+minus scratchpad show
 exec_always --no-startup-id guake && xdotool key F12 # run guake and hide it.
 
 # Autostart
-exec --no-startup-id ~/Linux/git/streamwall/src/streamwall/streamwall.sh -tbns http://www.ustream.tv/channel/iss-hdev-payload
+exec --no-startup-id ~/Linux/git/streamwall/src/streamwall/streamwall.sh -tbn
 exec --no-startup-id nm-applet
 exec --no-startup-id keepassx
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
