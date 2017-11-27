@@ -1,0 +1,12 @@
+#
+# ~/.zsh/exports
+# {{@@ env['dotdrop_warning'] @@}}
+#
+
+if [ -f /usr/bin/screen ]; then
+  export SYSSCREENRC=/etc/screenrc
+fi
+
+if [ -f ~/.pythonrc ]; then
+  export PYTHONSTARTUP=~/.pythonrc
+fi

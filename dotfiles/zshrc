@@ -4,18 +4,39 @@
 #
 
 # imports
-if [ -f ~/.zsh_defaults ]; then
-    . ~/.zsh_defaults
+if [ -f ~/.zsh/config ]; then
+    . ~/.zsh/config
 fi
 
-if [ -f ~/.zsh_arch ]; then
-    . ~/.zsh_arch
+if [ -f ~/.zsh/exports ]; then
+    . ~/.zsh/exports
 fi
 
-#aliases
-alias worms='worms -d 40 -l 16 -n 6'
-{%@@ if profile == "fuckup" @@%}
-alias janosch='~/Skripte/wrapper.sh --both gcompris --disable-quit --disable-config --profile janosch-profil'
-alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
-alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
-{%@@ endif @@%}
+if [ -f ~/.zsh/arch ]; then
+    . ~/.zsh/arch
+fi
+
+if [ -f ~/.zsh/aliases ]; then
+    . ~/.zsh/aliases
+fi
+
+if [ -f ~/.zsh/oh-my-zsh ]; then
+    . ~/.zsh/oh-my-zsh
+fi
+
+if [ -f ~/.zsh/prompt ]; then
+    . ~/.zsh/prompt
+fi
+
+if [ -f ~/.zsh/magic ]; then
+    . ~/.zsh/magic
+fi
+
+if [ -f ~/.zsh/transparency ]; then
+    . ~/.zsh/transparency
+fi
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

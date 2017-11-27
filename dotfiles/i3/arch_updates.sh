@@ -9,7 +9,7 @@ unset IFS
 
 if [ "${#repo[@]}" -gt 0 ]; then
     echo "Repo:"
-    echo "====="
+    echo "===="
     for package in "${repo[@]}"; do
         echo "$package" | awk '{print $1}'
     done
@@ -17,7 +17,7 @@ fi
 
 if [ "${#aur[@]}" -gt 0 ]; then
     echo -e "\nAur:"
-    echo "===="
+    echo "==="
     for package in "${aur[@]}"; do
         echo "$package" | awk '{print $3}'
     done
