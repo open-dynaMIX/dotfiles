@@ -29,6 +29,7 @@ A not exhaustive list of packages I use for my GUI systems:
  - [Xorg](https://www.x.org/wiki/)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
  - [zsh](https://www.zsh.org/)
+ - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
  - [zsh-completions](https://github.com/zsh-users/zsh-completions)
  - [zsh-pure-prompt](https://github.com/sindresorhus/pure)
  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
