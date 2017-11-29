@@ -4,6 +4,10 @@
 #
 
 # imports
+if [ -f ~/.zsh/locale ]; then
+    . ~/.zsh/locale
+fi
+
 if [ -f ~/.zsh/config ]; then
     . ~/.zsh/config
 fi

@@ -46,6 +46,8 @@ export SSH_AUTH_SOCK
 /usr/bin/xcalib -d :0 $HOME/.color/icc/TPLCD95.icm
 {%@@ endif @@%}
 
+source $HOME/.zsh/locale
+
 setxkbmap ch
 
 lxqt-policykit-agent &
