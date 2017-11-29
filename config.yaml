@@ -100,7 +100,7 @@ profiles:
     - f_hedgewars.desktop
     - f_mfixx_custom.ttf
     - f_pypirc
-    - f_pypirc
+    - f_pythonrc
     - f_radio.sh
     - f_screenrc
     - f_viewnior.conf
