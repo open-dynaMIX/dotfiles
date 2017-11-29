@@ -16,10 +16,6 @@ if [ -f ~/.zsh/arch ]; then
     . ~/.zsh/arch
 fi
 
-if [ -f ~/.zsh/aliases ]; then
-    . ~/.zsh/aliases
-fi
-
 if [ -f ~/.zsh/oh-my-zsh ]; then
     . ~/.zsh/oh-my-zsh
 fi
@@ -34,6 +30,10 @@ fi
 
 if [ -f ~/.zsh/transparency ]; then
     . ~/.zsh/transparency
+fi
+
+if [ -f ~/.zsh/aliases ]; then
+    . ~/.zsh/aliases
 fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
