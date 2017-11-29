@@ -240,10 +240,10 @@ bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 bindsym $mod+m exec --no-startup-id $raiseorlaunch -w $ws_mixxx -c Mixxx
 bindsym $mod+shift+m move container to workspace $ws_mixxx; workspace $ws_mixxx
 bindsym $mod+i workspace $ws_im
-bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 {%@@ elif profile == "ant" @@%}
 bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox
 {%@@ endif @@%}
+bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
 #bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e "dbus-launch nemo"
