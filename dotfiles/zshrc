@@ -4,40 +4,40 @@
 #
 
 # imports
-if [ -f ~/.zsh/locale ]; then
-    . ~/.zsh/locale
+if [ -f ~/.zsh/locale.zsh ]; then
+    . ~/.zsh/locale.zsh
 fi
 
-if [ -f ~/.zsh/config ]; then
-    . ~/.zsh/config
+if [ -f ~/.zsh/config.zsh ]; then
+    . ~/.zsh/config.zsh
 fi
 
-if [ -f ~/.zsh/exports ]; then
-    . ~/.zsh/exports
+if [ -f ~/.zsh/exports.zsh ]; then
+    . ~/.zsh/exports.zsh
 fi
 
-if [ -f ~/.zsh/arch ]; then
-    . ~/.zsh/arch
+if [ -f ~/.zsh/arch.zsh ]; then
+    . ~/.zsh/arch.zsh
 fi
 
-if [ -f ~/.zsh/oh-my-zsh ]; then
-    . ~/.zsh/oh-my-zsh
+if [ -f ~/.zsh/oh-my-zsh.zsh ]; then
+    . ~/.zsh/oh-my-zsh.zsh
 fi
 
-if [ -f ~/.zsh/prompt ]; then
-    . ~/.zsh/prompt
+if [ -f ~/.zsh/prompt.zsh ]; then
+    . ~/.zsh/prompt.zsh
 fi
 
-if [ -f ~/.zsh/magic ]; then
-    . ~/.zsh/magic
+if [ -f ~/.zsh/magic.zsh ]; then
+    . ~/.zsh/magic.zsh
 fi
 
-if [ -f ~/.zsh/transparency ]; then
-    . ~/.zsh/transparency
+if [ -f ~/.zsh/transparency.zsh ]; then
+    . ~/.zsh/transparency.zsh
 fi
 
-if [ -f ~/.zsh/aliases ]; then
-    . ~/.zsh/aliases
+if [ -f ~/.zsh/aliases.zsh ]; then
+    . ~/.zsh/aliases.zsh
 fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
