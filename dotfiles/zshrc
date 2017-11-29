@@ -37,6 +37,6 @@ if [ -f ~/.zsh/aliases ]; then
 fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

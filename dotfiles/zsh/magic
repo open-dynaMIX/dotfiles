@@ -57,7 +57,7 @@ magic-abbrev-expand() {
 }
 
 no-magic-abbrev-expand() {
-  LBUFFER+=' '
+    LBUFFER+=' '
 }
 
 zle -N magic-abbrev-expand
