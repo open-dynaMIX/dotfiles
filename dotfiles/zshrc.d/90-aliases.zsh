@@ -1,5 +1,5 @@
 #
-# ~/.zsh/aliases
+# ~/.zshrc.d/90-aliases.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 

@@ -1,5 +1,5 @@
 #
-# ~/.zsh/locale
+# ~/.zshrc.d/10-locale.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 

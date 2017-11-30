@@ -1,5 +1,5 @@
 #
-# ~/.zsh/magic
+# ~/.zshrc.d/70-magic.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
@@ -28,8 +28,7 @@ get_last_commit_cmd() {
 
 get_git_push_cmd() {
     if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
-        git_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-        if [ $? != 0 ]; then
+        if ! git_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
             git_branch="master"
         fi
         push_command="git push origin $git_branch"

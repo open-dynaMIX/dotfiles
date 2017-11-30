@@ -1,12 +1,12 @@
 #
-# ~/.zsh/config
+# ~/.zshrc.d/20-config.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit

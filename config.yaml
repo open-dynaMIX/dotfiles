@@ -18,9 +18,9 @@ dotfiles:
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
-  d_zsh:
-    dst: ~/.zsh
-    src: zsh
+  d_zshrc.d:
+    dst: ~/.zshrc.d
+    src: zshrc.d
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: config/ario/profiles/profiles.xml
@@ -91,7 +91,7 @@ profiles:
     - d_gtk_theme
     - d_i3
     - d_syncit
-    - d_zsh
+    - d_zshrc.d
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc
@@ -112,7 +112,7 @@ profiles:
     - f_zshrc
   baldur:
     dotfiles:
-    - d_zsh
+    - d_zshrc.d
     - f_bira_custom.zsh-theme
     - f_gitconfig
     - f_pypirc
@@ -125,7 +125,7 @@ profiles:
     - d_gtk_theme
     - d_i3
     - d_syncit
-    - d_zsh
+    - d_zshrc.d
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc

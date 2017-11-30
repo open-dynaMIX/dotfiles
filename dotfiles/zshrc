@@ -3,44 +3,9 @@
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
-# imports
-if [ -f ~/.zsh/locale.zsh ]; then
-    . ~/.zsh/locale.zsh
+# load all config files
+if [ -d $HOME/.zshrc.d ]; then
+    for file in $HOME/.zshrc.d/*.zsh(N); do
+        . $file
+    done
 fi
-
-if [ -f ~/.zsh/config.zsh ]; then
-    . ~/.zsh/config.zsh
-fi
-
-if [ -f ~/.zsh/exports.zsh ]; then
-    . ~/.zsh/exports.zsh
-fi
-
-if [ -f ~/.zsh/arch.zsh ]; then
-    . ~/.zsh/arch.zsh
-fi
-
-if [ -f ~/.zsh/oh-my-zsh.zsh ]; then
-    . ~/.zsh/oh-my-zsh.zsh
-fi
-
-if [ -f ~/.zsh/prompt.zsh ]; then
-    . ~/.zsh/prompt.zsh
-fi
-
-if [ -f ~/.zsh/magic.zsh ]; then
-    . ~/.zsh/magic.zsh
-fi
-
-if [ -f ~/.zsh/transparency.zsh ]; then
-    . ~/.zsh/transparency.zsh
-fi
-
-if [ -f ~/.zsh/aliases.zsh ]; then
-    . ~/.zsh/aliases.zsh
-fi
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

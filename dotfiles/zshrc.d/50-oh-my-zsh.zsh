@@ -1,5 +1,5 @@
 #
-# ~/.zsh/oh-my-zsh
+# ~/.zshrc.d/50-oh-my-zsh.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
@@ -69,16 +69,6 @@ PATH="${PATH}:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
 if [[ -f /usr/bin/src-hilite-lesspipe.sh ]]; then
     export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
     export LESS=' -R '
-fi
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
-else
-  export EDITOR='nano'
 fi
 
 # Compilation flags

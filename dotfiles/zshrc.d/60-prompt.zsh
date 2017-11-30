@@ -1,5 +1,5 @@
 #
-# ~/.zsh/prompt
+# ~/.zshrc.d/60-prompt.zsh
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
