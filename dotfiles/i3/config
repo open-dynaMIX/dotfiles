@@ -394,9 +394,6 @@ bar {
   workspace_buttons yes
   strip_workspace_numbers no
   tray_output primary
-  {%@@ if profile == "fuckup" @@%}
-  tray_padding 1
-  {%@@ endif @@%}
   bindsym button4 none
   bindsym button5 none
   colors {
