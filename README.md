@@ -2,10 +2,11 @@
 I manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
 
 # Packages
-A not exhaustive list of packages I use for my GUI systems:
+A not exhaustive list of things I use for my GUI systems:
  - [Ario](http://ario-player.sourceforge.net/)
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
  - [dmenu2](https://bitbucket.org/melek/dmenu2)
+ - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
  - [i3-py](https://github.com/ziberna/i3-py)
