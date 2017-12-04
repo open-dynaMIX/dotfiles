@@ -9,6 +9,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+ - [Guake](https://github.com/Guake/guake)
  - [i3-py](https://github.com/ziberna/i3-py)
  - [i3](https://github.com/i3/i3)
  - [i3lock](https://github.com/i3/i3lock)
@@ -27,10 +28,13 @@ A not exhaustive list of things I use for my GUI systems:
  - [viewnior](https://siyanpanayotov.com/project/viewnior/)
  - [vim](http://www.vim.org/)
  - [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
- - [Xorg](https://www.x.org/wiki/)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
  - [zsh](https://www.zsh.org/)
  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
  - [zsh-completions](https://github.com/zsh-users/zsh-completions)
  - [zsh-pure-prompt](https://github.com/sindresorhus/pure)
  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+``` shell
+pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git py3status raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+```
