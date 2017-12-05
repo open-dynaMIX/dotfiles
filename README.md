@@ -40,5 +40,3 @@ A not exhaustive list of things I use for my GUI systems:
 ``` shell
 pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git py3status raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
-
-BTW, I use Arch.

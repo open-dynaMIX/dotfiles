@@ -5,7 +5,13 @@
 
 # The following lines were added by compinstall
 
-zstyle ':completion:*' completer _complete _ignored _approximate
+# zstyle ':completion:*' completer _complete _ignored _approximate
+# zstyle :compinstall filename "$HOME/.zshrc"
+
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle -e ':completion:*:approximate:*' \
+        max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
 zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
