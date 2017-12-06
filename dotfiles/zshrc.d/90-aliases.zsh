@@ -5,6 +5,7 @@
 
 if [[ $EUID -ne 0 ]]; then
     alias sudo='sudo ' # needed for using aliases with sudo
+    alias please='sudo '
 fi
 alias ..='cd ..'
 alias amiinscreen='echo $STY'
