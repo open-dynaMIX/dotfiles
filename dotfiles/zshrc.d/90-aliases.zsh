@@ -16,7 +16,6 @@ alias dotdrop='eval $(cat ~/dotfiles/env.defaults ~/dotfiles/.env | grep -v "^#"
 alias fuck='sudo $(fc -ln -1)'
 alias gst='git status -u'
 alias home='cd ~/'
-alias less='less -iMW'
 alias ll='ls -la'
 alias ls='ls -h --color=auto --group-directories-first'
 alias mv='mv -i'

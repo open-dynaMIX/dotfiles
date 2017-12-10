@@ -65,12 +65,6 @@ PATH="${PATH}:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# enable syntax highlight in less
-if [[ -f /usr/bin/src-hilite-lesspipe.sh ]]; then
-    export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-    export LESS=' -R '
-fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

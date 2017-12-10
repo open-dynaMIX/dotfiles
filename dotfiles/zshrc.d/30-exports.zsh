@@ -11,7 +11,7 @@ if [ -f /usr/bin/screen ]; then
     export SYSSCREENRC=/etc/screenrc
 fi
 
-if [ -f $HOME/.pythonrc ]; then
+if [ -f "$HOME/.pythonrc" ]; then
     export PYTHONSTARTUP=$HOME/.pythonrc
 fi
 
@@ -20,3 +20,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
     export EDITOR='nano'
 fi
+
+export PAGER='less'
