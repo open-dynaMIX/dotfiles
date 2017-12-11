@@ -200,7 +200,7 @@ bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 bindsym $mod+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c Firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
-bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium -e 'i3-msg exec chromium'
+bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
 bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
 bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
