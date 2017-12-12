@@ -1,9 +1,11 @@
 # {{@@ env['dotdrop_warning'] @@}}
 
 [user]
-	email = {{@@ env['git_email'] @@}}
-	name = {{@@ env['git_name'] @@}}
+    email = {{@@ env['git_email'] @@}}
+    name = {{@@ env['git_name'] @@}}
 [color]
-	ui = true
+    ui = true
 [alias]
-	lfa = "!f() { git diff --name-status -r "HEAD~$1"; }; f"
+    lfa = "!f() { git diff --name-status -r "HEAD~$1"; }; f"
+    dad = "!curl https://icanhazdadjoke.com/ && git add"
+    ass = "!echo '(‿ˠ‿)' && git add"
