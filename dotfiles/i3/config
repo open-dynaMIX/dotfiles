@@ -111,6 +111,7 @@ set $ws_gimp 6:
 set $ws_ff 
 set $ws_pycharm 
 set $ws_subl 
+set $ws_qb 
 set $ws_mixxx MIXXX
 
 # switch to workspace
@@ -200,6 +201,9 @@ bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 bindsym $mod+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c Firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
+bindsym $mod+b exec --no-startup-id $raiseorlaunch -w $ws_qb -c qutebrowser
+bindsym $mod+Mod1+b exec --no-startup-id qutebrowser
+bindsym $mod+shift+b move container to workspace $ws_qb; workspace $ws_qb
 bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
 bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
@@ -334,7 +338,7 @@ for_window [class="Speedcrunch"] exec --no-startup-id transset-df -a 0.94
 for_window [class="I3exit" instance="i3exit"] exec --no-startup-id transset-df -a 0.9
 
 # Border toggle
-bindsym $mod+b border toggle
+bindsym $mod+' border toggle
 
 # force to workspace and (in some cases, if it works) directly focus new windows
 assign [class="Thunderbird"] $ws_mail
