@@ -15,6 +15,9 @@ dotfiles:
     - i3-restart
     dst: ~/.i3/
     src: i3/
+  d_qutebrowser:
+    dst: ~/.config/qutebrowser
+    src: config/qutebrowser
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
@@ -67,9 +70,6 @@ dotfiles:
   f_viewnior.conf:
     dst: ~/.config/viewnior/viewnior.conf
     src: config/viewnior/viewnior.conf
-  f_vimperatorrc:
-    dst: ~/.vimperatorrc
-    src: vimperatorrc
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
@@ -90,6 +90,7 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
+    - d_qutebrowser
     - d_syncit
     - d_zshrc.d
     - f_ario_profiles.xml
@@ -105,7 +106,6 @@ profiles:
     - f_radio.sh
     - f_screenrc
     - f_viewnior.conf
-    - f_vimperatorrc
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
@@ -125,6 +125,7 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
+    - d_qutebrowser
     - d_syncit
     - d_zshrc.d
     - f_ario_profiles.xml
@@ -141,7 +142,6 @@ profiles:
     - f_screenrc
     - f_syncit.desktop
     - f_viewnior.conf
-    - f_vimperatorrc
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
