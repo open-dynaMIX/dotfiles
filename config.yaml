@@ -67,6 +67,9 @@ dotfiles:
   f_syncit.desktop:
     dst: ~/.local/share/applications/syncit.desktop
     src: local/share/applications/syncit.desktop
+  f_tremc_settings.cfg:
+    dst: ~/.config/tremc/settings.cfg
+    src: config/tremc/settings.cfg
   f_viewnior.conf:
     dst: ~/.config/viewnior/viewnior.conf
     src: config/viewnior/viewnior.conf
@@ -105,6 +108,7 @@ profiles:
     - f_pythonrc
     - f_radio.sh
     - f_screenrc
+    - f_tremc_settings.cfg
     - f_viewnior.conf
     - f_vimrc
     - f_wrapper.sh
@@ -119,6 +123,7 @@ profiles:
     - f_pypirc
     - f_pythonrc
     - f_screenrc
+    - f_tremc_settings.cfg
     - f_vimrc
     - f_zshrc
   fuckup:
@@ -141,6 +146,7 @@ profiles:
     - f_radio.sh
     - f_screenrc
     - f_syncit.desktop
+    - f_tremc_settings.cfg
     - f_viewnior.conf
     - f_vimrc
     - f_wrapper.sh
