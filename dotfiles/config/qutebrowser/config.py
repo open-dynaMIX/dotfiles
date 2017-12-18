@@ -4,7 +4,8 @@
 ##   qute://help/configuring.html
 ##   qute://help/settings.html
 
-STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
+# STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
+STARTPAGE = 'qute://help/img/cheatsheet-big.png'
 
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
