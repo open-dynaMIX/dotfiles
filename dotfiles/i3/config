@@ -204,7 +204,7 @@ bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
 bindsym $mod+b exec --no-startup-id $raiseorlaunch -w $ws_qb -c qutebrowser
 bindsym $mod+Mod1+b exec --no-startup-id qutebrowser
 bindsym $mod+shift+b move container to workspace $ws_qb; workspace $ws_qb
-bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
+#bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
 bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
 bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
