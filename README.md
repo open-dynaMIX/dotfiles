@@ -18,7 +18,9 @@ A not exhaustive list of things I use for my GUI systems:
  - [libnotify](https://developer.gnome.org/libnotify/)
  - [MFixx](https://github.com/file-icons/MFixx) (edited version: moved all glyphs to private area in order to avoid conflicts with font-awesome. Plus some additional glyphs)
  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+ - [pdfjs](https://github.com/mozilla/pdf.js)
  - [py3status](https://github.com/ultrabug/py3status)
+ - [qutebrowser](https://github.com/qutebrowser/qutebrowser)
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
  - [screen](https://www.gnu.org/software/screen/)
  - [Scribes](http://scribes.sourceforge.net/)
@@ -38,5 +40,5 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git py3status raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs py3status qutebrowser raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```

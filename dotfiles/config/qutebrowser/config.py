@@ -1293,7 +1293,14 @@ c.url.default_page = STARTPAGE
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
-ENGINES = {}
+ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
+           'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
+           'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
+           'cc': 'https://www.dict.cc/?s={}',
+           'yt': 'https://www.youtube.com/results?search_query={}',
+           'w': 'http://en.wikipedia.org/wiki/{}',
+           'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}'}
+# Add some searchengines from dotdrop .env-file
 for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
     ENGINES[engine.split('&SPLIT&')[0]] = engine.split('&SPLIT&')[1]
 c.url.searchengines = ENGINES
