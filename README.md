@@ -31,6 +31,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [vim](http://www.vim.org/)
  - [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
+ - [youtube-dl](https://github.com/rg3/youtube-dl)
  - [zsh](https://www.zsh.org/)
  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
  - [zsh-completions](https://github.com/zsh-users/zsh-completions)
@@ -40,5 +41,5 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs py3status qutebrowser raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs py3status qutebrowser raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
