@@ -333,7 +333,7 @@ c.colors.statusbar.private.bg = 'red'
 ## Background color of unselected even tabs.
 ## Type: QtColor
 # c.colors.tabs.even.bg = 'darkgrey'
-c.colors.tabs.even.bg = '#4e4e4e'
+c.colors.tabs.even.bg = '#464646'
 
 ## Foreground color of unselected even tabs.
 ## Type: QtColor
@@ -362,6 +362,7 @@ c.colors.tabs.even.bg = '#4e4e4e'
 
 ## Background color of unselected odd tabs.
 ## Type: QtColor
+# c.colors.tabs.odd.bg = 'grey'
 c.colors.tabs.odd.bg = '#333333'
 
 ## Foreground color of unselected odd tabs.
