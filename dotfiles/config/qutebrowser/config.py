@@ -7,6 +7,9 @@
 STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
 # STARTPAGE = 'qute://help/img/cheatsheet-big.png'
 
+c = c
+config = config
+
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
 # config.load_autoconfig()
@@ -39,7 +42,6 @@ c.auto_save.session = True
 #   - webengine: Use QtWebEngine (based on Chromium)
 #   - webkit: Use QtWebKit (based on WebKit, similar to Safari)
 # c.backend = 'webengine'
-c.backend = 'webkit'
 
 ## This setting can be used to map keys to other keys. When the key used
 ## as dictionary-key is pressed, the binding for the key used as
@@ -160,7 +162,7 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## for transparency.
 ## Type: QssColor
 # c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(55, 11, 96, 0.8), stop:1 rgba(60, 12, 105, 0.8))'
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.9), stop:1 rgba(98, 22, 162, 0.9))'  # violet
 
 ## Font color for hints.
 ## Type: QssColor
@@ -369,6 +371,7 @@ c.colors.tabs.odd.bg = '#333333'
 ## Background color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.bg = 'black'
+c.colors.tabs.selected.even.bg = '#470f77'  # violet
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
@@ -377,6 +380,7 @@ c.colors.tabs.odd.bg = '#333333'
 ## Background color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.odd.bg = '#470f77'  # violet
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
@@ -489,7 +493,7 @@ c.content.default_encoding = 'utf-8'
 # `qutebrowser --help` instead.
 # Type: Bool
 # c.content.developer_extras = False
-c.content.developer_extras = True
+# c.content.developer_extras = True
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
@@ -640,7 +644,7 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ## viewer.
 ## Type: Bool
 # c.content.pdfjs = False
-c.content.pdfjs = True
+# c.content.pdfjs = True
 
 ## Enables or disables plugins in Web pages.
 ## Type: Bool
@@ -1128,6 +1132,7 @@ c.prompt.radius = 0
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
 # c.tabs.background = False
+c.tabs.background = True
 
 ## On which mouse button to close tabs.
 ## Type: String
@@ -1203,7 +1208,7 @@ c.tabs.last_close = 'startpage'
 ##   - next: Select the tab which came after the closed one (right in horizontal, below in vertical).
 ##   - last-used: Select the previously selected tab.
 # c.tabs.select_on_remove = 'next'
-c.tabs.select_on_remove = 'last-used'
+c.tabs.select_on_remove = 'prev'
 
 ## When to show the tab bar.
 ## Type: String

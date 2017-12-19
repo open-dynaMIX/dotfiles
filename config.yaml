@@ -58,6 +58,9 @@ dotfiles:
   f_pythonrc:
     dst: ~/.pythonrc
     src: pythonrc
+  f_qutebrowser.desktop:
+    dst: ~/.local/share/applications/qutebrowser.desktop
+    src: local/share/applications/qutebrowser.desktop
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
@@ -106,6 +109,7 @@ profiles:
     - f_mfixx_custom.ttf
     - f_pypirc
     - f_pythonrc
+    - f_qutebrowser.desktop
     - f_radio.sh
     - f_screenrc
     - f_tremc_settings.cfg
@@ -143,6 +147,7 @@ profiles:
     - f_mfixx_custom.ttf
     - f_pypirc
     - f_pythonrc
+    - f_qutebrowser.desktop
     - f_radio.sh
     - f_screenrc
     - f_syncit.desktop
