@@ -516,11 +516,11 @@ c.content.default_encoding = 'utf-8'
 ## Value to send in the `Accept-Language` header.
 ## Type: String
 # c.content.headers.accept_language = 'en-US,en'
+c.content.headers.accept_language = 'en-US,en;q=0.5'
 
 ## Set custom headers for qutebrowser HTTP requests.
 ## Type: Dict
 # c.content.headers.custom = {}
-c.content.headers.custom = {"accept": "text/html, */*; q=0.01"}
 
 ## Value to send in the `DNT` header. When this is set to true,
 ## qutebrowser asks websites to not track your identity. If set to null,
@@ -541,7 +541,6 @@ c.content.headers.custom = {"accept": "text/html, */*; q=0.01"}
 ## Type: String
 # c.content.headers.user_agent = None
 c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
-c.content.headers.accept_language = 'en-US,en;q=0.5'
 
 ## Whether host blocking is enabled.
 ## Type: Bool
@@ -1209,7 +1208,6 @@ c.tabs.last_close = 'startpage'
 ##   - next: Select the tab which came after the closed one (right in horizontal, below in vertical).
 ##   - last-used: Select the previously selected tab.
 # c.tabs.select_on_remove = 'next'
-c.tabs.select_on_remove = 'prev'
 
 ## When to show the tab bar.
 ## Type: String
@@ -1307,7 +1305,7 @@ ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
            'yt': 'https://www.youtube.com/results?search_query={}',
-           'w': 'http://en.wikipedia.org/wiki/{}',
+           'w': 'https://en.wikipedia.org/wiki/{}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}'}
 # Add some searchengines from dotdrop .env-file
 for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
@@ -1450,6 +1448,8 @@ config.bind('t', 'set-cmd-text -s :open -t')
 # config.bind(']]', 'navigate next')
 config.bind('ä', 'back')
 config.bind('$', 'forward')
+config.bind('à', 'tab-prev')
+config.bind('£', 'tab-next')
 # config.bind('`', 'enter-mode set_mark')
 # config.bind('ad', 'download-cancel')
 # config.bind('b', 'set-cmd-text -s :quickmark-load')
