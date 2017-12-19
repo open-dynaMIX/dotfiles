@@ -6,6 +6,7 @@
 
 STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
 # STARTPAGE = 'qute://help/img/cheatsheet-big.png'
+VIOLET = '#470f77'
 
 c = c
 config = config
@@ -55,6 +56,8 @@ c.auto_save.session = True
 ## Background color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
+# c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #000000, stop:1 #000000)'
+c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {0}, stop:1 {0})'.format(VIOLET)
 
 ## Bottom border color of the completion widget category headers.
 ## Type: QssColor
@@ -162,7 +165,7 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## for transparency.
 ## Type: QssColor
 # c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.9), stop:1 rgba(98, 22, 162, 0.9))'  # violet
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.8), stop:1 rgba(98, 22, 162, 0.8))'  # violet
 
 ## Font color for hints.
 ## Type: QssColor
@@ -372,7 +375,7 @@ c.colors.tabs.odd.bg = '#333333'
 ## Background color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.bg = 'black'
-c.colors.tabs.selected.even.bg = '#470f77'  # violet
+c.colors.tabs.selected.even.bg = VIOLET
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
@@ -381,7 +384,7 @@ c.colors.tabs.selected.even.bg = '#470f77'  # violet
 ## Background color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.bg = 'black'
-c.colors.tabs.selected.odd.bg = '#470f77'  # violet
+c.colors.tabs.selected.odd.bg = VIOLET
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
@@ -1305,9 +1308,11 @@ ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
            'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
-           'yt': 'https://www.youtube.com/results?search_query={}',
+           'ddg': 'https://start.duckduckgo.com/?q={}&kae=d&kak=-1&kal=-1&kao=-1&kaq=-1&kl=ch-de&kp=-2&k1=-1&kk=-1&kaj=m&kam=osm&kax=-1&kap=-1&ia=web',
+           'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
            'w': 'https://en.wikipedia.org/wiki/{}',
-           'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}'}
+           'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
+           'yt': 'https://www.youtube.com/results?search_query={}'}
 # Add some searchengines from dotdrop .env-file
 for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
     if engine:
