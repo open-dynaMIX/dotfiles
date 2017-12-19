@@ -10,6 +10,10 @@ dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
     src: themes/My_Fancy_Theme/
+  d_guake:
+    dst: ~/.config/gconf/apps/guake
+    link: true
+    src: config/gconf/apps/guake
   d_i3:
     actions:
     - i3-restart
@@ -96,6 +100,7 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
+    - d_guake
     - d_qutebrowser
     - d_syncit
     - d_zshrc.d
@@ -134,6 +139,7 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
+    - d_guake
     - d_qutebrowser
     - d_syncit
     - d_zshrc.d

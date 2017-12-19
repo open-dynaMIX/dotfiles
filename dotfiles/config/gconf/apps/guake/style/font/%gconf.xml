@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="allow_bold" mtime="1513716044" type="bool" value="true"/>
+	<entry name="style" mtime="1432038787" type="string">
+		<stringvalue>Monospace 12</stringvalue>
+	</entry>
+	<entry name="palette_name" mtime="1513715271" type="string">
+		<stringvalue>Custom</stringvalue>
+	</entry>
+	<entry name="palette" mtime="1513715271" type="string">
+		<stringvalue>#000000000000:#dcdc32322f2f:#5656dbdb3a3a:#ffff84840000:#00008484d4d4:#b7b72929d9d9:#ccccccccffff:#ffffffffffff:#694a694a694a:#dcdc32322f2f:#5656dbdb3a3a:#ffff84840000:#00008484d4d4:#b7b72929d9d9:#ccccccccffff:#ffffffffffff:#ffffffffffff:#000000000000</stringvalue>
+	</entry>
+</gconf>

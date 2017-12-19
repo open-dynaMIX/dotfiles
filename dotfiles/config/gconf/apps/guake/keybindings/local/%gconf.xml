@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="move_tab_right" mtime="1432730736" type="string">
+		<stringvalue>disabled</stringvalue>
+	</entry>
+	<entry name="previous_tab" mtime="1432730690" type="string">
+		<stringvalue>&lt;Primary&gt;Page_Up</stringvalue>
+	</entry>
+	<entry name="next_tab" mtime="1432730741" type="string">
+		<stringvalue>&lt;Primary&gt;Page_Down</stringvalue>
+	</entry>
+</gconf>
