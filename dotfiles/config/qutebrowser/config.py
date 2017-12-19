@@ -4,8 +4,8 @@
 ##   qute://help/configuring.html
 ##   qute://help/settings.html
 
-# STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
-STARTPAGE = 'qute://help/img/cheatsheet-big.png'
+STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
+# STARTPAGE = 'qute://help/img/cheatsheet-big.png'
 
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
@@ -1305,7 +1305,8 @@ ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}'}
 # Add some searchengines from dotdrop .env-file
 for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
-    ENGINES[engine.split('&SPLIT&')[0]] = engine.split('&SPLIT&')[1]
+    if engine:
+        ENGINES[engine.split('&SPLIT&')[0]] = engine.split('&SPLIT&')[1]
 c.url.searchengines = ENGINES
 
 ## The page(s) to open at the start.
