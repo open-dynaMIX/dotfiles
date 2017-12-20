@@ -4,7 +4,7 @@ XTerm*allowBoldFonts:       true
 xterm*borderWidth:          0
 XTerm*cursorBlink:          true
 xterm*dynamicColors:        true
-xterm*faceName:             monospace
+xterm*faceName:             DejaVu Mono
 XTerm*faceSize:             12
 xterm*font:                 *-fixed-*-*-*-10-*
 XTerm*locale:               true
