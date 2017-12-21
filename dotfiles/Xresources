@@ -8,7 +8,7 @@ xterm*faceName:             DejaVu Mono
 XTerm*faceSize:             11
 xterm*font:                 *-fixed-*-*-*-11-*
 XTerm*locale:               true
-XTerm*reverseVideo:         on
+XTerm*reverseVideo:         off
 xterm*rightScrollBar:       true
 Xterm*saveLines:            10000000
 xterm*scrollBar:            false
@@ -23,3 +23,40 @@ XTerm.vt100.metaSendsEscape: true
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
+
+! special
+xterm*.foreground:   #ffffff
+xterm*.background:   #000000
+xterm*.cursorColor:  #ffffff
+
+! black
+xterm*.color0:       #000000
+xterm*.color8:       #828282
+
+! red
+xterm*.color1:       #dc322f
+xterm*.color9:       #dc322f
+
+! green
+xterm*.color2:       #56db3a
+xterm*.color10:      #56db3a
+
+! yellow
+xterm*.color3:       #ff8400
+xterm*.color11:      #ff8400
+
+! blue
+xterm*.color4:       #0084d4
+xterm*.color12:      #0084d4
+
+! magenta
+xterm*.color5:       #b729d9
+xterm*.color13:      #b729d9
+
+! cyan
+xterm*.color6:       #ccccff
+xterm*.color14:      #ccccff
+
+! white
+xterm*.color7:       #ffffff
+xterm*.color15:      #ffffff

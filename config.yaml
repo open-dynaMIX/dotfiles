@@ -42,9 +42,6 @@ dotfiles:
     - dunst-restart
     dst: ~/.config/dunst/dunstrc
     src: config/dunst/dunstrc
-  f_export_guake:
-    dst: ~/scripts/export-guake.sh
-    src: scripts/export-guake.sh
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
@@ -115,7 +112,6 @@ profiles:
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc
-    - f_export_guake
     - f_gitconfig
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
@@ -155,7 +151,6 @@ profiles:
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
     - f_dunstrc
-    - f_export_guake
     - f_gitconfig
     - f_gtk3_settings.ini
     - f_hedgewars.desktop
