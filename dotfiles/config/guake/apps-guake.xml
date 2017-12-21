@@ -183,7 +183,7 @@
       <key>general/use_default_font</key>
       <schema_key>/schemas/apps/guake/general/use_default_font</schema_key>
       <value>
-        <bool>true</bool>
+        <bool>false</bool>
       </value>
     </entry>
     <entry>
@@ -615,7 +615,7 @@
       <key>style/font/style</key>
       <schema_key>/schemas/apps/guake/style/font/style</schema_key>
       <value>
-        <string>DejaVu Sans Mono 11</string>
+        <string>DejaVu Sans Mono 12</string>
       </value>
     </entry>
   </entrylist>

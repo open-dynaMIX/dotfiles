@@ -305,10 +305,12 @@ c.colors.hints.match.fg = '#b97ff0'
 ## Background color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.bg = 'darkorange'
+c.colors.messages.warning.bg = VIOLET
 
 ## Border color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.border = '#d47300'
+c.colors.messages.warning.border = VIOLET
 
 ## Foreground color a warning message.
 ## Type: QssColor
