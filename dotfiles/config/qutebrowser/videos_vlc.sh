@@ -1,5 +1,5 @@
 #!/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# This file is managed by dotdrop, only edit it in your dotdrop files!
 # If this is executed directly from within qutebrowser with spawn,
 # the browser crashes.
 

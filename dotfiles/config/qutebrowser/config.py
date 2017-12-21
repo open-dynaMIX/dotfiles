@@ -4,12 +4,19 @@
 ##   qute://help/configuring.html
 ##   qute://help/settings.html
 
-STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/newtab.html'
+
+STARTPAGE = 'file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/home.html'
 # STARTPAGE = 'qute://help/img/cheatsheet-big.png'
-VIOLET = '#470f77'
 
 c = c
 config = config
+
+config.source('adblocking.py')
+config.source('fonts.py')
+config.source('hints.py')
+config.source('key_bindings.py')
+config.source('search_engines.py')
+config.source('theme.py')
 
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
@@ -44,378 +51,15 @@ c.auto_save.session = True
 #   - webkit: Use QtWebKit (based on WebKit, similar to Safari)
 # c.backend = 'webengine'
 
-## This setting can be used to map keys to other keys. When the key used
-## as dictionary-key is pressed, the binding for the key used as
-## dictionary-value is invoked instead. This is useful for global
-## remappings of keys, for example to map Ctrl-[ to Escape. Note that
-## when a key is bound (via `bindings.default` or `bindings.commands`),
-## the mapping is ignored.
-## Type: Dict
-# c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
-
-## Background color of the completion widget category headers.
-## Type: QssColor
-# c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
-# c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #000000, stop:1 #000000)'
-c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {0}, stop:1 {0})'.format(VIOLET)
-
-## Bottom border color of the completion widget category headers.
-## Type: QssColor
-# c.colors.completion.category.border.bottom = 'black'
-
-## Top border color of the completion widget category headers.
-## Type: QssColor
-# c.colors.completion.category.border.top = 'black'
-
-## Foreground color of completion widget category headers.
-## Type: QtColor
-# c.colors.completion.category.fg = 'white'
-
-## Background color of the completion widget for even rows.
-## Type: QssColor
-# c.colors.completion.even.bg = '#333333'
-
-## Text color of the completion widget.
-## Type: QtColor
-# c.colors.completion.fg = 'white'
-
-## Background color of the selected completion item.
-## Type: QssColor
-# c.colors.completion.item.selected.bg = '#e8c000'
-c.colors.completion.item.selected.bg = '#000000'
-
-## Bottom border color of the selected completion item.
-## Type: QssColor
-# c.colors.completion.item.selected.border.bottom = '#bbbb00'
-c.colors.completion.item.selected.border.bottom = '#000000'
-
-## Top border color of the completion widget category headers.
-## Type: QssColor
-# c.colors.completion.item.selected.border.top = '#bbbb00'
-c.colors.completion.item.selected.border.top = '#000000'
-
-## Foreground color of the selected completion item.
-## Type: QtColor
-# c.colors.completion.item.selected.fg = 'black'
-c.colors.completion.item.selected.fg = '#ffffff'
-
-## Foreground color of the matched text in the completion.
-## Type: QssColor
-# c.colors.completion.match.fg = '#ff4444'
-
-## Background color of the completion widget for odd rows.
-## Type: QssColor
-# c.colors.completion.odd.bg = '#444444'
-
-## Color of the scrollbar in completion view
-## Type: QssColor
-# c.colors.completion.scrollbar.bg = '#333333'
-
-## Color of the scrollbar handle in completion view.
-## Type: QssColor
-# c.colors.completion.scrollbar.fg = 'white'
-
-## Background color for the download bar.
-## Type: QssColor
-# c.colors.downloads.bar.bg = 'black'
-
-## Background color for downloads with errors.
-## Type: QtColor
-# c.colors.downloads.error.bg = 'red'
-
-## Foreground color for downloads with errors.
-## Type: QtColor
-# c.colors.downloads.error.fg = 'white'
-
-## Color gradient start for download backgrounds.
-## Type: QtColor
-# c.colors.downloads.start.bg = '#0000aa'
-
-## Color gradient start for download text.
-## Type: QtColor
-# c.colors.downloads.start.fg = 'white'
-
-## Color gradient stop for download backgrounds.
-## Type: QtColor
-# c.colors.downloads.stop.bg = '#00aa00'
-
-## Color gradient end for download text.
-## Type: QtColor
-# c.colors.downloads.stop.fg = 'white'
-
-## Color gradient interpolation system for download backgrounds.
-## Type: ColorSystem
-## Valid values:
-##   - rgb: Interpolate in the RGB color system.
-##   - hsv: Interpolate in the HSV color system.
-##   - hsl: Interpolate in the HSL color system.
-##   - none: Don't show a gradient.
-# c.colors.downloads.system.bg = 'rgb'
-
-## Color gradient interpolation system for download text.
-## Type: ColorSystem
-## Valid values:
-##   - rgb: Interpolate in the RGB color system.
-##   - hsv: Interpolate in the HSV color system.
-##   - hsl: Interpolate in the HSL color system.
-##   - none: Don't show a gradient.
-# c.colors.downloads.system.fg = 'rgb'
-
-## Background color for hints. Note that you can use a `rgba(...)` value
-## for transparency.
-## Type: QssColor
-# c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.8), stop:1 rgba(98, 22, 162, 0.8))'  # violet
-
-## Font color for hints.
-## Type: QssColor
-# c.colors.hints.fg = 'black'
-c.colors.hints.fg = '#ffffff'
-
-## Font color for the matched part of hints.
-## Type: QssColor
-# c.colors.hints.match.fg = 'green'
-c.colors.hints.match.fg = '#b97ff0'
-
-## Background color of the keyhint widget.
-## Type: QssColor
-# c.colors.keyhint.bg = 'rgba(0, 0, 0, 80%)'
-
-## Text color for the keyhint widget.
-## Type: QssColor
-# c.colors.keyhint.fg = '#FFFFFF'
-
-## Highlight color for keys to complete the current keychain.
-## Type: QssColor
-# c.colors.keyhint.suffix.fg = '#FFFF00'
-
-## Background color of an error message.
-## Type: QssColor
-# c.colors.messages.error.bg = 'red'
-
-## Border color of an error message.
-## Type: QssColor
-# c.colors.messages.error.border = '#bb0000'
-
-## Foreground color of an error message.
-## Type: QssColor
-# c.colors.messages.error.fg = 'white'
-
-## Background color of an info message.
-## Type: QssColor
-# c.colors.messages.info.bg = 'black'
-
-## Border color of an info message.
-## Type: QssColor
-# c.colors.messages.info.border = '#333333'
-
-## Foreground color an info message.
-## Type: QssColor
-# c.colors.messages.info.fg = 'white'
-
-## Background color of a warning message.
-## Type: QssColor
-# c.colors.messages.warning.bg = 'darkorange'
-
-## Border color of a warning message.
-## Type: QssColor
-# c.colors.messages.warning.border = '#d47300'
-
-## Foreground color a warning message.
-## Type: QssColor
-# c.colors.messages.warning.fg = 'white'
-
-## Background color for prompts.
-## Type: QssColor
-# c.colors.prompts.bg = '#444444'
-
-## Border used around UI elements in prompts.
-## Type: String
-# c.colors.prompts.border = '1px solid gray'
-
-## Foreground color for prompts.
-## Type: QssColor
-# c.colors.prompts.fg = 'white'
-
-## Background color for the selected item in filename prompts.
-## Type: QssColor
-# c.colors.prompts.selected.bg = 'grey'
-
-## Background color of the statusbar in caret mode.
-## Type: QssColor
-# c.colors.statusbar.caret.bg = 'purple'
-
-## Foreground color of the statusbar in caret mode.
-## Type: QssColor
-# c.colors.statusbar.caret.fg = 'white'
-
-## Background color of the statusbar in caret mode with a selection.
-## Type: QssColor
-# c.colors.statusbar.caret.selection.bg = '#a12dff'
-
-## Foreground color of the statusbar in caret mode with a selection.
-## Type: QssColor
-# c.colors.statusbar.caret.selection.fg = 'white'
-
-## Background color of the statusbar in command mode.
-## Type: QssColor
-# c.colors.statusbar.command.bg = 'black'
-
-## Foreground color of the statusbar in command mode.
-## Type: QssColor
-# c.colors.statusbar.command.fg = 'white'
-
-## Background color of the statusbar in private browsing + command mode.
-## Type: QssColor
-# c.colors.statusbar.command.private.bg = 'grey'
-c.colors.statusbar.command.private.bg = 'red'
-
-## Foreground color of the statusbar in private browsing + command mode.
-## Type: QssColor
-# c.colors.statusbar.command.private.fg = 'white'
-
-## Background color of the statusbar in insert mode.
-## Type: QssColor
-# c.colors.statusbar.insert.bg = 'darkgreen'
-
-## Foreground color of the statusbar in insert mode.
-## Type: QssColor
-# c.colors.statusbar.insert.fg = 'white'
-
-## Background color of the statusbar.
-## Type: QssColor
-# c.colors.statusbar.normal.bg = 'black'
-
-## Foreground color of the statusbar.
-## Type: QssColor
-# c.colors.statusbar.normal.fg = 'white'
-
-## Background color of the statusbar in private browsing mode.
-## Type: QssColor
-# c.colors.statusbar.private.bg = '#666666'
-c.colors.statusbar.private.bg = 'red'
-
-## Foreground color of the statusbar in private browsing mode.
-## Type: QssColor
-# c.colors.statusbar.private.fg = 'white'
-
-## Background color of the progress bar.
-## Type: QssColor
-# c.colors.statusbar.progress.bg = 'white'
-
-## Foreground color of the URL in the statusbar on error.
-## Type: QssColor
-# c.colors.statusbar.url.error.fg = 'orange'
-
-## Default foreground color of the URL in the statusbar.
-## Type: QssColor
-# c.colors.statusbar.url.fg = 'white'
-
-## Foreground color of the URL in the statusbar for hovered links.
-## Type: QssColor
-# c.colors.statusbar.url.hover.fg = 'aqua'
-
-## Foreground color of the URL in the statusbar on successful load
-## (http).
-## Type: QssColor
-# c.colors.statusbar.url.success.http.fg = 'white'
-
-## Foreground color of the URL in the statusbar on successful load
-## (https).
-## Type: QssColor
-# c.colors.statusbar.url.success.https.fg = 'lime'
-
-## Foreground color of the URL in the statusbar when there's a warning.
-## Type: QssColor
-# c.colors.statusbar.url.warn.fg = 'yellow'
-
-## Background color of the tab bar.
-## Type: QtColor
-# c.colors.tabs.bar.bg = '#555555'
-
-## Background color of unselected even tabs.
-## Type: QtColor
-# c.colors.tabs.even.bg = 'darkgrey'
-c.colors.tabs.even.bg = '#464646'
-
-## Foreground color of unselected even tabs.
-## Type: QtColor
-# c.colors.tabs.even.fg = 'white'
-
-## Color for the tab indicator on errors.
-## Type: QtColor
-# c.colors.tabs.indicator.error = '#ff0000'
-
-## Color gradient start for the tab indicator.
-## Type: QtColor
-# c.colors.tabs.indicator.start = '#0000aa'
-
-## Color gradient end for the tab indicator.
-## Type: QtColor
-# c.colors.tabs.indicator.stop = '#00aa00'
-
-## Color gradient interpolation system for the tab indicator.
-## Type: ColorSystem
-## Valid values:
-##   - rgb: Interpolate in the RGB color system.
-##   - hsv: Interpolate in the HSV color system.
-##   - hsl: Interpolate in the HSL color system.
-##   - none: Don't show a gradient.
-# c.colors.tabs.indicator.system = 'rgb'
-
-## Background color of unselected odd tabs.
-## Type: QtColor
-# c.colors.tabs.odd.bg = 'grey'
-c.colors.tabs.odd.bg = '#333333'
-
-## Foreground color of unselected odd tabs.
-## Type: QtColor
-# c.colors.tabs.odd.fg = 'white'
-
-## Background color of selected even tabs.
-## Type: QtColor
-# c.colors.tabs.selected.even.bg = 'black'
-c.colors.tabs.selected.even.bg = VIOLET
-
-## Foreground color of selected even tabs.
-## Type: QtColor
-# c.colors.tabs.selected.even.fg = 'white'
-
-## Background color of selected odd tabs.
-## Type: QtColor
-# c.colors.tabs.selected.odd.bg = 'black'
-c.colors.tabs.selected.odd.bg = VIOLET
-
-## Foreground color of selected odd tabs.
-## Type: QtColor
-# c.colors.tabs.selected.odd.fg = 'white'
-
-## Background color for webpages if unset (or empty to use the theme's
-## color)
-## Type: QtColor
-# c.colors.webpage.bg = 'white'
-
 ## How many commands to save in the command history. 0: no history / -1:
 ## unlimited
 ## Type: Int
 # c.completion.cmd_history_max_items = 100
 
-## The height of the completion, in px or as percentage of the window.
-## Type: PercOrInt
-# c.completion.height = '50%'
-
 ## Move on to the next part when there's only one possible completion
 ## left.
 ## Type: Bool
 # c.completion.quick = True
-
-## Padding of scrollbar handle in the completion window (in px).
-## Type: Int
-# c.completion.scrollbar.padding = 2
-
-## Width of the scrollbar in the completion window (in px).
-## Type: Int
-# c.completion.scrollbar.width = 12
 
 ## When to show the autocompletion window.
 ## Type: String
@@ -424,11 +68,6 @@ c.colors.tabs.selected.odd.bg = VIOLET
 ##   - auto: Whenever a completion is requested.
 ##   - never: Never.
 # c.completion.show = 'always'
-
-## Shrink the completion to be smaller than the configured size if there
-## are no scrollbars.
-## Type: Bool
-# c.completion.shrink = False
 
 ## How to format timestamps (e.g. for the history completion).
 ## Type: TimestampTemplate
@@ -548,21 +187,6 @@ c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/2
 ## Whether host blocking is enabled.
 ## Type: Bool
 # c.content.host_blocking.enabled = True
-
-## List of URLs of lists which contain hosts to block.  The file can be
-## in one of the following formats:  - An `/etc/hosts`-like file - One
-## host per line - A zip-file of any of the above, with either only one
-## file, or a file named   `hosts` (with any extension).
-## Type: List of Url
-# c.content.host_blocking.lists = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext']
-c.content.host_blocking.lists = ['file:///home/{{@@ env["USER"] @@}}/.config/qutebrowser/blocked_hosts', 'https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext']
-
-## List of domains that should always be loaded, despite being ad-
-## blocked. Domains may contain * and ? wildcards and are otherwise
-## required to exactly match the requested domain. Local domains are
-## always exempt from hostblocking.
-## Type: List of String
-# c.content.host_blocking.whitelist = ['piwik.org']
 
 ## Enable or disable hyperlink auditing (`<a ping>`).
 ## Type: Bool
@@ -750,180 +374,6 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Encoding
 # c.editor.encoding = 'utf-8'
 
-# Font used in the completion categories.
-# Type: Font
-# c.fonts.completion.category = 'bold 8pt monospace'
-c.fonts.completion.category = 'bold 12pt monospace'
-
-# Font used in the completion widget.
-# Type: Font
-# c.fonts.completion.entry = '8pt monospace'
-c.fonts.completion.entry = '12pt monospace'
-
-# Font used for the debugging console.
-# Type: QtFont
-# c.fonts.debug_console = '8pt monospace'
-c.fonts.debug_console = '12pt monospace'
-
-# Font used for the downloadbar.
-# Type: Font
-# c.fonts.downloads = '8pt monospace'
-c.fonts.downloads = '12pt monospace'
-
-## Font used for the hints.
-## Type: Font
-# c.fonts.hints = 'bold 10pt monospace'
-
-# Font used in the keyhint widget.
-# Type: Font
-# c.fonts.keyhint = '8pt monospace'
-c.fonts.keyhint = '12pt monospace'
-
-# Font used for error messages.
-# Type: Font
-# c.fonts.messages.error = '8pt monospace'
-c.fonts.messages.error = '12pt monospace'
-
-# Font used for info messages.
-# Type: Font
-# c.fonts.messages.info = '8pt monospace'
-c.fonts.messages.info = '12pt monospace'
-
-# Font used for warning messages.
-# Type: Font
-# c.fonts.messages.warning = '8pt monospace'
-c.fonts.messages.warning = '12pt monospace'
-
-# Default monospace fonts. Whenever "monospace" is used in a font
-# setting, it's replaced with the fonts listed here.
-# Type: Font
-# c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
-c.fonts.monospace = '"Droid Sans Mono", "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
-
-# Font used for prompts.
-# Type: Font
-# c.fonts.prompts = '8pt sans-serif'
-c.fonts.prompts = '12pt sans-serif'
-
-# Font used in the statusbar.
-# Type: Font
-# c.fonts.statusbar = '8pt monospace'
-c.fonts.statusbar = '12pt monospace'
-
-# Font used in the tab bar.
-# Type: QtFont
-# c.fonts.tabs = '8pt monospace'
-c.fonts.tabs = '12pt monospace'
-
-## Font family for cursive fonts.
-## Type: FontFamily
-# c.fonts.web.family.cursive = ''
-
-## Font family for fantasy fonts.
-## Type: FontFamily
-# c.fonts.web.family.fantasy = ''
-
-## Font family for fixed fonts.
-## Type: FontFamily
-# c.fonts.web.family.fixed = ''
-
-## Font family for sans-serif fonts.
-## Type: FontFamily
-# c.fonts.web.family.sans_serif = ''
-
-## Font family for serif fonts.
-## Type: FontFamily
-# c.fonts.web.family.serif = ''
-
-## Font family for standard fonts.
-## Type: FontFamily
-# c.fonts.web.family.standard = ''
-
-## The default font size for regular text.
-## Type: Int
-# c.fonts.web.size.default = 16
-
-## The default font size for fixed-pitch text.
-## Type: Int
-# c.fonts.web.size.default_fixed = 13
-
-## The hard minimum font size.
-## Type: Int
-# c.fonts.web.size.minimum = 0
-
-## The minimum logical font size that is applied when zooming out.
-## Type: Int
-# c.fonts.web.size.minimum_logical = 6
-
-## Controls when a hint can be automatically followed without pressing
-## Enter.
-## Type: String
-## Valid values:
-##   - always: Auto-follow whenever there is only a single hint on a page.
-##   - unique-match: Auto-follow whenever there is a unique non-empty match in either the hint string (word mode) or filter (number mode).
-##   - full-match: Follow the hint when the user typed the whole hint (letter, word or number mode) or the element's text (only in number mode).
-##   - never: The user will always need to press Enter to follow a hint.
-# c.hints.auto_follow = 'unique-match'
-
-## A timeout (in milliseconds) to ignore normal-mode key bindings after a
-## successful auto-follow.
-## Type: Int
-# c.hints.auto_follow_timeout = 0
-
-## CSS border value for hints.
-## Type: String
-# c.hints.border = '1px solid #E3BE23'
-c.hints.border = '1px solid #ffffff'
-
-## Chars used for hint strings.
-## Type: UniqueCharString
-# c.hints.chars = 'asdfghjkl'
-c.hints.chars = 'werasdfyxc'
-
-## The dictionary file to be used by the word hints.
-## Type: File
-# c.hints.dictionary = '/usr/share/dict/words'
-
-## Which implementation to use to find elements to hint.
-## Type: String
-## Valid values:
-##   - javascript: Better but slower
-##   - python: Slightly worse but faster
-# c.hints.find_implementation = 'python'
-
-## Hide unmatched hints in rapid mode.
-## Type: Bool
-# c.hints.hide_unmatched_rapid_hints = True
-
-## Minimum number of chars used for hint strings.
-## Type: Int
-# c.hints.min_chars = 1
-
-## Mode to use for hints.
-## Type: String
-## Valid values:
-##   - number: Use numeric hints. (In this mode you can also type letters from the hinted element to filter and reduce the number of elements that are hinted.)
-##   - letter: Use the chars in the `hints.chars` setting.
-##   - word: Use hints words based on the html elements and the extra words.
-# c.hints.mode = 'letter'
-
-## A comma-separated list of regexes to use for 'next' links.
-## Type: List of Regex
-# c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
-
-## A comma-separated list of regexes to use for 'prev' links.
-## Type: List of Regex
-# c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
-
-## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for
-## number hints.
-## Type: Bool
-# c.hints.scatter = True
-
-## Make chars in hint strings uppercase.
-## Type: Bool
-# c.hints.uppercase = False
-
 ## The maximum time in minutes between two history items for them to be
 ## considered being from the same browsing session. Items with less time
 ## between them are grouped when being displayed in `:history`. Use -1 to
@@ -1031,11 +481,6 @@ c.messages.timeout = 5000
 ## Type: Bool
 # c.prompt.filebrowser = True
 
-## The rounding radius for the edges of prompts.
-## Type: Int
-# c.prompt.radius = 8
-c.prompt.radius = 0
-
 ## Additional arguments to pass to Qt, without leading `--`. With
 ## QtWebEngine, some Chromium arguments (see
 ## https://peter.sh/experiments/chromium-command-line-switches/ for a
@@ -1054,10 +499,6 @@ c.prompt.radius = 0
 ## restart.
 ## Type: Bool
 # c.qt.force_software_rendering = False
-
-## Show a scrollbar.
-## Type: Bool
-# c.scrolling.bar = False
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
@@ -1118,21 +559,6 @@ c.prompt.radius = 0
 ##   - vi-VN: Vietnamese (Viet Nam)
 # c.spellcheck.languages = []
 
-## Hide the statusbar unless a message is shown.
-## Type: Bool
-# c.statusbar.hide = False
-
-## Padding for the statusbar.
-## Type: Padding
-# c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
-
-## The position of the status bar.
-## Type: VerticalPosition
-## Valid values:
-##   - top
-##   - bottom
-# c.statusbar.position = 'bottom'
-
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
 # c.tabs.background = False
@@ -1145,19 +571,6 @@ c.tabs.background = True
 ##   - middle: Close tabs on middle-click.
 ##   - none: Don't close tabs using the mouse.
 # c.tabs.close_mouse_button = 'middle'
-
-## Scaling for favicons in the tab bar. The tab size is unchanged, so big
-## favicons also require extra `tabs.padding`.
-## Type: Float
-# c.tabs.favicons.scale = 1.0
-
-## Show favicons in the tab bar.
-## Type: Bool
-# c.tabs.favicons.show = True
-
-## Padding for tab indicators
-## Type: Padding
-# c.tabs.indicator_padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 
 ## Behavior when the last tab is closed.
 ## Type: String
@@ -1192,19 +605,6 @@ c.tabs.last_close = 'startpage'
 ##   - last: At the end.
 # c.tabs.new_position.unrelated = 'last'
 
-## Padding around text for tabs
-## Type: Padding
-# c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
-
-## The position of the tab bar.
-## Type: Position
-## Valid values:
-##   - top
-##   - bottom
-##   - left
-##   - right
-# c.tabs.position = 'top'
-
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
 ## Valid values:
@@ -1213,58 +613,9 @@ c.tabs.last_close = 'startpage'
 ##   - last-used: Select the previously selected tab.
 # c.tabs.select_on_remove = 'next'
 
-## When to show the tab bar.
-## Type: String
-## Valid values:
-##   - always: Always show the tab bar.
-##   - never: Always hide the tab bar.
-##   - multiple: Hide the tab bar if only one tab is open.
-##   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'always'
-
-## Time to show the tab bar before hiding it when tabs.show is set to
-## 'switching'.
-## Type: Int
-# c.tabs.show_switching_delay = 800
-
 ## Open a new window for every tab.
 ## Type: Bool
 # c.tabs.tabs_are_windows = False
-
-## Alignment of the text inside of tabs.
-## Type: TextAlignment
-## Valid values:
-##   - left
-##   - right
-##   - center
-# c.tabs.title.alignment = 'left'
-
-## The format to use for the tab title. The following placeholders are
-## defined:  * `{perc}`: The percentage as a string like `[10%]`. *
-## `{perc_raw}`: The raw percentage, e.g. `10` * `{title}`: The title of
-## the current web page * `{title_sep}`: The string ` - ` if a title is
-## set, empty otherwise. * `{index}`: The index of this tab. * `{id}`:
-## The internal tab ID of this tab. * `{scroll_pos}`: The page scroll
-## position. * `{host}`: The host of the current web page. * `{backend}`:
-## Either ''webkit'' or ''webengine'' * `{private}` : Indicates when
-## private mode is enabled.
-## Type: FormatString
-# c.tabs.title.format = '{index}: {title}'
-c.tabs.title.format = '{title}{title_sep}{host}'
-
-## The format to use for the tab title for pinned tabs. The same
-## placeholders like for `tabs.title.format` are defined.
-## Type: FormatString
-# c.tabs.title.format_pinned = '{index}'
-
-## The width of the tab bar if it's vertical, in px or as percentage of
-## the window.
-## Type: PercOrInt
-# c.tabs.width.bar = '20%'
-
-## Width of the progress indicator (0 to disable).
-## Type: Int
-# c.tabs.width.indicator = 3
 
 ## Whether to wrap when changing tabs.
 ## Type: Bool
@@ -1294,31 +645,6 @@ c.url.default_page = STARTPAGE
 ##   - anchor
 # c.url.incdec_segments = ['path', 'query']
 
-## Definitions of search engines which can be used via the address bar.
-## Maps a searchengine name (such as `DEFAULT`, or `ddg`) to a URL with a
-## `{}` placeholder. The placeholder will be replaced by the search term,
-## use `{{` and `}}` for literal `{`/`}` signs. The searchengine named
-## `DEFAULT` is used when `url.auto_search` is turned on and something
-## else than a URL was entered to be opened. Other search engines can be
-## used by prepending the search engine name to the search term, e.g.
-## `:open google qutebrowser`.
-## Type: Dict
-# c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
-ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
-           'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
-           'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
-           'cc': 'https://www.dict.cc/?s={}',
-           'ddg': 'https://start.duckduckgo.com/?q={}&kae=d&kak=-1&kal=-1&kao=-1&kaq=-1&kl=ch-de&kp=-2&k1=-1&kk=-1&kaj=m&kam=osm&kax=-1&kap=-1&ia=web',
-           'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
-           'w': 'https://en.wikipedia.org/wiki/{}',
-           'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
-           'yt': 'https://www.youtube.com/results?search_query={}'}
-# Add some searchengines from dotdrop .env-file
-for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
-    if engine:
-        ENGINES[engine.split('&SPLIT&')[0]] = engine.split('&SPLIT&')[1]
-c.url.searchengines = ENGINES
-
 ## The page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
 # c.url.start_pages = ['https://start.duckduckgo.com']
@@ -1327,21 +653,6 @@ c.url.start_pages = [STARTPAGE]
 ## The URL parameters to strip with `:yank url`.
 ## Type: List of String
 # c.url.yank_ignored_parameters = ['ref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
-
-## Hide the window decoration when using wayland (requires restart)
-## Type: Bool
-# c.window.hide_wayland_decoration = False
-
-## The format to use for the window title. The following placeholders are
-## defined:  * `{perc}`: The percentage as a string like `[10%]`. *
-## `{perc_raw}`: The raw percentage, e.g. `10` * `{title}`: The title of
-## the current web page * `{title_sep}`: The string ` - ` if a title is
-## set, empty otherwise. * `{id}`: The internal window ID of this window.
-## * `{scroll_pos}`: The page scroll position. * `{host}`: The host of
-## the current web page. * `{backend}`: Either ''webkit'' or
-## ''webengine'' * `{private}` : Indicates when private mode is enabled.
-## Type: FormatString
-# c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
 
 ## The default zoom level.
 ## Type: Perc
@@ -1360,269 +671,3 @@ c.url.start_pages = [STARTPAGE]
 ## content.
 ## Type: Bool
 # c.zoom.text_only = False
-
-## Bindings for normal mode
-# config.bind("'", 'enter-mode jump_mark')
-# config.bind('+', 'zoom-in')
-# config.bind('-', 'zoom-out')
-# config.bind('.', 'repeat-command')
-# config.bind('/', 'set-cmd-text /')
-# config.bind(':', 'set-cmd-text :')
-# config.bind(';I', 'hint images tab')
-# config.bind(';O', 'hint links fill :open -t -r {hint-url}')
-# config.bind(';R', 'hint --rapid links window')
-# config.bind(';Y', 'hint links yank-primary')
-# config.bind(';b', 'hint all tab-bg')
-# config.bind(';d', 'hint links download')
-# config.bind(';f', 'hint all tab-fg')
-# config.bind(';h', 'hint all hover')
-# config.bind(';i', 'hint images')
-# config.bind(';o', 'hint links fill :open {hint-url}')
-# config.bind(';r', 'hint --rapid links tab-bg')
-# config.bind(';t', 'hint inputs')
-# config.bind(';y', 'hint links yank')
-# config.bind('<Alt-1>', 'tab-focus 1')
-# config.bind('<Alt-2>', 'tab-focus 2')
-# config.bind('<Alt-3>', 'tab-focus 3')
-# config.bind('<Alt-4>', 'tab-focus 4')
-# config.bind('<Alt-5>', 'tab-focus 5')
-# config.bind('<Alt-6>', 'tab-focus 6')
-# config.bind('<Alt-7>', 'tab-focus 7')
-# config.bind('<Alt-8>', 'tab-focus 8')
-# config.bind('<Alt-9>', 'tab-focus -1')
-# config.bind('<Ctrl-A>', 'navigate increment')
-# config.bind('<Ctrl-Alt-p>', 'print')
-# config.bind('<Ctrl-B>', 'scroll-page 0 -1')
-# config.bind('<Ctrl-D>', 'scroll-page 0 0.5')
-# config.bind('<Ctrl-F5>', 'reload -f')
-# config.bind('<Ctrl-F>', 'scroll-page 0 1')
-# config.bind('<Ctrl-N>', 'open -w')
-# config.bind('<Ctrl-PgDown>', 'tab-next')
-# config.bind('<Ctrl-PgUp>', 'tab-prev')
-# config.bind('<Ctrl-Q>', 'quit')
-# config.bind('<Ctrl-Return>', 'follow-selected -t')
-# config.bind('<Ctrl-Shift-N>', 'open -p')
-# config.bind('<Ctrl-Shift-T>', 'undo')
-# config.bind('<Ctrl-Shift-W>', 'close')
-# config.bind('<Ctrl-T>', 'open -t')
-# config.bind('<Ctrl-Tab>', 'tab-focus last')
-# config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
-# config.bind('<Ctrl-V>', 'enter-mode passthrough')
-# config.bind('<Ctrl-W>', 'tab-close')
-# config.bind('<Ctrl-X>', 'navigate decrement')
-# config.bind('<Ctrl-^>', 'tab-focus last')
-# config.bind('<Ctrl-h>', 'home')
-# config.bind('<Ctrl-p>', 'tab-pin')
-# config.bind('<Ctrl-s>', 'stop')
-# config.bind('<Escape>', 'clear-keychain ;; search ;; fullscreen --leave')
-# config.bind('<F11>', 'fullscreen')
-# config.bind('<F5>', 'reload')
-# config.bind('<Return>', 'follow-selected')
-# config.bind('<back>', 'back')
-# config.bind('<forward>', 'forward')
-# config.bind('=', 'zoom')
-# config.bind('?', 'set-cmd-text ?')
-# config.bind('@', 'run-macro')
-# config.bind('B', 'set-cmd-text -s :quickmark-load -t')
-# config.bind('D', 'tab-close -o')
-# config.bind('F', 'hint all tab')
-# config.bind('G', 'scroll-to-perc')
-# config.bind('H', 'back')
-# config.bind('J', 'tab-next')
-# config.bind('K', 'tab-prev')
-config.bind('J', 'tab-prev')
-config.bind('K', 'tab-next')
-# config.bind('L', 'forward')
-# config.bind('M', 'bookmark-add')
-# config.bind('N', 'search-prev')
-# config.bind('O', 'set-cmd-text -s :open -t')
-config.bind('O', 'set-cmd-text -s :open {url:pretty}')
-# config.bind('PP', 'open -t -- {primary}')
-# config.bind('Pp', 'open -t -- {clipboard}')
-# config.bind('R', 'reload -f')
-# config.bind('Sb', 'open qute://bookmarks#bookmarks')
-# config.bind('Sh', 'open qute://history')
-# config.bind('Sq', 'open qute://bookmarks')
-# config.bind('Ss', 'open qute://settings')
-# config.bind('T', 'tab-focus')
-config.bind('T', 'set-cmd-text :open -t {url:pretty}')
-config.bind('t', 'set-cmd-text -s :open -t')
-# config.bind('ZQ', 'quit')
-# config.bind('ZZ', 'quit --save')
-# config.bind('[[', 'navigate prev')
-# config.bind(']]', 'navigate next')
-config.bind('ä', 'back')
-config.bind('$', 'forward')
-config.bind('à', 'tab-prev')
-config.bind('£', 'tab-next')
-# config.bind('`', 'enter-mode set_mark')
-# config.bind('ad', 'download-cancel')
-# config.bind('b', 'set-cmd-text -s :quickmark-load')
-# config.bind('cd', 'download-clear')
-# config.bind('co', 'tab-only')
-# config.bind('d', 'tab-close')
-# config.bind('f', 'hint')
-# config.bind('g$', 'tab-focus -1')
-# config.bind('g0', 'tab-focus 1')
-# config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
-# config.bind('gC', 'tab-clone')
-# config.bind('gO', 'set-cmd-text :open -t -r {url:pretty}')
-# config.bind('gU', 'navigate up -t')
-# config.bind('g^', 'tab-focus 1')
-# config.bind('ga', 'open -t')
-# config.bind('gb', 'set-cmd-text -s :bookmark-load')
-# config.bind('gd', 'download')
-# config.bind('gf', 'view-source')
-# config.bind('gg', 'scroll-to-perc 0')
-# config.bind('gl', 'tab-move -')
-# config.bind('gm', 'tab-move')
-# config.bind('go', 'set-cmd-text :open {url:pretty}')
-# config.bind('gr', 'tab-move +')
-# config.bind('gt', 'set-cmd-text -s :buffer')
-# config.bind('gu', 'navigate up')
-# config.bind('h', 'scroll left')
-# config.bind('i', 'enter-mode insert')
-# config.bind('j', 'scroll down')
-# config.bind('k', 'scroll up')
-# config.bind('l', 'scroll right')
-# config.bind('m', 'quickmark-save')
-config.bind('m', 'spawn ~/.config/qutebrowser/videos_vlc.sh "{url}"')
-# config.bind('n', 'search-next')
-# config.bind('o', 'set-cmd-text -s :open')
-# config.bind('pP', 'open -- {primary}')
-# config.bind('pp', 'open -- {clipboard}')
-# config.bind('q', 'record-macro')
-# config.bind('r', 'reload')
-# config.bind('sf', 'save')
-# config.bind('sk', 'set-cmd-text -s :bind')
-# config.bind('sl', 'set-cmd-text -s :set -t')
-# config.bind('ss', 'set-cmd-text -s :set')
-# config.bind('th', 'back -t')
-# config.bind('tl', 'forward -t')
-# config.bind('u', 'undo')
-# config.bind('v', 'enter-mode caret')
-# config.bind('wB', 'set-cmd-text -s :bookmark-load -w')
-# config.bind('wO', 'set-cmd-text :open -w {url:pretty}')
-# config.bind('wP', 'open -w -- {primary}')
-# config.bind('wb', 'set-cmd-text -s :quickmark-load -w')
-# config.bind('wf', 'hint all window')
-# config.bind('wh', 'back -w')
-# config.bind('wi', 'inspector')
-# config.bind('wl', 'forward -w')
-# config.bind('wo', 'set-cmd-text -s :open -w')
-# config.bind('wp', 'open -w -- {clipboard}')
-# config.bind('xO', 'set-cmd-text :open -b -r {url:pretty}')
-# config.bind('xb', 'config-cycle statusbar.hide')
-# config.bind('xo', 'set-cmd-text -s :open -b')
-# config.bind('xt', 'config-cycle tabs.show always switching')
-# config.bind('xx', 'config-cycle statusbar.hide ;; config-cycle tabs.show always switching')
-# config.bind('yD', 'yank domain -s')
-# config.bind('yP', 'yank pretty-url -s')
-# config.bind('yT', 'yank title -s')
-# config.bind('yY', 'yank -s')
-# config.bind('yd', 'yank domain')
-# config.bind('yp', 'yank pretty-url')
-# config.bind('yt', 'yank title')
-# config.bind('yy', 'yank')
-# config.bind('{{', 'navigate prev -t')
-# config.bind('}}', 'navigate next -t')
-
-## Bindings for caret mode
-# config.bind('$', 'move-to-end-of-line', mode='caret')
-# config.bind('0', 'move-to-start-of-line', mode='caret')
-# config.bind('<Ctrl-Space>', 'drop-selection', mode='caret')
-# config.bind('<Escape>', 'leave-mode', mode='caret')
-# config.bind('<Return>', 'yank selection', mode='caret')
-# config.bind('<Space>', 'toggle-selection', mode='caret')
-# config.bind('G', 'move-to-end-of-document', mode='caret')
-# config.bind('H', 'scroll left', mode='caret')
-# config.bind('J', 'scroll down', mode='caret')
-# config.bind('K', 'scroll up', mode='caret')
-# config.bind('L', 'scroll right', mode='caret')
-# config.bind('Y', 'yank selection -s', mode='caret')
-# config.bind('[', 'move-to-start-of-prev-block', mode='caret')
-# config.bind(']', 'move-to-start-of-next-block', mode='caret')
-# config.bind('b', 'move-to-prev-word', mode='caret')
-# config.bind('c', 'enter-mode normal', mode='caret')
-# config.bind('e', 'move-to-end-of-word', mode='caret')
-# config.bind('gg', 'move-to-start-of-document', mode='caret')
-# config.bind('h', 'move-to-prev-char', mode='caret')
-# config.bind('j', 'move-to-next-line', mode='caret')
-# config.bind('k', 'move-to-prev-line', mode='caret')
-# config.bind('l', 'move-to-next-char', mode='caret')
-# config.bind('v', 'toggle-selection', mode='caret')
-# config.bind('w', 'move-to-next-word', mode='caret')
-# config.bind('y', 'yank selection', mode='caret')
-# config.bind('{', 'move-to-end-of-prev-block', mode='caret')
-# config.bind('}', 'move-to-end-of-next-block', mode='caret')
-
-## Bindings for command mode
-# config.bind('<Alt-B>', 'rl-backward-word', mode='command')
-# config.bind('<Alt-Backspace>', 'rl-backward-kill-word', mode='command')
-# config.bind('<Alt-D>', 'rl-kill-word', mode='command')
-# config.bind('<Alt-F>', 'rl-forward-word', mode='command')
-# config.bind('<Ctrl-?>', 'rl-delete-char', mode='command')
-# config.bind('<Ctrl-A>', 'rl-beginning-of-line', mode='command')
-# config.bind('<Ctrl-B>', 'rl-backward-char', mode='command')
-# config.bind('<Ctrl-D>', 'completion-item-del', mode='command')
-# config.bind('<Ctrl-E>', 'rl-end-of-line', mode='command')
-# config.bind('<Ctrl-F>', 'rl-forward-char', mode='command')
-# config.bind('<Ctrl-H>', 'rl-backward-delete-char', mode='command')
-# config.bind('<Ctrl-K>', 'rl-kill-line', mode='command')
-# config.bind('<Ctrl-N>', 'command-history-next', mode='command')
-# config.bind('<Ctrl-P>', 'command-history-prev', mode='command')
-# config.bind('<Ctrl-Shift-Tab>', 'completion-item-focus prev-category', mode='command')
-# config.bind('<Ctrl-Tab>', 'completion-item-focus next-category', mode='command')
-# config.bind('<Ctrl-U>', 'rl-unix-line-discard', mode='command')
-# config.bind('<Ctrl-W>', 'rl-unix-word-rubout', mode='command')
-# config.bind('<Ctrl-Y>', 'rl-yank', mode='command')
-# config.bind('<Down>', 'command-history-next', mode='command')
-# config.bind('<Escape>', 'leave-mode', mode='command')
-# config.bind('<Return>', 'command-accept', mode='command')
-# config.bind('<Shift-Delete>', 'completion-item-del', mode='command')
-# config.bind('<Shift-Tab>', 'completion-item-focus prev', mode='command')
-# config.bind('<Tab>', 'completion-item-focus next', mode='command')
-# config.bind('<Up>', 'command-history-prev', mode='command')
-
-## Bindings for hint mode
-# config.bind('<Ctrl-B>', 'hint all tab-bg', mode='hint')
-# config.bind('<Ctrl-F>', 'hint links', mode='hint')
-# config.bind('<Ctrl-R>', 'hint --rapid links tab-bg', mode='hint')
-# config.bind('<Escape>', 'leave-mode', mode='hint')
-# config.bind('<Return>', 'follow-hint', mode='hint')
-
-## Bindings for insert mode
-# config.bind('<Ctrl-E>', 'open-editor', mode='insert')
-# config.bind('<Escape>', 'leave-mode', mode='insert')
-# config.bind('<Shift-Ins>', 'insert-text {primary}', mode='insert')
-
-## Bindings for passthrough mode
-# config.bind('<Ctrl-V>', 'leave-mode', mode='passthrough')
-
-## Bindings for prompt mode
-# config.bind('<Alt-B>', 'rl-backward-word', mode='prompt')
-# config.bind('<Alt-Backspace>', 'rl-backward-kill-word', mode='prompt')
-# config.bind('<Alt-D>', 'rl-kill-word', mode='prompt')
-# config.bind('<Alt-F>', 'rl-forward-word', mode='prompt')
-# config.bind('<Ctrl-?>', 'rl-delete-char', mode='prompt')
-# config.bind('<Ctrl-A>', 'rl-beginning-of-line', mode='prompt')
-# config.bind('<Ctrl-B>', 'rl-backward-char', mode='prompt')
-# config.bind('<Ctrl-E>', 'rl-end-of-line', mode='prompt')
-# config.bind('<Ctrl-F>', 'rl-forward-char', mode='prompt')
-# config.bind('<Ctrl-H>', 'rl-backward-delete-char', mode='prompt')
-# config.bind('<Ctrl-K>', 'rl-kill-line', mode='prompt')
-# config.bind('<Ctrl-U>', 'rl-unix-line-discard', mode='prompt')
-# config.bind('<Ctrl-W>', 'rl-unix-word-rubout', mode='prompt')
-# config.bind('<Ctrl-X>', 'prompt-open-download', mode='prompt')
-# config.bind('<Ctrl-Y>', 'rl-yank', mode='prompt')
-# config.bind('<Down>', 'prompt-item-focus next', mode='prompt')
-# config.bind('<Escape>', 'leave-mode', mode='prompt')
-# config.bind('<Return>', 'prompt-accept', mode='prompt')
-# config.bind('<Shift-Tab>', 'prompt-item-focus prev', mode='prompt')
-# config.bind('<Tab>', 'prompt-item-focus next', mode='prompt')
-# config.bind('<Up>', 'prompt-item-focus prev', mode='prompt')
-# config.bind('n', 'prompt-accept no', mode='prompt')
-# config.bind('y', 'prompt-accept yes', mode='prompt')
-
-## Bindings for register mode
-# config.bind('<Escape>', 'leave-mode', mode='register')

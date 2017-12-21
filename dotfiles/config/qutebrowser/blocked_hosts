@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# This file is managed by dotdrop, only edit it in your dotdrop files!
 
 # Block Facebook
 127.0.0.1 www.facebook.com
