@@ -36,6 +36,9 @@ alias janosch='~/scripts/wrapper.sh --both gcompris --disable-quit --disable-con
 alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
 alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
 {%@@ endif @@%}
+{%@@ if env['has_x'] @@%}
+alias guake-export='~/dotfiles/scripts/guake-export.sh'
+{%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
     alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
     alias djoin='cont=$(docker ps --format="{{.ID}}" | head -n 1) && docker exec -it "$cont" bash'
