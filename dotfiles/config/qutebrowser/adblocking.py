@@ -1,8 +1,9 @@
 # This file is managed by dotdrop, only edit it in your dotdrop files!
+# flake8: noqa: E266
 
 
-c = c
-config = config
+c = c  # noqa
+config = config  # noqa
 
 ## List of URLs of lists which contain hosts to block.  The file can be
 ## in one of the following formats:  - An `/etc/hosts`-like file - One

@@ -1,8 +1,9 @@
 # This file is managed by dotdrop, only edit it in your dotdrop files!
+# flake8: noqa: E266
 
 
-c = c
-config = config
+c = c  # noqa
+config = config  # noqa
 
 ## This setting can be used to map keys to other keys. When the key used
 ## as dictionary-key is pressed, the binding for the key used as

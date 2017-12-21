@@ -1,10 +1,11 @@
 # This file is managed by dotdrop, only edit it in your dotdrop files!
+# flake8: noqa: E266
 
 
 VIOLET = '#470f77'
 
-c = c
-config = config
+c = c  # noqa
+config = config  # noqa
 
 ## The width of the tab bar if it's vertical, in px or as percentage of
 ## the window.

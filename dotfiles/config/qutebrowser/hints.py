@@ -1,8 +1,9 @@
 # This file is managed by dotdrop, only edit it in your dotdrop files!
+# flake8: noqa: E266
 
 
-c = c
-config = config
+c = c  # noqa
+config = config  # noqa
 
 ## Controls when a hint can be automatically followed without pressing
 ## Enter.

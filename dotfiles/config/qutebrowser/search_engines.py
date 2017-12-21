@@ -1,8 +1,9 @@
 # This file is managed by dotdrop, only edit it in your dotdrop files!
+# flake8: noqa: E266
 
 
-c = c
-config = config
+c = c  # noqa
+config = config  # noqa
 
 ## Definitions of search engines which can be used via the address bar.
 ## Maps a searchengine name (such as `DEFAULT`, or `ddg`) to a URL with a
