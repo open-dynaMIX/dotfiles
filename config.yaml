@@ -3,6 +3,7 @@ actions:
   font-cache-refresh: fc-cache -f -v
   i3-restart: ~/.i3/i3restart.sh
   import-guake-settings: gconftool-2 --load ~/dotfiles/dotfiles/config/guake/apps-guake.xml && gconftool-2 --load ~/dotfiles/dotfiles/config/guake/schemas-apps-guake.xml
+  reload-xresources: xrdb -merge ~/.Xresources
 config:
   backup: true
   create: true
@@ -95,6 +96,8 @@ dotfiles:
     dst: ~/.xinitrc
     src: xinitrc
   f_xresources:
+    actions:
+      - reload-xresources
     dst: ~/.Xresources
     src: Xresources
   f_zshrc:
