@@ -23,20 +23,20 @@ alias mynload='nload -t 1000 -i 500 -o 100 -u K'
 alias nano='nano -cw'
 alias pa='pacaur'
 alias pprint='python -m json.tool'
-alias qutebrowser='qutebrowser --enable-webengine-inspector'
 alias radio='~/scripts/radio/radio.sh'
 alias rm='rm -i'
 alias seconds='while true; do; date +"%H:%m:%S"; sleep 1; done'
 alias syncit='~/scripts/syncit/syncit.sh'
 alias whereami='pwd'
 alias worms='worms -d 40 -l 16 -n 6'
-alias xkill='xkill -button 1'
 {%@@ if profile == "fuckup" @@%}
 alias janosch='~/scripts/wrapper.sh --both gcompris --disable-quit --disable-config --profile janosch-profil'
 alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
 alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
 {%@@ endif @@%}
 {%@@ if env['has_x'] @@%}
+alias xkill='xkill -button 1'
+alias qutebrowser='qutebrowser --enable-webengine-inspector'
 alias guake-export='~/dotfiles/scripts/guake-export.sh'
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
