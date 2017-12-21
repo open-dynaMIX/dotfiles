@@ -1,10 +1,10 @@
 #!/bin/bash
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 # If this is executed directly from within qutebrowser with spawn,
 # the browser crashes.
 
-if echo "$1" | grep "youtube.com"; then
-    vlc "$1"
+if echo "$QUTE_URL" | grep "youtube.com"; then
+    vlc "$QUTE_URL"
 else
-    xterm -hold -e "youtube-dl -o - ${1} | vlc -"
+    xterm -hold -e "youtube-dl -o - ${QUTE_URL} | vlc -"
 fi

@@ -1,4 +1,4 @@
-# This file is managed by dotdrop, only edit it in your dotdrop files!
+# {{@@ env['dotdrop_warning'] @@}}
 # flake8: noqa: E266
 
 
@@ -139,7 +139,7 @@ config.bind('£', 'tab-next')
 # config.bind('k', 'scroll up')
 # config.bind('l', 'scroll right')
 # config.bind('m', 'quickmark-save')
-config.bind('m', 'spawn --userscript ~/.config/qutebrowser/userscripts/videos_vlc.sh "{url}"')
+config.bind('m', 'spawn --userscript ~/.config/qutebrowser/userscripts/videos_vlc.sh')
 # config.bind('n', 'search-next')
 # config.bind('o', 'set-cmd-text -s :open')
 # config.bind('pP', 'open -- {primary}')
