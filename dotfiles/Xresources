@@ -5,8 +5,8 @@ xterm*borderWidth:          0
 XTerm*cursorBlink:          true
 xterm*dynamicColors:        true
 xterm*faceName:             DejaVu Mono
-XTerm*faceSize:             12
-xterm*font:                 *-fixed-*-*-*-12-*
+XTerm*faceSize:             11
+xterm*font:                 *-fixed-*-*-*-11-*
 XTerm*locale:               true
 XTerm*reverseVideo:         off
 xterm*rightScrollBar:       true

@@ -183,7 +183,7 @@
       <key>general/use_default_font</key>
       <schema_key>/schemas/apps/guake/general/use_default_font</schema_key>
       <value>
-        <bool>false</bool>
+        <bool>true</bool>
       </value>
     </entry>
     <entry>
