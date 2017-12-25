@@ -1,16 +1,18 @@
 #!/usr/bin/bash
-# Parse https://www.qutebrowser.org/doc/help/settings.html
+# Parse qutebrowsers settings.html
 # to find settings not present in local config
 
+conf="$HOME/dotfiles/dotfiles/config/qutebrowser/config.d/"
 
-function get_list {
+
+function read_list {
 PYTHON_ARG="$1" python - <<END
-from bs4 import BeautifulSoup
-import requests
 import os
-SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
-req = requests.get('https://www.qutebrowser.org/doc/help/settings.html', None)
-soup = BeautifulSoup(req.content, 'lxml')
+import qutebrowser
+from bs4 import BeautifulSoup
+file = os.path.join(qutebrowser.basedir, 'html/doc/settings.html')
+with open(file) as f:
+    soup = BeautifulSoup(f.read(), 'lxml')
 tbody = soup.find('tbody').findAll('td')
 for item in tbody:
     link = item.find('a')
@@ -19,8 +21,17 @@ for item in tbody:
 END
 }
 
+if [ -d "$conf" ]; then
+    grep="grep -Enqr"
+elif [ -f "$conf" ]; then
+    grep="grep -Enq"
+else
+    >&2 echo "Config not found!"
+    exit 1
+fi
+
 while read -r line; do
-    if ! grep -nrq "# c.*\\.$line" "$HOME/dotfiles/dotfiles/config/qutebrowser/config.d/"; then
+    if ! $grep "(# )?(c|config)\\.$line" "$conf"; then
         echo "$line"
     fi
-done <<< "$(get_list "$@")"
+done <<< "$(read_list "$@")"
