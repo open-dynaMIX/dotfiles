@@ -12,9 +12,9 @@ config = config  # noqa
 ## Type: PercOrInt
 # c.tabs.width.bar = '20%'
 
-## Width of the progress indicator (0 to disable).
+## Width (in pixels) of the progress indicator (0 to disable).
 ## Type: Int
-# c.tabs.width.indicator = 3
+# c.tabs.indicator.width = 3
 
 ## Padding for tab indicators
 ## Type: Padding
@@ -274,6 +274,11 @@ c.colors.hints.match.fg = '#b97ff0'
 ## Type: QssColor
 # c.colors.keyhint.fg = '#FFFFFF'
 
+## Rounding radius (in pixels) for the edges of the keyhint dialog.
+## Type: Int
+# c.keyhint.radius = 6
+c.keyhint.radius = 0
+
 ## Highlight color for keys to complete the current keychain.
 ## Type: QssColor
 # c.colors.keyhint.suffix.fg = '#FFFF00'
@@ -380,6 +385,14 @@ c.colors.statusbar.command.private.bg = 'red'
 ## Foreground color of the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.normal.fg = 'white'
+
+## Background color of the statusbar in passthrough mode.
+## Type: QssColor
+# c.colors.statusbar.passthrough.bg = 'darkblue'
+
+## Foreground color of the statusbar in passthrough mode.
+## Type: QssColor
+# c.colors.statusbar.passthrough.fg = 'white'
 
 ## Background color of the statusbar in private browsing mode.
 ## Type: QssColor
