@@ -2,11 +2,13 @@
 # Parse qutebrowsers settings.html
 # to find settings not present in local config
 
-conf="$HOME/dotfiles/dotfiles/config/qutebrowser/config.d/"
+
+# path to config.py or directory with config files
+conf="$HOME/.config/qutebrowser/config.d/"
 
 
 function read_list {
-PYTHON_ARG="$1" python - <<END
+python - <<END
 import os
 import qutebrowser
 from bs4 import BeautifulSoup
@@ -34,4 +36,4 @@ while read -r line; do
     if ! $grep "(# )?(c|config)\\.$line" "$conf"; then
         echo "$line"
     fi
-done <<< "$(read_list "$@")"
+done <<< "$(read_list)"
