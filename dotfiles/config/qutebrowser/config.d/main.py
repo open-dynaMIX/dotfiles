@@ -26,23 +26,23 @@ c.aliases = {'q': 'quit'}
 ## Type: Int
 # c.auto_save.interval = 15000
 
-# Always restore open sites when qutebrowser is reopened.
-# Type: Bool
+## Always restore open sites when qutebrowser is reopened.
+## Type: Bool
 # c.auto_save.session = False
 c.auto_save.session = True
 
-# The backend to use to display websites. qutebrowser supports two
-# different web rendering engines / backends, QtWebKit and QtWebEngine.
-# QtWebKit was discontinued by the Qt project with Qt 5.6, but picked up
-# as a well maintained fork: https://github.com/annulen/webkit/wiki -
-# qutebrowser only supports the fork. QtWebEngine is Qt's official
-# successor to QtWebKit. It's slightly more resource hungry that
-# QtWebKit and has a couple of missing features in qutebrowser, but is
-# generally the preferred choice. This setting requires a restart.
-# Type: String
-# Valid values:
-#   - webengine: Use QtWebEngine (based on Chromium)
-#   - webkit: Use QtWebKit (based on WebKit, similar to Safari)
+## The backend to use to display websites. qutebrowser supports two
+## different web rendering engines / backends, QtWebKit and QtWebEngine.
+## QtWebKit was discontinued by the Qt project with Qt 5.6, but picked up
+## as a well maintained fork: https://github.com/annulen/webkit/wiki -
+## qutebrowser only supports the fork. QtWebEngine is Qt's official
+## successor to QtWebKit. It's slightly more resource hungry that
+## QtWebKit and has a couple of missing features in qutebrowser, but is
+## generally the preferred choice. This setting requires a restart.
+## Type: String
+## Valid values:
+##   - webengine: Use QtWebEngine (based on Chromium)
+##   - webkit: Use QtWebKit (based on WebKit, similar to Safari)
 # c.backend = 'webengine'
 
 ## How many commands to save in the command history. 0: no history / -1:
@@ -403,7 +403,7 @@ c.editor.command = ['subl', '-a', '{}']
 ##   - always: Search case-insensitively
 ##   - never: Search case-sensitively
 ##   - smart: Search case-sensitively if there are capital chars
-# c.ignore_case = 'smart'
+# c.search.ignore_case = 'smart'
 
 ## Forward unbound keys to the webview in normal mode.
 ## Type: String
@@ -465,10 +465,6 @@ c.editor.command = ['subl', '-a', '{}']
 # Type: Int
 # c.messages.timeout = 2000
 c.messages.timeout = 5000
-
-## Show messages in unfocused windows.
-## Type: Bool
-# c.messages.unfocused = False
 
 ## How to open links in an existing instance if a new one is launched.
 ## This happens when e.g. opening a link from a terminal. See
@@ -544,7 +540,7 @@ c.messages.timeout = 5000
 ## The name of the session to save by default. If this is set to null,
 ## the session which was last loaded is saved.
 ## Type: SessionName
-# c.session_default_name = None
+# c.session.default_name = None
 
 ## Load a restored tab as soon as it takes focus.
 ## Type: Bool

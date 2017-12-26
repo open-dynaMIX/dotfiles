@@ -7,18 +7,18 @@ VIOLET = '#470f77'
 c = c  # noqa
 config = config  # noqa
 
-## The width of the tab bar if it's vertical, in px or as percentage of
-## the window.
+## Width (in pixels or as percentage of the window) of the tab bar if
+## it's vertical.
 ## Type: PercOrInt
-# c.tabs.width.bar = '20%'
+# c.tabs.width = '20%'
 
 ## Width (in pixels) of the progress indicator (0 to disable).
 ## Type: Int
 # c.tabs.indicator.width = 3
 
-## Padding for tab indicators
+## Padding (in pixels) for tab indicators.
 ## Type: Padding
-# c.tabs.indicator_padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
+# c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 
 ## The height of the completion, in px or as percentage of the window.
 ## Type: PercOrInt
