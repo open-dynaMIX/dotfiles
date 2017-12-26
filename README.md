@@ -21,6 +21,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [pdfjs](https://github.com/mozilla/pdf.js)
  - [py3status](https://github.com/ultrabug/py3status)
  - [qutebrowser](https://github.com/qutebrowser/qutebrowser)
+ - [qutebrowser-compare-config](https://github.com/open-dynaMIX/qutebrowser-compare-config)
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
  - [screen](https://www.gnu.org/software/screen/)
  - [Scribes](http://scribes.sourceforge.net/)
