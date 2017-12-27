@@ -193,7 +193,7 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ## User agent to send. Unset to send the default.
 ## Type: String
 # c.content.headers.user_agent = None
-c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
 
 ## Whether host blocking is enabled.
 ## Type: Bool
