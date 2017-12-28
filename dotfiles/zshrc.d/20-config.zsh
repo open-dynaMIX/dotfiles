@@ -29,4 +29,6 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+disable -r time  # disable shell reserved word
+
 setopt extendedglob
