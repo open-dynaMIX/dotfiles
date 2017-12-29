@@ -23,7 +23,6 @@ alias mynload='nload -t 1000 -i 500 -o 100 -u K'
 alias nano='nano -cw'
 alias pa='pacaur'
 alias pprint='python -m json.tool'
-alias qutebrowser-compare-config='~/Linux/git/qutebrowser-compare-config/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
 alias radio='~/scripts/radio/radio.sh'
 alias rm='rm -i'
 alias seconds='while true; do; date +"%H:%m:%S"; sleep 1; done'
@@ -38,6 +37,7 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 {%@@ if env['has_x'] @@%}
 alias xkill='xkill -button 1'
 alias qutebrowser='qutebrowser --enable-webengine-inspector'
+alias qutebrowser-compare-config.py='~/Linux/git/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
 alias guake-export='~/dotfiles/scripts/guake-export.sh'
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
