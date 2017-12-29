@@ -44,3 +44,7 @@ A not exhaustive list of things I use for my GUI systems:
 ``` shell
 pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs py3status qutebrowser raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
+
+# py3status
+
+![i3bar with py3status screenshot](screenshots/i3bar_py3status.png "i3bar with py3status screenshot")
