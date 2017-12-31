@@ -31,6 +31,7 @@ config = config  # noqa
 ## Width of the scrollbar in the completion window (in px).
 ## Type: Int
 # c.completion.scrollbar.width = 12
+
 ## Shrink the completion to be smaller than the configured size if there
 ## are no scrollbars.
 ## Type: Bool
@@ -145,7 +146,6 @@ c.tabs.title.format = '{perc}{title}{title_sep}{host}'
 ## Background color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
-# c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #000000, stop:1 #000000)'
 c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {0}, stop:1 {0})'.format(VIOLET)
 
 ## Bottom border color of the completion widget category headers.
@@ -165,8 +165,10 @@ c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:
 # c.colors.completion.even.bg = '#333333'
 
 ## Text color of the completion widget.
-## Type: QtColor
-# c.colors.completion.fg = 'white'
+## May be a single color to use for all columns or a list of three colors,
+## one for each column.
+## Type: List of QtColor, or QtColor
+# c.colors.completion.fg = ['white', 'white', 'white']
 
 ## Background color of the selected completion item.
 ## Type: QssColor

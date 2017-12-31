@@ -147,7 +147,6 @@ c.content.default_encoding = 'utf-8'
 # `qutebrowser --help` instead.
 # Type: Bool
 # c.content.developer_extras = False
-# c.content.developer_extras = True
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
@@ -283,7 +282,6 @@ c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
 ## viewer.
 ## Type: Bool
 # c.content.pdfjs = False
-# c.content.pdfjs = True
 
 ## Enables or disables plugins in Web pages.
 ## Type: Bool
@@ -383,7 +381,7 @@ c.content.plugins = True
 ## The editor (and arguments) to use for the `open-editor` command. `{}`
 ## gets replaced by the filename of the file to be edited.
 ## Type: ShellCommand
-# c.editor.command = ['gvim', '-f', '{}']
+# c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 c.editor.command = ['subl', '-a', '{}']
 
 ## Encoding to use for the editor.
