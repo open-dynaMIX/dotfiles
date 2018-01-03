@@ -2,7 +2,8 @@ actions:
   dunst-restart: killall dunst; notify-send -t 2000 -i face-sick "Dunst restarted"
   font-cache-refresh: fc-cache -f -v
   i3-restart: ~/.i3/i3restart.sh
-  import-guake-settings: gconftool-2 --load ~/dotfiles/dotfiles/config/guake/apps-guake.xml && gconftool-2 --load ~/dotfiles/dotfiles/config/guake/schemas-apps-guake.xml
+  import-guake-settings: gconftool-2 --load ~/dotfiles/dotfiles/config/guake/apps-guake.xml
+    && gconftool-2 --load ~/dotfiles/dotfiles/config/guake/schemas-apps-guake.xml
   reload-xresources: xrdb -merge ~/.Xresources
 config:
   backup: true
@@ -14,23 +15,26 @@ dotfiles:
     src: themes/My_Fancy_Theme/
   d_guake:
     actions:
-      - import-guake-settings
-    src: config/guake
-    dst: ~/.config/guake
+    - import-guake-settings
+    dst: ~/.config/guake/
+    src: config/guake/
   d_i3:
     actions:
     - i3-restart
     dst: ~/.i3/
     src: i3/
+  d_mpv:
+    dst: ~/.config/mpv/
+    src: config/mpv/
   d_qutebrowser:
-    dst: ~/.config/qutebrowser
-    src: config/qutebrowser
+    dst: ~/.config/qutebrowser/
+    src: config/qutebrowser/
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
   d_zshrc.d:
-    dst: ~/.zshrc.d
-    src: zshrc.d
+    dst: ~/.zshrc.d/
+    src: zshrc.d/
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: config/ario/profiles/profiles.xml
@@ -94,7 +98,7 @@ dotfiles:
     src: xinitrc
   f_xresources:
     actions:
-      - reload-xresources
+    - reload-xresources
     dst: ~/.Xresources
     src: Xresources
   f_zshrc:
@@ -106,6 +110,7 @@ profiles:
     - d_gtk_theme
     - d_i3
     - d_guake
+    - d_mpv
     - d_qutebrowser
     - d_syncit
     - d_zshrc.d
@@ -145,6 +150,7 @@ profiles:
     - d_gtk_theme
     - d_i3
     - d_guake
+    - d_mpv
     - d_qutebrowser
     - d_syncit
     - d_zshrc.d

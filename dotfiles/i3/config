@@ -333,6 +333,7 @@ for_window [class="Viewnior"] border 1pixel
 for_window [class="Speedcrunch"] border none
 for_window [class="I3exit" instance="i3exit"] border 1pixel
 for_window [class="qutebrowser"] border none
+for_window [class="mpv"] border none
 
 # transparency
 for_window [class="Scribes"] exec --no-startup-id transset-df -a 0.9
