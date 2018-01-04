@@ -25,6 +25,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
  - [screen](https://www.gnu.org/software/screen/)
  - [Scribes](http://scribes.sourceforge.net/)
+ - [simple-mpv-webui](https://github.com/open-dynaMIX/simple-mpv-webui)
  - [streamwall](https://github.com/open-dynaMIX/streamwall)
  - [transset-df](http://forchheimer.se/transset-df/)
  - [unclutter-patched](https://aur.archlinux.org/packages/unclutter-patched/)
