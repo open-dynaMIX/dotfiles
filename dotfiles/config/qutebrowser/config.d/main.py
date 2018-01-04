@@ -20,7 +20,7 @@ config = config  # noqa
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
 # c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
-c.aliases = {'q': 'quit'}
+c.aliases = {'q': 'quit', 'youtube-dl': 'spawn youtube-dl -o "$HOME/Downloads/%(title)s-%(id)s.%(ext)s" {url}'}
 
 ## How often (in milliseconds) to auto-save config/cookies/etc.
 ## Type: Int
