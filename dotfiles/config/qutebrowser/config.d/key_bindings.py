@@ -34,6 +34,7 @@ config = config  # noqa
 # config.bind(';r', 'hint --rapid links tab-bg')
 # config.bind(';t', 'hint inputs')
 # config.bind(';y', 'hint links yank')
+config.bind(',n', f'config-cycle --temp content.user_stylesheets ~/Linux/solarized-everything-css/css/solarized-all-sites-dark.css "" ;; reload')
 # config.bind('<Alt-1>', 'tab-focus 1')
 # config.bind('<Alt-2>', 'tab-focus 2')
 # config.bind('<Alt-3>', 'tab-focus 3')
