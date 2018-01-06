@@ -61,7 +61,7 @@ ZSH_CUSTOM=~/.oh-my-zsh
 plugins=(git python docker docker-compose)
 
 # User configuration
-PATH="${PATH}:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+PATH="${PATH}:$(ruby -e "puts Gem.user_dir")/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
