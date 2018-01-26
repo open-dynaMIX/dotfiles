@@ -2,8 +2,6 @@ actions:
   dunst-restart: killall dunst; notify-send -t 2000 -i face-sick "Dunst restarted"
   font-cache-refresh: fc-cache -f -v
   i3-restart: ~/.i3/i3restart.sh
-  import-guake-settings: gconftool-2 --load ~/dotfiles/dotfiles/config/guake/apps-guake.xml
-    && gconftool-2 --load ~/dotfiles/dotfiles/config/guake/schemas-apps-guake.xml
   reload-xresources: xrdb -merge ~/.Xresources
 config:
   backup: true
@@ -13,11 +11,6 @@ dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
     src: themes/My_Fancy_Theme/
-  d_guake:
-    actions:
-    - import-guake-settings
-    dst: ~/.config/guake/
-    src: config/guake/
   d_i3:
     actions:
     - i3-restart
@@ -109,7 +102,6 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
-    - d_guake
     - d_mpv
     - d_qutebrowser
     - d_syncit
@@ -149,7 +141,6 @@ profiles:
     dotfiles:
     - d_gtk_theme
     - d_i3
-    - d_guake
     - d_mpv
     - d_qutebrowser
     - d_syncit
