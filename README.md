@@ -5,6 +5,7 @@ I manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
 A not exhaustive list of things I use for my GUI systems:
  - [Ario](http://ario-player.sourceforge.net/)
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
+ - [cower](https://github.com/falconindy/cower)
  - [dmenu2](https://bitbucket.org/melek/dmenu2)
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)

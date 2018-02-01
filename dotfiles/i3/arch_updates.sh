@@ -3,8 +3,8 @@
 
 
 IFS=$'\n'
-repo=($(checkupdates))
-aur=($(pacaur -k | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"))
+repo=("$(checkupdates)")
+aur=("$(cower -u)")
 unset IFS
 
 if [ "${#repo[@]}" -gt 0 ]; then
@@ -16,10 +16,10 @@ if [ "${#repo[@]}" -gt 0 ]; then
 fi
 
 if [ "${#aur[@]}" -gt 0 ]; then
-    echo -e "\nAur:"
+    echo -e "\\nAur:"
     echo "==="
     for package in "${aur[@]}"; do
-        echo "$package" | awk '{print $3}'
+        echo "$package" | awk '{print $2}'
     done
 fi
 
