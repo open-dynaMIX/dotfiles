@@ -1,11 +1,19 @@
 #!/usr/bin/bash
 # {{@@ env['dotdrop_warning'] @@}}
 
-
 IFS=$'\n'
-repo=("$(checkupdates)")
-aur=("$(cower -u)")
+repo_dirty=("$(checkupdates)")
+aur_dirty=("$(cower -u)")
 unset IFS
+
+repo=()
+aur=()
+for value in "${repo_dirty[@]}"; do
+    [[ $value != "" ]] && repo+=("$value")
+done
+for value in "${aur_dirty[@]}"; do
+    [[ $value != "" ]] && aur+=("$value")
+done
 
 if [ "${#repo[@]}" -gt 0 ]; then
     echo "Repo:"
