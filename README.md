@@ -11,6 +11,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [dunst](https://github.com/dunst-project/dunst)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
  - [Guake](https://github.com/Guake/guake)
+ - [gvim](http://www.vim.org/)
  - [i3-py](https://github.com/ziberna/i3-py)
  - [i3](https://github.com/i3/i3)
  - [i3lock](https://github.com/i3/i3lock)
@@ -20,6 +21,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [MFixx](https://github.com/file-icons/MFixx) (edited version: moved all glyphs to private area in order to avoid conflicts with font-awesome. Plus some additional glyphs)
  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [pdfjs](https://github.com/mozilla/pdf.js)
+ - [powerline](https://github.com/powerline/powerline)
  - [py3status](https://github.com/ultrabug/py3status)
  - [qutebrowser](https://github.com/qutebrowser/qutebrowser)
  - [qutebrowser-compare-config](https://github.com/open-dynaMIX/qutebrowser-compare-config)
@@ -28,10 +30,11 @@ A not exhaustive list of things I use for my GUI systems:
  - [Scribes](http://scribes.sourceforge.net/)
  - [simple-mpv-webui](https://github.com/open-dynaMIX/simple-mpv-webui)
  - [streamwall](https://github.com/open-dynaMIX/streamwall)
+ - [termite](https://github.com/thestinger/termite)
  - [transset-df](http://forchheimer.se/transset-df/)
  - [unclutter-patched](https://aur.archlinux.org/packages/unclutter-patched/)
  - [viewnior](https://siyanpanayotov.com/project/viewnior/)
- - [vim](http://www.vim.org/)
+ - [vundle](https://github.com/VundleVim/Vundle.vim)
  - [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
  - [youtube-dl](https://github.com/rg3/youtube-dl)
@@ -44,7 +47,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs py3status qutebrowser raiseorlaunch screen scribes transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake gvim python-i3-py i3-wm i3lock i3status j4-dmenu-desktop libnotify oh-my-zsh-git pdfjs powerline powerline-fonts py3status qutebrowser raiseorlaunch screen scribes termite transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status

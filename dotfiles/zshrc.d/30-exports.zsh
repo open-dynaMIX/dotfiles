@@ -16,9 +16,9 @@ if [ -f "$HOME/.pythonrc" ]; then
 fi
 
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='nano'
+    export EDITOR='vim'
 else
-    export EDITOR='nano'
+    export EDITOR='vim'
 fi
 
 export PAGER='less'

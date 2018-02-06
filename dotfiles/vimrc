@@ -13,18 +13,17 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'scrooloose/nerdtree'
-let NERDTreeShowHidden=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 Plugin 'tomtom/tcomment_vim'
 Plugin 'timheap/linters.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'plytophogy/vim-virtualenv'
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='term'
 
 " auto-completion
 Plugin 'Valloric/YouCompleteMe'
@@ -47,19 +46,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
 
 
 " All of your Plugins must be added before the following line
@@ -87,23 +73,26 @@ set tabstop=4       " numbers of spaces of tab character
 set expandtab       " tabs are spaces
 set shiftwidth=4    " numbers of spaces to (auto)indent
 set showcmd         " display incomplete commands
-set clipboard=unnamed
+set clipboard=unnamedplus
 set hlsearch        " highlight searches
 set ruler           " show the cursor position all the time
 set title           " show title in console title bar
 set autoindent      " always set autoindenting on
 set smartindent     " smart indent
 set showtabline=2   " always show tabbar
+set mouse=a         " enable mousescroll
+set nowrap
+set colorcolumn=80
+highlight ColorColumn ctermbg=8 guibg=lightgrey
+
 map t <Esc>:tabnew
-map <C-n> :NERDTreeToggle<CR>
 
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
 " Use ctrl-[hjkl] to select the active split!
@@ -116,3 +105,7 @@ nmap <silent> <c-down> :wincmd j<CR>
 nmap <silent> <c-left> :wincmd h<CR>
 nmap <silent> <c-right> :wincmd l<CR>
 command CustomHelp vsplit ~/Linux/vim/vim.txt
+
+hi Normal guibg=NONE ctermbg=NONE
+
+set t_Co=256
