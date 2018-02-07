@@ -14,7 +14,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tomtom/tcomment_vim'
-Plugin 'timheap/linters.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'plytophogy/vim-virtualenv'
 Plugin 'tpope/vim-fugitive'
