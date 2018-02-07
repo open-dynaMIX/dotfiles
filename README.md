@@ -62,3 +62,5 @@ To have a uniform look for gtk, qt4 and qt5, the theme needs to be configured in
  - lxappearance
  - qtconfig-qt4
  - qt5ct
+
+Add `export QT_QPA_PLATFORMTHEME=qt5ct` to `.xinitrc`.
