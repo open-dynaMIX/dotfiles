@@ -25,6 +25,9 @@ dotfiles:
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
+  d_termite:
+    dst: ~/.config/termite
+    src: config/termite
   d_zshrc.d:
     dst: ~/.zshrc.d/
     src: zshrc.d/
@@ -105,6 +108,7 @@ profiles:
     - d_mpv
     - d_qutebrowser
     - d_syncit
+    - d_termite
     - d_zshrc.d
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
@@ -144,6 +148,7 @@ profiles:
     - d_mpv
     - d_qutebrowser
     - d_syncit
+    - d_termite
     - d_zshrc.d
     - f_ario_profiles.xml
     - f_bira_custom.zsh-theme
