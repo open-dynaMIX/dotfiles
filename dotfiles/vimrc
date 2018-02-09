@@ -81,10 +81,12 @@ set smartindent     " smart indent
 set showtabline=2   " always show tabbar
 set mouse=a         " enable mousescroll
 set nowrap
-set colorcolumn=80
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
+hi Normal guibg=NONE ctermbg=NONE
+set t_Co=256
 highlight ColorColumn ctermbg=8 guibg=lightgrey
-
-map t <Esc>:tabnew
+let &colorcolumn=join(range(81,999),",")
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -103,8 +105,5 @@ nmap <silent> <c-up> :wincmd k<CR>
 nmap <silent> <c-down> :wincmd j<CR>
 nmap <silent> <c-left> :wincmd h<CR>
 nmap <silent> <c-right> :wincmd l<CR>
-command CustomHelp vsplit ~/Linux/vim/vim.txt
-
-hi Normal guibg=NONE ctermbg=NONE
-
-set t_Co=256
+map t <Esc>:tabnew
+command CustomHelp tabnew ~/Linux/vim/vim.txt
