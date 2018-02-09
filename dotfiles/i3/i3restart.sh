@@ -12,7 +12,9 @@ i3-msg restart
 killall dunst
 sleep 0.3
 transset-df -n "Notes.txt - (~)" 0.8
+transset-df -n "vim_notes" 0.8
 
 hack_no_transparency "Thunderbird"
 hack_no_transparency "Firefox"
 hack_no_transparency "Rambox"
+hack_no_transparency "Sublime_text"
