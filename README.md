@@ -7,6 +7,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
  - [cower](https://github.com/falconindy/cower)
  - [dmenu2](https://bitbucket.org/melek/dmenu2)
+ - [dotdrop](https://github.com/deadc0de6/dotdrop)
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
@@ -49,7 +50,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dmenu2 ttf-droid dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status j4-dmenu-desktop libnotify lxappearance oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch screen scribes termite transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dmenu2 dotdrop ttf-droid dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status j4-dmenu-desktop libnotify lxappearance oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch screen scribes termite transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status
