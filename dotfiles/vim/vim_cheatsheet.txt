@@ -1,0 +1,35 @@
+# {{@@ env['dotdrop_warning'] @@}}
+
+Ctrl+w [hjkl]         --> navigate windows
+Ctrl+[hjkl]           --> navigate windows
+Ctrl+w Ctrl+w         --> cycle windows
+Ctrl+[PgUp/PgDn]      --> navigate tabs
+u                     --> undo
+Ctrl+r                --> redo
+dd                    --> remove line
+v/V                   --> visual mode chars/lines
+y/p/P                 --> yank/paste/paste before cursor in visual mode
+gt                    --> switch tabs
+ctrl + PgUp/PgDn      --> switch tabs
+< 2< > 2>             --> indent
+t                     --> :tabnew
+:split/:vsplit        --> new split
+:new/:vnew            --> new split
+gc                    --> toggle comment
+gcc                   --> toggle comment for current line
+[n]gg/[n]G            --> go to line n
+gg                    --> go to first line
+G                     --> go to last line
+<Leader>ig            --> toggle indent guide
+:cc                   --> linter go to first error
+[q                    --> linter go to next error
+]q                    --> linter go to next error
+/                     --> search forward
+?                     --> search backward
+*                     --> search for current word
+n/shift+n             --> next/previous result
+:%s/SEARCH/REPLACE/g  --> search and replace in the whole file
+\\c                   --> be case insesitive
+\\C                   --> be case sensitive
+Example:
+:%s/\\cblablabla/BluBluBlu/gc --> replace all occurences of blablabla (case insensitive) with BluBluBlu and ask for confirmation on every occurence

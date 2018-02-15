@@ -106,4 +106,4 @@ nmap <silent> <c-down> :wincmd j<CR>
 nmap <silent> <c-left> :wincmd h<CR>
 nmap <silent> <c-right> :wincmd l<CR>
 map t <Esc>:tabnew
-command CustomHelp tabnew ~/Linux/vim/vim.txt
+command CustomHelp tabnew ~/.vim/vim_cheatsheet.txt
