@@ -123,6 +123,19 @@ c.tabs.title.format = '{perc}{title}{title_sep}{host}'
 ## Type: Int
 # c.tabs.show_switching_delay = 800
 
+## List of widgets displayed in the statusbar.
+## Type: List of String
+## Valid values:
+##   - url: Current page URL.
+##   - scroll: Percentage of the current page position like 10%.
+##   - scroll_raw: Raw percentage of the current page position like 10.
+##   - history: Display an arrow when possible to go back/forward in history.
+##   - tabs: Current active tab, e.g. 2.
+##   - keypress: Display pressed keys when composing a vi command.
+##   - progress: Progress bar for the current page loading.
+# statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs']
+c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
+
 ## Hide the window decoration when using wayland (requires restart)
 ## Type: Bool
 # c.window.hide_wayland_decoration = False

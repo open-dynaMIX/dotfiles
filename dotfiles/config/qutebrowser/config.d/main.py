@@ -651,9 +651,13 @@ c.tabs.last_close = 'startpage'
 ##   - last: At the end.
 # c.tabs.new_position.unrelated = 'last'
 
-## Stay in insert/passthrough mode when switching tabs.
-## Type: Bool
-# c.tabs.persist_mode_on_change = False
+## When switching tabs, what input mode is applied.
+## Type: String
+## Valid values:
+##   - persist: Retain the current mode.
+##   - restore: Restore previously saved mode.
+##   - normal: Always revert to normal mode.
+# c.tabs.mode_on_change = normal
 
 ## Shrink pinned tabs down to their contents.
 ## Type: Bool
