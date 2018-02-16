@@ -332,16 +332,15 @@ for_window [class="Nemo"] border none
 for_window [title="padctl - Mapping"] border none
 for_window [class="Scribes"] border none
 for_window [class="Viewnior"] border 1pixel
-for_window [class="Speedcrunch"] border none
 for_window [class="I3exit" instance="i3exit"] border 1pixel
 for_window [class="qutebrowser"] border none
 for_window [class="mpv"] border none
 
 # transparency
-for_window [class="Scribes"] exec --no-startup-id transset-df -a 0.9
-for_window [class="Speedcrunch"] exec --no-startup-id transset-df -a 0.94
-for_window [class="I3exit" instance="i3exit"] exec --no-startup-id transset-df -a 0.9
-for_window [title="^vim_notes$"] exec --no-startup-id transset-df -a 0.8
+for_window [class="Scribes"] exec --no-startup-id sleep .5 && transset-df -a 0.9
+for_window [class="SpeedCrunch"] exec --no-startup-id sleep .5 && transset-df -a 0.94
+for_window [class="I3exit" instance="i3exit"] exec --no-startup-id sleep .5 && transset-df -a 0.9
+for_window [title="^vim_notes$"] exec --no-startup-id sleep .5 && transset-df -a 0.8
 
 # Border toggle
 bindsym $mod+b border toggle
