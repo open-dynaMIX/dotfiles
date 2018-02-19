@@ -657,7 +657,7 @@ c.tabs.last_close = 'startpage'
 ##   - persist: Retain the current mode.
 ##   - restore: Restore previously saved mode.
 ##   - normal: Always revert to normal mode.
-# c.tabs.mode_on_change = normal
+# c.tabs.mode_on_change = 'normal'
 
 ## Shrink pinned tabs down to their contents.
 ## Type: Bool

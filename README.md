@@ -50,7 +50,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dmenu2 dotdrop ttf-droid dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status j4-dmenu-desktop libnotify lxappearance oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch screen scribes termite transset-df unclutter-patched viewnior vim xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dmenu2 dotdrop ttf-droid dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status j4-dmenu-desktop libnotify lxappearance oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch screen scribes termite transset-df unclutter-patched viewnior xcompmgr xterm youtube-dl zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status
