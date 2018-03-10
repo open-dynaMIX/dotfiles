@@ -413,6 +413,10 @@ c.editor.command = ['subl', '-a', '{}']
 ##   - none: Don't forward any keys.
 # c.input.forward_unbound_keys = 'auto'
 
+## Enter insert mode if an editable element is clicked.
+## Type: Bool
+# c.input.insert_mode.auto_enter = True
+
 ## Leave insert mode if a non-editable element is clicked.
 ## Type: Bool
 # c.input.insert_mode.auto_leave = True
