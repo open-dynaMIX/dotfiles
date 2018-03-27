@@ -20,6 +20,14 @@ config = config  # noqa
 ## Type: Padding
 # c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 
+## Minimum width (in pixels) of tabs
+## (-1 for the default minimum size behavior).
+## This setting only applies when tabs are horizontal.
+## This setting does not apply to pinned tabs,
+##unless tabs.pinned.shrink is False.
+## Type: Int
+# c.tabs.min_width = -1
+
 ## The height of the completion, in px or as percentage of the window.
 ## Type: PercOrInt
 # c.completion.height = '50%'

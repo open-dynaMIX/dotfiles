@@ -707,6 +707,12 @@ c.url.default_page = STARTPAGE
 ##   - anchor
 # c.url.incdec_segments = ['path', 'query']
 
+## Open base URL of the searchengine if a searchengine shortcut is invoked
+## without parameters.
+## Type: Bool
+# c.url.open_base_url = False
+c.url.open_base_url = True
+
 ## The page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
 # c.url.start_pages = ['https://start.duckduckgo.com']
