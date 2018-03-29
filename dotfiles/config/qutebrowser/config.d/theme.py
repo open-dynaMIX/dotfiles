@@ -144,9 +144,10 @@ c.tabs.title.format = '{perc}{title}{title_sep}{host}'
 # statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs']
 c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
 
-## Hide the window decoration when using wayland (requires restart)
+## Hide the window decoration
+## This setting requires a restart on Wayland.
 ## Type: Bool
-# c.window.hide_wayland_decoration = False
+# c.window.hide_decoration = False
 
 ## The format to use for the window title. The following placeholders are
 ## defined:  * `{perc}`: The percentage as a string like `[10%]`. *
