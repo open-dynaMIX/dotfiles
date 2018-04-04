@@ -100,6 +100,9 @@ dotfiles:
     - reload-xresources
     dst: ~/.Xresources
     src: Xresources
+  f_zathurarc:
+    dst: ~/.config/zathura/zathurarc
+    src: config/zathura/zathurarc
   f_zshrc:
     dst: ~/.zshrc
     src: zshrc
@@ -133,6 +136,7 @@ profiles:
     - f_wrapper.sh
     - f_xinitrc
     - f_xresources
+    - f_zathurarc
     - f_zshrc
   baldur:
     dotfiles:
@@ -176,4 +180,5 @@ profiles:
     - f_wrapper.sh
     - f_xinitrc
     - f_xresources
+    - f_zathurarc
     - f_zshrc
