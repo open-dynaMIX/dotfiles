@@ -74,9 +74,9 @@ c.prompt.radius = 0
 ## Type: Float
 # c.tabs.favicons.scale = 1.0
 
-## Show favicons in the tab bar.
-## Type: Bool
-# c.tabs.favicons.show = True
+## When to show favicons in the tab bar.
+## Type: String
+# c.tabs.favicons.show = 'always'
 
 ## Padding around text for tabs
 ## Type: Padding
