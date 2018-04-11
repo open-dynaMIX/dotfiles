@@ -1,18 +1,12 @@
 ! {{@@ env['dotdrop_warning'] @@}}
 
-rofi.color-enabled: true
-! Color scheme for normal row
-rofi.color-normal:                   #000000, #b1b4b3, #000000, #470f77, #b1b4b3
-! Color scheme for urgent row
-rofi.color-urgent:                   #000000, #b1b4b3, #000000, #77003d, #b1b4b3
-! Color scheme for active row
-rofi.color-active:                   #000000, #b1b4b3, #000000, #007763, #b1b4b3
-! Color scheme window
-rofi.color-window:                   #000000, #000000, #b1b4b3
-! Separator style (none, dash, solid)
-rofi.separator-style:                none
-rofi.font:                           Droid Sans Mono 12
+rofi.combi-modi:                     drun,run,window
+rofi.modi:                           drun,run,window,combi
 rofi.case-sensitive:                 false
+rofi.terminal:                       termite
+rofi.disable-history:                true
+rofi.sort:                           true
+rofi.levenshtein-sort:               true
 rofi.location:                       1
 rofi.width:                          100
 rofi.lines:                          5
@@ -22,12 +16,14 @@ rofi.line-padding:                   1
 rofi.columns:                        5
 rofi.bw:                             0
 rofi.hide-scrollbar:                 true
-rofi.combi-modi:                     drun,run,window
-rofi.modi:                           drun,run,window,combi
-rofi.terminal:                       termite
-rofi.disable-history:                true
-rofi.sort:                           true
-rofi.levenshtein-sort:               true
+rofi.color-enabled:                  true
+rofi.color-normal:                   #000000, #b1b4b3, #000000, #470f77, #b1b4b3
+rofi.color-urgent:                   #000000, #b1b4b3, #000000, #77003d, #b1b4b3
+rofi.color-active:                   #000000, #b1b4b3, #000000, #007763, #b1b4b3
+rofi.color-window:                   #000000, #000000, #b1b4b3
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
+rofi.font:                           Droid Sans Mono 12
 
 
 ! DEFAULTS
