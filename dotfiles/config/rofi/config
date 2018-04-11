@@ -5,7 +5,9 @@ rofi.modi:                           drun,run,window,combi
 rofi.case-sensitive:                 false
 rofi.terminal:                       termite
 rofi.disable-history:                true
-rofi.sort:                           true
+! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
+rofi.matching:                       normal
+rofi.sort:                           false
 rofi.levenshtein-sort:               true
 rofi.location:                       1
 rofi.width:                          100
