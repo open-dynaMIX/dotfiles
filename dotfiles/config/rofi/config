@@ -23,7 +23,7 @@ rofi.columns:                        5
 rofi.bw:                             0
 rofi.hide-scrollbar:                 true
 rofi.combi-modi:                     drun,run,window
-rofi.modi:                           window,run,ssh,combi
+rofi.modi:                           drun,run,window,combi
 rofi.terminal:                       termite
 rofi.disable-history:                true
 rofi.sort:                           true
