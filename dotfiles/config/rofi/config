@@ -19,7 +19,7 @@ rofi.lines:                          5
 rofi.fixed-num-lines:                true
 rofi.line-margin:                    0
 rofi.line-padding:                   1
-rofi.columns:                        6
+rofi.columns:                        5
 rofi.bw:                             0
 rofi.hide-scrollbar:                 true
 rofi.combi-modi:                     drun,run,window
