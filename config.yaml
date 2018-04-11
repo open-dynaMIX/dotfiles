@@ -74,6 +74,9 @@ dotfiles:
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
+  f_rofi_config:
+    dst: ~/.config/rofi/config
+    src: config/rofi/config
   f_screenrc:
     dst: ~/.screenrc
     src: screenrc
@@ -129,6 +132,7 @@ profiles:
     - f_pythonrc
     - f_qutebrowser.desktop
     - f_radio.sh
+    - f_rofi_config
     - f_screenrc
     - f_tremc_settings.cfg
     - f_viewnior.conf
@@ -172,6 +176,7 @@ profiles:
     - f_pythonrc
     - f_qutebrowser.desktop
     - f_radio.sh
+    - f_rofi_config
     - f_screenrc
     - f_syncit.desktop
     - f_tremc_settings.cfg
