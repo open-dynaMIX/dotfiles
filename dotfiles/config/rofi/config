@@ -27,6 +27,7 @@ rofi.color-window:                   #000000, #000000, #d5d5d5
 rofi.separator-style:                solid
 rofi.font:                           Droid Sans Mono 12
 rofi.show-icons:                     true
+rofi.display-combi:
 
 
 ! DEFAULTS
