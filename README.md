@@ -19,6 +19,9 @@ A not exhaustive list of things I use for my GUI systems:
  - [libnotify](https://developer.gnome.org/libnotify/)
  - [lxappearance](https://wiki.lxde.org/de/LXAppearance)
  - [MFixx](https://github.com/file-icons/MFixx) (edited version: moved all glyphs to private area in order to avoid conflicts with font-awesome. Plus some additional glyphs)
+ - [nemo](https://github.com/linuxmint/nemo)
+ - [nemo-fileroller](https://github.com/linuxmint/nemo-extensions/tree/master/nemo-fileroller)
+ - [nemo-seahorse](https://github.com/linuxmint/nemo-extensions/tree/master/nemo-seahorse)
  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [pdfjs](https://github.com/mozilla/pdf.js)
  - [powerline](https://github.com/powerline/powerline)
@@ -39,6 +42,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [viewnior](https://siyanpanayotov.com/project/viewnior/)
  - [vundle](https://github.com/VundleVim/Vundle.vim)
  - [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
+ - [xdotool](https://github.com/jordansissel/xdotool)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
  - [youtube-dl](https://github.com/rg3/youtube-dl)
  - [zathura](https://github.com/pwmt/zathura)
@@ -52,7 +56,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-pacaur -S ario awoken-icons dotdrop ttf-droid dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch rofi rofi-dmenu screen scribes termite transset-df unclutter-patched viewnior xcompmgr xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
+pacaur -S ario awoken-icons dotdrop ttf-droid dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-seahorse-nonautilus oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch rofi rofi-dmenu screen scribes termite transset-df unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status
@@ -67,3 +71,9 @@ To have a uniform look for gtk, qt4 and qt5, the theme needs to be configured in
  - qt5ct
 
 Add `export QT_QPA_PLATFORMTHEME=qt5ct` and `export QT_AUTO_SCREEN_SCALE_FACTOR=0` to `.xinitrc`.
+
+# Set some default applications
+``` bash
+xdg-settings set default-web-browser qutebrowser.desktop
+xdg-mime default nemo.desktop inode/directory
+```

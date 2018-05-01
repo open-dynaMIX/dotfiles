@@ -213,7 +213,7 @@ bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chr
 bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+shift+t move container to workspace $ws_mail; workspace $ws_mail
-bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo -e nemo
+bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo
 bindsym $mod+Mod1+n exec --no-startup-id nemo
 bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
@@ -330,6 +330,7 @@ for_window [class="(?i)xterm"] border none
 for_window [class="Termite"] border none
 for_window [class="Atom"] border none
 for_window [class="Nemo"] border none
+for_window [class="Thunar"] border none
 for_window [title="padctl - Mapping"] border none
 for_window [class="Scribes"] border none
 for_window [class="Viewnior"] border 1pixel

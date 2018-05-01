@@ -1,0 +1,2 @@
+# {{@@ env['dotdrop_warning'] @@}}
+gtk-can-change-accels=1
