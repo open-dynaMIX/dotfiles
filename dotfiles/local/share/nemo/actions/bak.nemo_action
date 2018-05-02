@@ -6,6 +6,6 @@ Comment=Add/Remove '.bak' from filename.
 Icon-Name=text-x-bak
 Exec=sh -c "${HOME}/scripts/bak.sh %F"
 Selection=any
-Quote=double
+Quote=single
 Extensions=any;
 
