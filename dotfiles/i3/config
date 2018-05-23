@@ -298,7 +298,7 @@ for_window [class="Transmission-gtk"] floating enable
 for_window [instance="TeamViewer.exe"] floating enable
 for_window [instance="pdwindow" class="PdWindow"] floating enable
 for_window [class="PatchWindow"] floating enable
-for_window [class="Hedgewars" instance="hedgewars" title="Hedgewars"] floating enable
+for_window [class="hedgewars" instance="hedgewars"] floating enable
 for_window [class="hwengine"] floating enable
 for_window [class="SuperTuxKart"] floating enable
 for_window [class="Qjoypad"] floating enable

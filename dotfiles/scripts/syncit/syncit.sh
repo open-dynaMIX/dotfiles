@@ -21,7 +21,7 @@ echo "
 scriptlocation=$(readlink -f $0)
 scriptdir=$(dirname $scriptlocation)
 rsynccmd="rsync -avxe ssh --delete --delete-excluded --include-from=/home/{{@@ env['USER'] @@}}/scripts/syncit/include --exclude-from=/home/{{@@ env['USER'] @@}}/scripts/syncit/exclude"
-serverdir="{{@@ env['USER'] @@}}@{{@@ env['backup_host'] @@}}:/var/disk/{{@@ env['USER'] @@}}/backup_{{@@ env['model'] @@}}/"
+serverdir="{{@@ env['USER'] @@}}@{{@@ env['backup_host'] @@}}:/home/{{@@ env['USER'] @@}}/{{@@ env['model'] @@}}/"
 localdir="/home/{{@@ env['USER'] @@}}/"
 
 rm -f "$scriptdir"/.pyoutput
