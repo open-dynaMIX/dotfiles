@@ -7,62 +7,64 @@ config:
   backup: true
   create: true
   dotpath: dotfiles
+  keepdot: true
+  banner: false
 dotfiles:
   d_nemo_actions:
     dst: ~/.local/share/nemo/actions
-    src: local/share/nemo/actions
+    src: .local/share/nemo/actions
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
-    src: themes/My_Fancy_Theme/
+    src: .themes/My_Fancy_Theme/
   d_i3:
     actions:
     - i3-restart
     dst: ~/.i3/
-    src: i3/
+    src: .i3/
   d_mpv:
     dst: ~/.config/mpv/
-    src: config/mpv/
+    src: .config/mpv/
   d_qutebrowser:
     dst: ~/.config/qutebrowser/
-    src: config/qutebrowser/
+    src: .config/qutebrowser/
   d_syncit:
     dst: ~/scripts/syncit/
     src: scripts/syncit/
   d_termite:
     dst: ~/.config/termite
-    src: config/termite
+    src: .config/termite
   d_vim:
     dst: ~/.vim
-    src: vim
+    src: .vim
   d_zshrc.d:
     dst: ~/.zshrc.d/
-    src: zshrc.d/
+    src: .zshrc.d/
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
-    src: config/ario/profiles/profiles.xml
+    src: .config/ario/profiles/profiles.xml
   f_bak.sh:
     dst: ~/scripts/bak.sh
     src: scripts/bak.sh
   f_bira_custom.zsh-theme:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
-    src: oh-my-zsh/themes/bira_custom.zsh-theme
+    src: .oh-my-zsh/themes/bira_custom.zsh-theme
   f_dunstrc:
     actions:
     - dunst-restart
     dst: ~/.config/dunst/dunstrc
-    src: config/dunst/dunstrc
+    src: .config/dunst/dunstrc
   f_gitconfig:
     dst: ~/.gitconfig
-    src: gitconfig
+    src: .gitconfig
   f_gtk3_settings.ini:
     dst: ~/.config/gtk-3.0/settings.ini
-    src: config/gtk-3.0/settings.ini
+    src: .config/gtk-3.0/settings.ini
   f_gtkrc-2.0.mine:
     dst: ~/.gtkrc-2.0.mine
-    src: gtkrc-2.0.mine
+    src: .gtkrc-2.0.mine
   f_hedgewars.desktop:
     dst: ~/.local/share/applications/hedgewars.desktop
-    src: local/share/applications/hedgewars.desktop
+    src: .local/share/applications/hedgewars.desktop
   f_keylayouttoggle.sh:
     dst: ~/scripts/keylayouttoggle.sh
     src: scripts/keylayouttoggle.sh
@@ -70,54 +72,54 @@ dotfiles:
     actions:
     - font-cache-refresh
     dst: ~/.local/share/fonts/MFixx_custom.ttf
-    src: local/share/fonts/MFixx_custom.ttf
+    src: .local/share/fonts/MFixx_custom.ttf
   f_pypirc:
     dst: ~/.pypirc
-    src: pypirc
+    src: .pypirc
   f_pythonrc:
     dst: ~/.pythonrc
-    src: pythonrc
+    src: .pythonrc
   f_qutebrowser.desktop:
     dst: ~/.local/share/applications/qutebrowser.desktop
-    src: local/share/applications/qutebrowser.desktop
+    src: .local/share/applications/qutebrowser.desktop
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
   f_rofi_config:
     dst: ~/.config/rofi/config
-    src: config/rofi/config
+    src: .config/rofi/config
   f_screenrc:
     dst: ~/.screenrc
-    src: screenrc
+    src: .screenrc
   f_syncit.desktop:
     dst: ~/.local/share/applications/syncit.desktop
-    src: local/share/applications/syncit.desktop
+    src: .local/share/applications/syncit.desktop
   f_tremc_settings.cfg:
     dst: ~/.config/tremc/settings.cfg
-    src: config/tremc/settings.cfg
+    src: .config/tremc/settings.cfg
   f_viewnior.conf:
     dst: ~/.config/viewnior/viewnior.conf
-    src: config/viewnior/viewnior.conf
+    src: .config/viewnior/viewnior.conf
   f_vimrc:
     dst: ~/.vimrc
-    src: vimrc
+    src: .vimrc
   f_wrapper.sh:
     dst: ~/scripts/wrapper.sh
     src: scripts/wrapper.sh
   f_xinitrc:
     dst: ~/.xinitrc
-    src: xinitrc
+    src: .xinitrc
   f_xresources:
     actions:
     - reload-xresources
     dst: ~/.Xresources
-    src: Xresources
+    src: .Xresources
   f_zathurarc:
     dst: ~/.config/zathura/zathurarc
-    src: config/zathura/zathurarc
+    src: .config/zathura/zathurarc
   f_zshrc:
     dst: ~/.zshrc
-    src: zshrc
+    src: .zshrc
 profiles:
   ant:
     dotfiles:
