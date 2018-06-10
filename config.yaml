@@ -148,6 +148,7 @@ profiles:
     - f_radio.sh
     - f_rofi_config
     - f_screenrc
+    - f_syncit.desktop
     - f_tremc_settings.cfg
     - f_viewnior.conf
     - f_vimrc

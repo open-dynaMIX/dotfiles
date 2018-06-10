@@ -397,6 +397,10 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Int
 # c.history_gap_interval = 30
 
+## Allow Escape to quit the crash reporter.
+## Type: Bool
+# c.input.escape_quits_reporter = True
+
 ## Find text on a page case-insensitively.
 ## Type: String
 ## Valid values:
