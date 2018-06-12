@@ -100,17 +100,23 @@ c.prompt.radius = 0
 # c.tabs.title.alignment = 'left'
 
 ## The format to use for the tab title. The following placeholders are
-## defined:  * `{perc}`: The percentage as a string like `[10%]`. *
-## `{perc_raw}`: The raw percentage, e.g. `10` * `{title}`: The title of
-## the current web page * `{title_sep}`: The string ` - ` if a title is
-## set, empty otherwise. * `{index}`: The index of this tab. * `{id}`:
-## The internal tab ID of this tab. * `{scroll_pos}`: The page scroll
-## position. * `{host}`: The host of the current web page. * `{backend}`:
-## Either ''webkit'' or ''webengine'' * `{private}` : Indicates when
-## private mode is enabled.
+## defined:
+## * `{perc}`: The percentage as a string like `[10%]`.
+## * `{perc_raw}`: The raw percentage, e.g. `10`
+## * `{title}`: The title of the current web page
+## * `{title_sep}`: The string ` - ` if a title is set, empty otherwise.
+## * `{index}`: The index of this tab.
+## * `{id}`: The internal tab ID of this tab.
+## * `{scroll_pos}`: The page scroll position.
+## * `{host}`: The host of the current web page.
+## * `{backend}`: Either ''webkit'' or ''webengine''
+## * `{private}` : Indicates when private mode is enabled.
+## * `{current_url}`: URL of the current web page.
+## * `{protocol}`: Protocol (http/https/…) of the current web page.
+## * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-# c.tabs.title.format = '{index}: {title}'
-c.tabs.title.format = '{perc}{title}{title_sep}{host}'
+# c.tabs.title.format = '{audio}{index}: {title}'
+c.tabs.title.format = '{perc}{audio}{title}{title_sep}{host}'
 
 ## The format to use for the tab title for pinned tabs. The same
 ## placeholders like for `tabs.title.format` are defined.

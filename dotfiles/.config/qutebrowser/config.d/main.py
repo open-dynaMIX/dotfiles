@@ -101,6 +101,14 @@ c.auto_save.session = True
 # c.confirm_quit = ['never']
 c.confirm_quit = ['downloads']
 
+## Automatically start playing <video> elements.
+## Note this option needs a restart with QtWebEngine on Qt < 5.11.
+## Type: Bool
+## On QtWebEngine, this setting requires Qt 5.10 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.autoplay = True
+c.content.autoplay = False
+
 ## Whether support for the HTML 5 web application cache feature is
 ## enabled. An application cache acts like an HTTP cache in some sense.
 ## For documents that use the application cache via JavaScript, the
@@ -123,6 +131,14 @@ c.confirm_quit = ['downloads']
 ## Type: Int
 # c.content.cache.size = None
 
+
+## Allow websites to read canvas elements.
+## Note this is needed for some websites to work properly.
+## This setting requires a restart.
+## Type: Bool
+## This setting is only available with the QtWebEngine backend
+# c.content.canvas_reading = True
+
 ## Control which cookies to accept.
 ## Type: String
 ## Valid values:
@@ -143,12 +159,15 @@ c.confirm_quit = ['downloads']
 # c.content.default_encoding = 'iso-8859-1'
 c.content.default_encoding = 'utf-8'
 
-# Enable extra tools for Web developers. This needs to be enabled for
-# `:inspector` to work and also adds an _Inspect_ entry to the context
-# menu. For QtWebEngine, see `--enable-webengine-inspector` in
-# `qutebrowser --help` instead.
-# Type: Bool
-# c.content.developer_extras = False
+
+## Allow websites to share screen content. On Qt < 5.10, a dialog box is
+## always displayed, even if this is set to "true".
+## Type: BoolAsk
+## Valid values:
+## - true
+## - false
+## - ask
+# c.content.desktop_capture = 'ask'
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
@@ -285,6 +304,17 @@ c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
 ## Type: Bool
 # c.content.pdfjs = False
 
+## Allow websites to request persistent storage quota via
+## navigator.webkitPersistentStorage.requestQuota.
+## Type: BoolAsk
+## Valid values:
+## - true
+## - false
+## - ask
+## On QtWebEngine, this setting requires Qt 5.11 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.persistent_storage = 'ask'
+
 ## Enables or disables plugins in Web pages.
 ## Type: Bool
 # c.content.plugins = False
@@ -312,6 +342,17 @@ c.content.plugins = True
 ## Type: Bool
 # c.content.proxy_dns_requests = True
 
+## Allow websites to register protocol handlers via
+## navigator.registerProtocolHandler.
+## Type: BoolAsk
+## Valid values:
+## - true
+## - false
+## - ask
+## On QtWebEngine, this setting requires Qt 5.11 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.register_protocol_handler = 'ask'
+
 ## Validate SSL handshakes.
 ## Type: BoolAsk
 ## Valid values:
@@ -327,6 +368,15 @@ c.content.plugins = True
 ## Enables or disables WebGL.
 ## Type: Bool
 # c.content.webgl = True
+
+## Only expose public interfaces via WebRTC.
+## On Qt 5.9, this option requires a restart.
+## On Qt 5.10, this option doesn’t work at all because of a Qt bug.
+## On Qt >= 5.11, no restart is required.
+## Type: Bool
+## On QtWebEngine, this setting requires Qt 5.9.2 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.webrtc_public_interfaces_only = False
 
 ## Limit fullscreen to the browser window (does not expand to fill the
 ## screen).
@@ -517,8 +567,13 @@ c.messages.timeout = 5000
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers. This setting requires a
 ## restart.
-## Type: Bool
-# c.qt.force_software_rendering = False
+## Type: String
+## Valid values:
+##   - software-opengl: Tell LibGL to use a software implementation of GL (LIBGL_ALWAYS_SOFTWARE / QT_XCB_FORCE_SOFTWARE_OPENGL)
+##   - qt-quick: Tell Qt Quick to use a software renderer instead of OpenGL. (QT_QUICK_BACKEND=software)
+##   - chromium: Tell Chromium to disable GPU support and use Skia software rendering instead. (--disable-gpu)
+##   - none: Don’t force software rendering.
+# c.qt.force_software_rendering = 'none'
 
 ## Turn on Qt HighDPI scaling. This is equivalent to setting
 ## QT_AUTO_SCREEN_SCALE_FACTOR=1 in the environment. It's off by default
