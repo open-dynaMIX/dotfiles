@@ -388,7 +388,7 @@ c.content.plugins = True
 ## inspector's JavaScript console. Enabling this feature might have an
 ## impact on performance.
 ## Type: Bool
-# c.content.xss_auditing = False
+# c.content.xss_auditing = True
 
 ## The directory to save downloads to. If unset, a sensible os-specific
 ## default is used.

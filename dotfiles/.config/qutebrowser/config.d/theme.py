@@ -2,7 +2,7 @@
 # flake8: noqa: E266
 
 
-VIOLET = '#470f77'
+PURPLE = '#470f77'
 
 c = c  # noqa
 config = config  # noqa
@@ -174,7 +174,7 @@ c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress
 ## Background color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
-c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {0}, stop:1 {0})'.format(VIOLET)
+c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {0}, stop:1 {0})'.format(PURPLE)
 
 ## Bottom border color of the completion widget category headers.
 ## Type: QssColor
@@ -284,7 +284,7 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## for transparency.
 ## Type: QssColor
 # c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.8), stop:1 rgba(98, 22, 162, 0.8))'  # violet
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 15, 119, 0.8), stop:1 rgba(98, 22, 162, 0.8))'  # purple
 
 ## Font color for hints.
 ## Type: QssColor
@@ -340,12 +340,12 @@ c.keyhint.radius = 0
 ## Background color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.bg = 'darkorange'
-c.colors.messages.warning.bg = VIOLET
+c.colors.messages.warning.bg = PURPLE
 
 ## Border color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.border = '#d47300'
-c.colors.messages.warning.border = VIOLET
+c.colors.messages.warning.border = PURPLE
 
 ## Foreground color a warning message.
 ## Type: QssColor
@@ -509,7 +509,7 @@ c.colors.tabs.odd.bg = '#333333'
 ## Background color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.bg = 'black'
-c.colors.tabs.selected.even.bg = VIOLET
+c.colors.tabs.selected.even.bg = PURPLE
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
@@ -518,7 +518,7 @@ c.colors.tabs.selected.even.bg = VIOLET
 ## Background color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.bg = 'black'
-c.colors.tabs.selected.odd.bg = VIOLET
+c.colors.tabs.selected.odd.bg = PURPLE
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
