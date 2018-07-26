@@ -1,0 +1,5 @@
+# {{@@ env['dotdrop_warning'] @@}}
+
+clear lock
+keycode 66 = Super_L
+keycode 133 = Caps_Lock

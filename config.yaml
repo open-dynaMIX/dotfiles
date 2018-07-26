@@ -5,14 +5,12 @@ actions:
   reload-xresources: xrdb -merge ~/.Xresources
 config:
   backup: true
+  banner: false
   create: true
   dotpath: dotfiles
   keepdot: true
-  banner: false
+  longkey: false
 dotfiles:
-  d_nemo_actions:
-    dst: ~/.local/share/nemo/actions
-    src: .local/share/nemo/actions
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
     src: .themes/My_Fancy_Theme/
@@ -24,6 +22,9 @@ dotfiles:
   d_mpv:
     dst: ~/.config/mpv/
     src: .config/mpv/
+  d_nemo_actions:
+    dst: ~/.local/share/nemo/actions
+    src: .local/share/nemo/actions
   d_qutebrowser:
     dst: ~/.config/qutebrowser/
     src: .config/qutebrowser/
@@ -109,6 +110,9 @@ dotfiles:
   f_xinitrc:
     dst: ~/.xinitrc
     src: .xinitrc
+  f_xmodmap:
+    dst: ~/.Xmodmap
+    src: .Xmodmap
   f_xresources:
     actions:
     - reload-xresources
@@ -154,6 +158,7 @@ profiles:
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
+    - f_xmodmap
     - f_xresources
     - f_zathurarc
     - f_zshrc
@@ -202,6 +207,7 @@ profiles:
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
+    - f_xmodmap
     - f_xresources
     - f_zathurarc
     - f_zshrc
