@@ -58,7 +58,7 @@ ZSH_CUSTOM=~/.oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python docker docker-compose)
+plugins=(git python docker docker-compose history-substring-search)
 
 # User configuration
 PATH="${PATH}:$(ruby -e "puts Gem.user_dir")/bin"
