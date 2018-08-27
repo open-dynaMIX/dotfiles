@@ -27,6 +27,7 @@ SAVEHIST=10000000
 HISTFILESIZE=1000000
 setopt histignorespace
 #setopt appendhistory
+setopt HIST_FIND_NO_DUPS
 setopt notify
 unsetopt beep
 bindkey -v
