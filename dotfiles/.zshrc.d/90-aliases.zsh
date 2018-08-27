@@ -4,8 +4,10 @@
 #
 
 if [[ $EUID -ne 0 ]]; then
-    alias sudo='sudo ' # needed for using aliases with sudo
-    alias please='sudo '
+    # alias sudo='sudo ' # needed for using aliases with sudo
+    # alias please='sudo '
+    alias sudo='nocorrect sudo' # needed for using aliases with sudo
+    alias please='nocorrect sudo '
 fi
 alias ..='cd ..'
 alias amiinscreen='echo $STY'
