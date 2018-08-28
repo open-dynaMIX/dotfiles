@@ -285,6 +285,17 @@ c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
 ##   - ask
 # c.content.media_capture = 'ask'
 
+## Allow websites to lock your mouse pointer.
+## This setting supports URL patterns.
+## Type: BoolAsk
+## Valid values:
+##   - true
+##   - false
+##   - ask
+## On QtWebEngine, this setting requires Qt 5.8 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.mouse_lock = 'ask'
+
 ## Location of a netrc-file for HTTP authentication. If unset, `~/.netrc`
 ## is used.
 ## Type: File

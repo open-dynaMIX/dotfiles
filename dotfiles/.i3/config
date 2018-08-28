@@ -213,7 +213,7 @@ bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -C -c Firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
-bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -C -c qutebrowser -e "qutebrowser --enable-webengine-inspector"
+bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -C -c qutebrowser -l 15 -e "qutebrowser --enable-webengine-inspector"
 bindsym $mod+Mod1+w exec --no-startup-id qutebrowser
 bindsym $mod+shift+w move container to workspace $ws_qb; workspace $ws_qb
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
@@ -247,7 +247,7 @@ bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
 {%@@ if env['intellij'] == "true" @@%}
-bindsym $mod+p exec --no-startup-id $raiseorlaunch -W $ws_pycharm -C -c jetbrains-pycharm -e pycharm -l 20
+bindsym $mod+p exec --no-startup-id $raiseorlaunch -W $ws_pycharm -C -c jetbrains-pycharm -e pycharm -l 35
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
 {%@@ endif @@%}
@@ -262,7 +262,7 @@ bindsym $mod+m exec --no-startup-id $raiseorlaunch -w $ws_mixxx -c Mixxx
 bindsym $mod+shift+m move container to workspace $ws_mixxx; workspace $ws_mixxx
 bindsym $mod+i workspace $ws_im
 {%@@ elif profile == "ant" @@%}
-bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox
+bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox -l 5
 {%@@ endif @@%}
 bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 
