@@ -20,7 +20,7 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono, Icons 14
 #font pango:Droid Sans Mono, Font Awesome 5 Free Solid, MFixx_custom 12
-font pango:Fira Code, Font Awesome 5 Free Solid, MFixx_custom 12
+font pango:Fira Code Medium, Font Awesome 5 Free Solid, MFixx_custom 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
