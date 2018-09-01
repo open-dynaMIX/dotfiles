@@ -9,6 +9,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [dotdrop](https://github.com/deadc0de6/dotdrop)
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
+ - [Fira Code](https://github.com/tonsky/FiraCode)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
  - [Guake](https://github.com/Guake/guake)
  - [gvim](http://www.vim.org/)
@@ -57,7 +58,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-yay -S ario awoken-icons dotdrop ttf-droid dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-seahorse-nonautilus oh-my-zsh-git pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch rofi rofi-dmenu screen scribes termite transset-df unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
+yay -S ario awoken-icons dotdrop ttf-droid dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-seahorse-nonautilus oh-my-zsh-git otf-fira-code pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser raiseorlaunch rofi rofi-dmenu screen scribes termite transset-df unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status
