@@ -211,10 +211,10 @@ bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 
-bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -C -c Firefox -s Navigator
+bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -c Firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
-bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -C -c qutebrowser -l 15 -e "qutebrowser --enable-webengine-inspector"
+bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -c qutebrowser -l 15 -e "qutebrowser --enable-webengine-inspector"
 bindsym $mod+Mod1+w exec --no-startup-id qutebrowser
 bindsym $mod+shift+w move container to workspace $ws_qb; workspace $ws_qb
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
@@ -224,13 +224,13 @@ bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chr
 bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
 bindsym $mod+shift+t move container to workspace $ws_mail; workspace $ws_mail
-bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -C -c Nemo -s nemo
+bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo
 bindsym $mod+Mod1+n exec --no-startup-id nemo
 bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 
 #bindsym $mod+q exec --no-startup-id $raiseorlaunch -W 4 -C -c Termite
 
-bindsym $mod+s exec --no-startup-id $raiseorlaunch -W $ws_subl -C -c Sublime_text -s sublime_text -e subl
+bindsym $mod+s exec --no-startup-id $raiseorlaunch -W $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
 # bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
