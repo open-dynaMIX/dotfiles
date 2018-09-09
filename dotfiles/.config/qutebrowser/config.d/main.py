@@ -86,10 +86,19 @@ c.auto_save.session = True
 ## Type: Bool
 # c.completion.use_best_match = False
 
+## A list of patterns which should not be shown in the history.
+## This only affects the completion. Matching URLs are still saved in the
+## history (and visible on the qute://history page), but hidden in the
+## completion. Changing this setting will cause the completion history to be
+## regenerated on the next start, which will take a short while.
+## This setting requires a restart.
+## Type: List of UrlPattern
+# c.completion.web_history.exclude = []
+
 ## How many URLs to show in the web history. 0: no history / -1:
 ## unlimited
 ## Type: Int
-# c.completion.web_history_max_items = -1
+# c.completion.web_history.max_items = -1
 
 ## Whether quitting the application requires a confirmation.
 ## Type: ConfirmQuit
