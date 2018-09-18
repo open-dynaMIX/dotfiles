@@ -389,14 +389,22 @@ c.content.plugins = True
 ## Type: Bool
 # c.content.webgl = True
 
-## Only expose public interfaces via WebRTC.
-## On Qt 5.9, this option requires a restart.
-## On Qt 5.10, this option doesn’t work at all because of a Qt bug.
-## On Qt >= 5.11, no restart is required.
-## Type: Bool
+## Which interfaces to expose via WebRTC. On Qt 5.10, this option doesn’t
+## work because of a Qt bug. This setting requires a restart.
+## Type: String
+## Valid values:
+##   - all-interfaces: WebRTC has the right to enumerate all interfaces and
+##       bind them to discover public interfaces.
+##   - default-public-and-private-interfaces: WebRTC should only use the
+##       default route used by http. This also exposes the associated default private address. Default route is the route chosen by the OS on a multi-homed endpoint.
+##   - default-public-interface-only: WebRTC should only use the default
+##       route used by http. This doesn’t expose any local addresses.
+##   - disable-non-proxied-udp: WebRTC should only use TCP to contact peers
+##       or servers unless the proxy server supports UDP. This doesn’t expose any local addresses either.
+## Default: all-interfaces
 ## On QtWebEngine, this setting requires Qt 5.9.2 or newer.
 ## On QtWebKit, this setting is unavailable.
-# c.content.webrtc_public_interfaces_only = False
+# c.content.webrtc_ip_handling_policy = 'all-interfaces'
 
 ## Limit fullscreen to the browser window (does not expand to fill the
 ## screen).
@@ -601,6 +609,37 @@ c.messages.timeout = 5000
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
 # c.qt.highdpi = False
+
+## Use Chromium’s low-end device mode. This improves the RAM usage of renderer processes, at the expense of performance. This setting requires a restart.
+## Type: String
+## Valid values:
+##   - force-on: Always use low-end device mode.
+##   - auto: Decide automatically (uses low-end mode with < 1 GB available RAM).
+##   - force-off: Never use low-end device mode.
+## Default: auto
+## This setting is only available with the QtWebEngine backend.
+# c.qt.low_end_device_mode = 'auto'
+
+## Which Chromium process model to use. Alternative process models use less
+## resources, but decrease security and robustness. See the following pages
+## for more details:
+## https://www.chromium.org/developers/design-documents/process-models
+## https://doc.qt.io/qt-5/qtwebengine-features.html#process-models
+## This setting requires a restart.
+## Type: String
+## Valid values:
+##   - process-per-site-instance: Pages from separate sites are put into
+##       separate processes and separate visits to the same site are also
+##       isolated.
+##   - process-per-site: Pages from separate sites are put into separate
+##       processes. Unlike Process per Site Instance, all visits to the same
+##       site will share an OS process. The benefit of this model is reduced
+##       memory consumption, because more web pages will share processes. The drawbacks include reduced security, robustness, and responsiveness.
+##   - single-process: Run all tabs in a single process. This should be used
+##       for debugging purposes only, and it disables :open --private.
+## Default: process-per-site-instance
+## This setting is only available with the QtWebEngine backend.
+# c.qt.process_model = 'process-per-site-instance'
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
