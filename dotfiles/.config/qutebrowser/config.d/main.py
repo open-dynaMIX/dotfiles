@@ -613,9 +613,9 @@ c.messages.timeout = 5000
 ## Use Chromium’s low-end device mode. This improves the RAM usage of renderer processes, at the expense of performance. This setting requires a restart.
 ## Type: String
 ## Valid values:
-##   - force-on: Always use low-end device mode.
+##   - always: Always use low-end device mode.
 ##   - auto: Decide automatically (uses low-end mode with < 1 GB available RAM).
-##   - force-off: Never use low-end device mode.
+##   - never: Never use low-end device mode.
 ## Default: auto
 ## This setting is only available with the QtWebEngine backend.
 # c.qt.low_end_device_mode = 'auto'
