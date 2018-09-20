@@ -284,7 +284,7 @@ for_window [class="I3exit" instance="i3exit"] floating enable
 for_window [class="qjackctl"] floating enable
 for_window [class="Skype" window_role="ConversationsWindow"] floating enable
 for_window [class="Pidgin" window_role="conversation"] floating enable
-for_window [class="Gimp"] floating enable
+#for_window [class="Gimp"] floating enable
 for_window [class="Main.py" instance="guake"] floating enable
 for_window [class="GCompris"] floating enable
 for_window [title="KeePassX - Auto-Type"] floating enable
