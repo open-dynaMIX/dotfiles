@@ -9,7 +9,9 @@ config:
   create: true
   dotpath: dotfiles
   keepdot: true
+  link_by_default: false
   longkey: false
+  workdir: ~/.config/dotdrop
 dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
@@ -37,6 +39,9 @@ dotfiles:
   d_vim:
     dst: ~/.vim
     src: .vim
+  d_yay:
+    dst: ~/.config/yay
+    src: .config/yay
   d_zshrc.d:
     dst: ~/.zshrc.d/
     src: .zshrc.d/
@@ -135,6 +140,7 @@ profiles:
     - d_syncit
     - d_termite
     - d_vim
+    - d_yay
     - d_zshrc.d
     - f_ario_profiles.xml
     - f_bak.sh
@@ -184,6 +190,7 @@ profiles:
     - d_syncit
     - d_termite
     - d_vim
+    - d_yay
     - d_zshrc.d
     - f_ario_profiles.xml
     - f_bak.sh
