@@ -20,6 +20,14 @@ config = config  # noqa
 ## Type: Padding
 # c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 
+## Maximum width (in pixels) of tabs (-1 for no maximum). This setting
+## only applies when tabs are horizontal. This setting does not apply to
+## pinned tabs, unless `tabs.pinned.shrink` is False. This setting may
+## not apply properly if max_width is smaller than the minimum size of
+## tab contents, or smaller than tabs.min_width.
+## Type: Int
+# c.tabs.max_width = -1
+
 ## Minimum width (in pixels) of tabs
 ## (-1 for the default minimum size behavior).
 ## This setting only applies when tabs are horizontal.
@@ -50,9 +58,15 @@ config = config  # noqa
 # c.prompt.radius = 8
 c.prompt.radius = 0
 
-## Show a scrollbar.
-## Type: Bool
-# c.scrolling.bar = False
+## When to show a scrollbar.
+## Type: String
+## Valid values:
+##   - always: Always show the scrollbar.
+##   - never: Never show the scrollbar.
+##   - when-searching: Show the scrollbar when searching for text in the
+##                     webpage. With the QtWebKit backend, this is equal to
+##                     never.
+# c.scrolling.bar = 'when-searching'
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool

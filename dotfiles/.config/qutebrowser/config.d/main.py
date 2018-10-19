@@ -19,8 +19,10 @@ config = config  # noqa
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
-# c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
-c.aliases = {'q': 'quit',
+# c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
+c.aliases = {'q': 'close',
+             'qa': 'quit',
+             'wq': 'quit --save',
              'youtube-dl': 'spawn youtube-dl -o "$HOME/Downloads/%(title)s-%(id)s.%(ext)s" {url}',
              'vlc': 'spawn --userscript ~/.config/qutebrowser/userscripts/videos_vlc.sh'}
 
@@ -64,6 +66,16 @@ c.auto_save.session = True
 ## Minimum amount of characters needed to update completions.
 ## Type: Int
 # c.completion.min_chars = 1
+
+
+## Which categories to show (in which order) in the :open completion.
+## Type: FlagList
+## Valid values:
+##   - searchengines
+##   - quickmarks
+##   - bookmarks
+##   - history
+# c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history']
 
 ## Move on to the next part when there's only one possible completion
 ## left.
@@ -305,8 +317,14 @@ c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
 ## On QtWebKit, this setting is unavailable.
 # c.content.mouse_lock = 'ask'
 
-## Location of a netrc-file for HTTP authentication. If unset, `~/.netrc`
-## is used.
+## Automatically mute tabs. Note that if the :tab-mute command is used,
+## the mute status for the affected tab is now controlled manually, and this
+## setting doesn’t have any effect.
+## This setting supports URL patterns.
+## Type: Bool
+# c.content.mute = False
+
+## Netrc-file for HTTP authentication. If unset, ~/.netrc is used
 ## Type: File
 # c.content.netrc_file = None
 
@@ -755,7 +773,8 @@ c.tabs.last_close = 'startpage'
 ## Type: Bool
 # c.tabs.mousewheel_switching = True
 
-## How new tabs opened from another tab are positioned.
+## Position of new tabs opened from another tab. See
+## `tabs.new_position.stacking` for controlling stacking behavior.
 ## Type: NewTabPosition
 ## Valid values:
 ##   - prev: Before the current tab.
@@ -763,6 +782,12 @@ c.tabs.last_close = 'startpage'
 ##   - first: At the beginning.
 ##   - last: At the end.
 # c.tabs.new_position.related = 'next'
+
+## Stack related tabs on top of each other when opened consecutively.
+## Only applies for `next` and `prev` values of
+## `tabs.new_position.related` and `tabs.new_position.unrelated`.
+## Type: Bool
+# c.tabs.new_position.stacking = True
 
 ## How new tabs which aren't opened from another tab are positioned.
 ## Type: NewTabPosition
