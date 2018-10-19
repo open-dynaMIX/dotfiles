@@ -34,7 +34,7 @@
 	"upgrademenu": true,
 	"cleanmenu": true,
 	"diffmenu": true,
-	"editmenu": false,
+	"editmenu": true,
 	"combinedupgrade": true,
 	"useask": false
 }
