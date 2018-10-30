@@ -167,7 +167,8 @@ c.content.autoplay = False
 ##   - no-3rdparty: Accept cookies from the same origin only.
 ##   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain.
 ##   - never: Don't accept cookies at all.
-# c.content.cookies.accept = 'no-3rdparty'
+# c.content.cookies.accept = 'all'
+c.content.cookies.accept = 'no-3rdparty'
 
 ## Store cookies. Note this option needs a restart with QtWebEngine on Qt
 ## < 5.9.
