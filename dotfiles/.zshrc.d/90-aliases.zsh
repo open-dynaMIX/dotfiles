@@ -49,3 +49,17 @@ fi
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
 fi
+
+django_secret_key() {
+    if [ $# -eq 0 ]; then
+        range=63
+    else
+        range="$1"
+    fi
+    python -c """\
+import random
+import string
+choice = f\"{string.ascii_letters}{string.digits}{string.punctuation}\"
+print(''.join([random.SystemRandom().choice(choice) for i in range("$range")]))
+"""
+}
