@@ -190,8 +190,8 @@ bindsym $mod+r mode "resize"
 set $scrot scrot -m '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots/'
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
-set $raiseorlaunch ~/Linux/git/raiseorlaunch/raiseorlaunch/__main__.py
-#set $raiseorlaunch raiseorlaunch
+#set $raiseorlaunch ~/Linux/git/raiseorlaunch/raiseorlaunch/__main__.py
+set $raiseorlaunch raiseorlaunch
 
 # Fix guake focus after scrolling in PyCharm
 # Do not forget to disable this bindsym in guake itself
