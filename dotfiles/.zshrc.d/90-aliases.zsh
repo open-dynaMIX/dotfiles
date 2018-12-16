@@ -40,7 +40,7 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 {%@@ if env['has_x'] @@%}
 alias xkill='xkill -button 1'
 alias qutebrowser='qutebrowser --enable-webengine-inspector'
-alias qutebrowser-compare-config.py='~/Linux/git/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
+alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
     alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
