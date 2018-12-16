@@ -401,7 +401,7 @@ exec --no-startup-id xset b off
 exec --no-startup-id xset s off    # disable screen blanking
 exec --no-startup-id xset -dpms    # disable screen blanking
 exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
-exec --no-startup-id owncloud
+exec --no-startup-id nextcloud
 
 {%@@ if env['has_dropbox'] == "true" @@%}
 exec --no-startup-id dropbox
