@@ -11,7 +11,6 @@ if [[ $EUID -ne 0 ]]; then
 fi
 alias ..='cd ..'
 alias amiinscreen='echo $STY'
-alias bpython='clear && bpython'
 alias cal='cal -m'
 alias cp='cp -i'
 alias dotdrop='eval $(cat ~/dotfiles/env.defaults ~/dotfiles/.env | grep -v "^#") /usr/bin/dotdrop --cfg=~/dotfiles/config.yaml'
@@ -39,7 +38,6 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 {%@@ endif @@%}
 {%@@ if env['has_x'] @@%}
 alias xkill='xkill -button 1'
-alias qutebrowser='qutebrowser --enable-webengine-inspector'
 alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
