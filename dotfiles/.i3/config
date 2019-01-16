@@ -200,9 +200,9 @@ bindsym F12 exec --no-startup-id guake-toggle
 bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
 bindsym XF86PowerOff exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
 bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device'] @@}} +4db
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device'] @@}} -4db
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ env['audio_device'] @@}} toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse'] @@}} +4db
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse'] @@}} -4db
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ env['audio_device_pulse'] @@}} toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 2 toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
