@@ -190,7 +190,7 @@ bindsym $mod+r mode "resize"
 set $scrot scrot -m '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots/'
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
-#set $raiseorlaunch ~/Linux/git/raiseorlaunch/raiseorlaunch/__main__.py
+#set $raiseorlaunch ~/code/raiseorlaunch/raiseorlaunch/__main__.py
 set $raiseorlaunch raiseorlaunch
 
 # Fix guake focus after scrolling in PyCharm
@@ -200,9 +200,9 @@ bindsym F12 exec --no-startup-id guake-toggle
 bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
 bindsym XF86PowerOff exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
 bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse'] @@}} +4db
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse'] @@}} -4db
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ env['audio_device_pulse'] @@}} toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse_internal'] @@}} +4db
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse_internal'] @@}} -4db
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ env['audio_device_pulse_internal'] @@}} toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 2 toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
