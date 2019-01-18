@@ -807,6 +807,10 @@ c.tabs.last_close = 'startpage'
 ##   - normal: Always revert to normal mode.
 # c.tabs.mode_on_change = 'normal'
 
+## Force pinned tabs to stay at fixed URL.
+## Type: Bool
+# c.tabs.pinned.frozen = True
+
 ## Shrink pinned tabs down to their contents.
 ## Type: Bool
 # c.tabs.pinned.shrink = True
