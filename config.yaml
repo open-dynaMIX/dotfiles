@@ -12,7 +12,7 @@ config:
   keepdot: true
   link_by_default: false
   longkey: false
-  showdiff: false
+  showdiff: true
   workdir: ~/.config/dotdrop
 dotfiles:
   d_gtk_theme:
