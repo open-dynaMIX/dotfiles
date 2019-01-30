@@ -3,7 +3,7 @@
 
 IFS=$'\n'
 repo_dirty=("$(checkupdates)")
-aur_dirty=("$(cower -u)")
+aur_dirty=("$(yay --query --upgrades --aur)")
 unset IFS
 
 repo=()
@@ -27,7 +27,7 @@ if [ "${#aur[@]}" -gt 0 ]; then
     echo -e "\\nAur:"
     echo "==="
     for package in "${aur[@]}"; do
-        echo "$package" | awk '{print $2}'
+        echo "$package" | awk '{print $1}'
     done
 fi
 
