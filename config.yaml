@@ -8,9 +8,11 @@ config:
   banner: false
   create: true
   dotpath: dotfiles
+  ignoreempty: false
   keepdot: true
   link_by_default: false
   longkey: false
+  showdiff: false
   workdir: ~/.config/dotdrop
 dotfiles:
   d_gtk_theme:
@@ -79,6 +81,9 @@ dotfiles:
     - font-cache-refresh
     dst: ~/.local/share/fonts/MFixx_custom.ttf
     src: .local/share/fonts/MFixx_custom.ttf
+  f_netflix.desktop:
+    dst: ~/.local/share/applications/netflix.desktop
+    src: .local/share/applications/netflix.desktop
   f_pypirc:
     dst: ~/.pypirc
     src: .pypirc
@@ -149,6 +154,7 @@ profiles:
     - f_hedgewars.desktop
     - f_keylayouttoggle.sh
     - f_mfixx_custom.ttf
+    - f_netflix.desktop
     - f_pypirc
     - f_pythonrc
     - f_radio.sh
@@ -186,6 +192,7 @@ profiles:
     - f_hedgewars.desktop
     - f_keylayouttoggle.sh
     - f_mfixx_custom.ttf
+    - f_netflix.desktop
     - f_pypirc
     - f_pythonrc
     - f_radio.sh

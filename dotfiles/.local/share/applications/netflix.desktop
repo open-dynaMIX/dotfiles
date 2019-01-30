@@ -1,0 +1,12 @@
+# {{@@ env['dotdrop_warning'] @@}}
+
+[Desktop Entry]
+Name=Netflix
+GenericName=Netflix
+Comment=Netflix as chromium app
+Categories=Network;AudioVideo;Player;
+Exec=/usr/bin/chromium --app=https://netflix.com
+StartupNotify=true
+Terminal=false
+Type=Application
+
