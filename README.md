@@ -22,6 +22,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [MFixx](https://github.com/file-icons/MFixx) (edited version: moved all glyphs to private area in order to avoid conflicts with font-awesome. Plus some additional glyphs)
  - [nemo](https://github.com/linuxmint/nemo)
  - [nemo-fileroller](https://github.com/linuxmint/nemo-extensions/tree/master/nemo-fileroller)
+ - [nemo-python](https://github.com/linuxmint/nemo-extensions/tree/master/nemo-python)
  - [nemo-seahorse](https://github.com/linuxmint/nemo-extensions/tree/master/nemo-seahorse)
  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [pdfjs](https://github.com/mozilla/pdf.js)
@@ -59,7 +60,7 @@ A not exhaustive list of things I use for my GUI systems:
 # Install
 
 ``` shell
-yay -S ario awoken-icons dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-seahorse-nonautilus oh-my-zsh-git otf-fira-code pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen scribes termite time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
+yay -S ario awoken-icons dotdrop dunst otf-font-awesome guake gvim i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus oh-my-zsh-git otf-fira-code pdfjs powerline powerline-fonts py3status qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen scribes termite time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
 ```
 
 # py3status
