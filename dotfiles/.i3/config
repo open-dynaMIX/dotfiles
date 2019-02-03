@@ -262,14 +262,10 @@ bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
 bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 {%@@ endif @@%}
 
-{%@@ if profile == "fuckup" @@%}
 bindsym $mod+m exec --no-startup-id $raiseorlaunch -w $ws_mixxx -c Mixxx
 bindsym $mod+shift+m move container to workspace $ws_mixxx; workspace $ws_mixxx
-bindsym $mod+i workspace $ws_im
-{%@@ elif profile == "ant" @@%}
-bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox -l 5
-{%@@ endif @@%}
 bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
+bindsym $mod+i workspace $ws_im
 
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
 #bindsym $mod+p exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name: '
@@ -391,10 +387,16 @@ bindsym $mod+minus scratchpad show
 exec_always --no-startup-id guake && xdotool key F12 # run guake and hide it.
 
 # Autostart
+
+# make left handed
+exec --no-startup-id xmodmap -e "pointer = 3 2 1"
+{%@@ if profile == "ant" @@%}
+exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1 4 5 6 7
+{%@@ endif @@%}
+
 exec --no-startup-id ~/code/streamwall/src/streamwall/streamwall.sh -tbn
 exec --no-startup-id nm-applet
 exec --no-startup-id keepassxc
-exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id nemo -n
 #exec --no-startup-id conky -c ~/.conky/conkyrc
 exec --no-startup-id xcompmgr -c -n # real transparency (this needs xcompmgr to be installed)
