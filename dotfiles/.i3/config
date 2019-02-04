@@ -262,10 +262,13 @@ bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
 bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 {%@@ endif @@%}
 
-bindsym $mod+m exec --no-startup-id $raiseorlaunch -w $ws_mixxx -c Mixxx
-bindsym $mod+shift+m move container to workspace $ws_mixxx; workspace $ws_mixxx
 bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
+
+{%@@ if profile == "fuckup" @@%}
 bindsym $mod+i workspace $ws_im
+{%@@ elif profile == "ant" @@%}
+bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox -l 5
+{%@@ endif @@%}
 
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
 #bindsym $mod+p exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name: '
