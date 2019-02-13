@@ -399,6 +399,7 @@ exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1 4 5 6 7
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 303 1
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 294 0.17500
+exec --no-startup-id hamster
 {%@@ endif @@%}
 
 exec --no-startup-id ~/code/streamwall/src/streamwall/streamwall.sh -tbn
@@ -412,7 +413,6 @@ exec --no-startup-id xset s off    # disable screen blanking
 exec --no-startup-id xset -dpms    # disable screen blanking
 exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
 exec --no-startup-id nextcloud
-exec --no-startup-id hamster
 
 {%@@ if env['has_dropbox'] == "true" @@%}
 exec --no-startup-id dropbox
