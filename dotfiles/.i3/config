@@ -400,8 +400,8 @@ exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1 4 5 6 7
 # enable touch to click
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 305 1
-# set touchpad sensitivity
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 294 0.17500
+# set touchpad accel speed
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 296 0.17500
 exec --no-startup-id hamster
 {%@@ endif @@%}
 
