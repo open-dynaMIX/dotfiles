@@ -218,7 +218,7 @@ bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -c Firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
-bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -c qutebrowser -l 15 -e "qutebrowser --enable-webengine-inspector"
+bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -c qutebrowser -l 15
 bindsym $mod+Mod1+w exec --no-startup-id qutebrowser
 bindsym $mod+shift+w move container to workspace $ws_qb; workspace $ws_qb
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
