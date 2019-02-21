@@ -15,7 +15,7 @@ config = config  # noqa
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
-ENGINES = {'DEFAULT': 'https://www.google.ch/search?q={}',
+ENGINES = {'DEFAULT': 'https://www.google.com/search?q={}',
            'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
