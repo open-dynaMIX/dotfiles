@@ -527,6 +527,13 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Bool
 # c.input.insert_mode.auto_load = False
 
+## Leave insert mode when starting a new page load. Patterns may be
+## unreliable on this setting, and they may match the url you are navigating
+## to, or the URL you are navigating from.
+## This setting supports URL patterns.
+## Type: Bool
+# c.input.insert_mode.leave_on_load = True
+
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
 # c.input.insert_mode.plugins = False
