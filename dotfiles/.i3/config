@@ -237,7 +237,6 @@ bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -W $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
-# bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Scribes -e 'scribes ~/Notes.txt'
 bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Termite -t vim_notes -l 1 -e "~/.i3/vim_notes.sh"
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
@@ -314,7 +313,6 @@ for_window [class="Phoenix" title="Game Library"] floating enable
 for_window [class="Phoenix" title="Configuration Settings"] floating enable
 for_window [class="Phoenix" title="Load Image"] floating enable
 for_window [class="feh"] floating enable
-for_window [class="Scribes"] floating enable
 for_window [class="Viewnior"] floating enable
 for_window [class="SpeedCrunch"] floating enable
 for_window [class="Xterm" title="cmus"] floating enable
@@ -350,16 +348,13 @@ for_window [class="Atom"] border none
 for_window [class="Nemo"] border none
 for_window [class="Thunar"] border none
 for_window [title="padctl - Mapping"] border none
-for_window [class="Scribes"] border none
 for_window [class="Viewnior"] border 1pixel
 for_window [class="I3exit" instance="i3exit"] border 1pixel
 for_window [class="qutebrowser"] border none
 for_window [class="mpv"] border none
 
 # transparency
-for_window [class="Scribes"] exec --no-startup-id sleep .5 && transset-df -a 0.9
 for_window [class="SpeedCrunch"] exec --no-startup-id sleep .5 && transset-df -a 0.94
-for_window [class="I3exit" instance="i3exit"] exec --no-startup-id sleep .5 && transset-df -a 0.9
 for_window [title="^vim_notes$"] exec --no-startup-id sleep .5 && transset-df -a 0.8
 
 # Border toggle

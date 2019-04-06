@@ -105,9 +105,6 @@ dotfiles:
   f_tremc_settings.cfg:
     dst: ~/.config/tremc/settings.cfg
     src: .config/tremc/settings.cfg
-  f_viewnior.conf:
-    dst: ~/.config/viewnior/viewnior.conf
-    src: .config/viewnior/viewnior.conf
   f_vimrc:
     dst: ~/.vimrc
     src: .vimrc
@@ -162,7 +159,6 @@ profiles:
     - f_screenrc
     - f_syncit.desktop
     - f_tremc_settings.cfg
-    - f_viewnior.conf
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
@@ -200,7 +196,6 @@ profiles:
     - f_screenrc
     - f_syncit.desktop
     - f_tremc_settings.cfg
-    - f_viewnior.conf
     - f_vimrc
     - f_wrapper.sh
     - f_xinitrc
