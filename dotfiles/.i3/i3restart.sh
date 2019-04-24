@@ -10,7 +10,6 @@ function hack_no_transparency {
 
 i3-msg restart
 killall dunst
-killall nextcloud
 kill "$(pgrep keepassxc)"
 sleep 0.3
 transset-df -n "Notes.txt - (~)" 0.8
@@ -24,4 +23,3 @@ hack_no_transparency "Nemo"
 hack_no_transparency "Thunar"
 
 keepassxc &
-nextcloud &
