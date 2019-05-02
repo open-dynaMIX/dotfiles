@@ -115,22 +115,22 @@ c.prompt.radius = 0
 
 ## The format to use for the tab title. The following placeholders are
 ## defined:
-## * `{perc}`: The percentage as a string like `[10%]`.
-## * `{perc_raw}`: The raw percentage, e.g. `10`
-## * `{title}`: The title of the current web page
+## * `{perc}`: Percentage as a string like [10%].
+## * `{perc_raw}`: Raw percentage, e.g. 10.
+## * `{current_title}`: Title of the current web page.
 ## * `{title_sep}`: The string ` - ` if a title is set, empty otherwise.
-## * `{index}`: The index of this tab.
-## * `{id}`: The internal tab ID of this tab.
-## * `{scroll_pos}`: The page scroll position.
-## * `{host}`: The host of the current web page.
-## * `{backend}`: Either ''webkit'' or ''webengine''
-## * `{private}` : Indicates when private mode is enabled.
+## * `{index}`: Index of this tab.
+## * `{id}`: Internal tab ID of this tab.
+## * `{scroll_pos}`: Page scroll position.
+## * `{host}`: Host of the current web page.
+## * `{backend}`: Either 'webkit’ or 'webengine'
+## * `{private}`: Indicates when private mode is enabled.
 ## * `{current_url}`: URL of the current web page.
 ## * `{protocol}`: Protocol (http/https/…) of the current web page.
 ## * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-# c.tabs.title.format = '{audio}{index}: {title}'
-c.tabs.title.format = '{perc}{audio}{title}{title_sep}{host}'
+# c.tabs.title.format = '{audio}{index}: {current_title}'
+c.tabs.title.format = '{perc}{audio}{current_title}{title_sep}{host}'
 
 ## The format to use for the tab title for pinned tabs. The same
 ## placeholders like for `tabs.title.format` are defined.
@@ -178,7 +178,7 @@ c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress
 ## the current web page. * `{backend}`: Either ''webkit'' or
 ## ''webengine'' * `{private}` : Indicates when private mode is enabled.
 ## Type: FormatString
-# c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
+# c.window.title_format = '{perc}{current_title}{title_sep}qutebrowser'
 
 
 ##############################################################################
