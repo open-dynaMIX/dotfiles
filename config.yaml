@@ -85,6 +85,9 @@ dotfiles:
   f_netflix.desktop:
     dst: ~/.local/share/applications/netflix.desktop
     src: .local/share/applications/netflix.desktop
+  f_pa_output_switcher.sh:
+    dst: ~/scripts/pa_output_switcher.sh
+    src: scripts/pa_output_switcher.sh
   f_pypirc:
     dst: ~/.pypirc
     src: .pypirc
@@ -153,6 +156,7 @@ profiles:
     - f_keylayouttoggle.sh
     - f_mfixx_custom.ttf
     - f_netflix.desktop
+    - f_pa_output_switcher.sh
     - f_pypirc
     - f_pythonrc
     - f_radio.sh
@@ -190,6 +194,7 @@ profiles:
     - f_keylayouttoggle.sh
     - f_mfixx_custom.ttf
     - f_netflix.desktop
+    - f_pa_output_switcher.sh
     - f_pypirc
     - f_pythonrc
     - f_radio.sh
