@@ -43,7 +43,7 @@ alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebr
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
     alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
-    alias djoin='cont=$(docker ps --format="{{.ID}}" | head -n 1) && docker exec -it "$cont" bash'
+    alias dclean='docker stop $(docker ps -q)'
 fi
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'

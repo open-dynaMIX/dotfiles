@@ -337,7 +337,7 @@ for_window [class="Firefox" title="Install user style"] floating enable
 for_window [title="Developer Tools - "] floating disable
 #for_window [class="Skype" window_role="ConversationsWindow"] sticky enable
 
-# Damn IntelliJ
+# IntelliJ
 for_window [class="jetbrains-pycharm"] focus_on_window_activation none
 no_focus [class="jetbrains-pycharm"]
 
