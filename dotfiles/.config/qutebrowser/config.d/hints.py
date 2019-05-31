@@ -40,6 +40,10 @@ c.hints.chars = 'werasdfyxc'
 ## Type: Bool
 # c.hints.hide_unmatched_rapid_hints = True
 
+## Leave hint mode when starting a new page load.
+## Type: Bool
+# c.hints.leave_on_load = True
+
 ## Minimum number of chars used for hint strings.
 ## Type: Int
 # c.hints.min_chars = 1
