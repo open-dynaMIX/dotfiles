@@ -16,6 +16,7 @@ set_abbrevations() {
       "Cm"    "git commit -am \"__CURSOR__\""
       "Cml"   "${last_commit%?}__CURSOR__\""
       "Pu"    "${push_command}__CURSOR__"
+      "Re"    "grep -rniC 0 \"__CURSOR__\" ./"
     )
 }
 
