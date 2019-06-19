@@ -16,6 +16,7 @@ alias cp='cp -i'
 alias dcbl='docker-compose build --pull'
 alias dotdrop='eval $(cat ~/dotfiles/env.defaults ~/dotfiles/.env | grep -v "^#") /usr/bin/dotdrop --cfg=~/dotfiles/config.yaml'
 alias fuck='sudo $(fc -ln -1)'
+alias gti='git'
 alias gst='git status -u'
 alias home='cd ~/'
 alias ll='ls -la'
@@ -36,6 +37,8 @@ alias worms='worms -d 40 -l 16 -n 6'
 alias janosch='~/scripts/wrapper.sh --both gcompris --disable-quit --disable-config --profile janosch-profil'
 alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 --filename image%5n.%C"'
 alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
+{%@@ elif profile == "ant" @@%}
+alias caluma='cd ~/code/caluma/'
 {%@@ endif @@%}
 {%@@ if env['has_x'] @@%}
 alias xkill='xkill -button 1'
