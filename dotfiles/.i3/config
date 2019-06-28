@@ -381,6 +381,9 @@ bindsym $mod+minus scratchpad show
 # Show the sup-mail scratchpad window, if any.
 # bindsym mod4+s [title="^Sup ::"] scratchpad show
 
+# mouse
+mouse_warping none
+
 # Autostart always
 exec_always --no-startup-id guake && xdotool key F12 # run guake and hide it.
 

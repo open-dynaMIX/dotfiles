@@ -1,0 +1,7 @@
+# {{@@ env['dotdrop_warning'] @@}}
+
+# IDE specific configurations
+.idea/
+
+# Pyenv
+.python-version

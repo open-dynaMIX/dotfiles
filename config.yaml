@@ -65,6 +65,9 @@ dotfiles:
   f_gitconfig:
     dst: ~/.gitconfig
     src: .gitconfig
+  f_gitignore_global:
+    src: .gitignore_global
+    dst: ~/.gitignore_global
   f_gtk3_settings.ini:
     dst: ~/.config/gtk-3.0/settings.ini
     src: .config/gtk-3.0/settings.ini
@@ -150,6 +153,7 @@ profiles:
     - f_bira_custom.zsh-theme
     - f_dunstrc
     - f_gitconfig
+    - f_gitignore_global
     - f_gtk3_settings.ini
     - f_gtkrc-2.0.mine
     - f_hedgewars.desktop
@@ -188,6 +192,7 @@ profiles:
     - f_bira_custom.zsh-theme
     - f_dunstrc
     - f_gitconfig
+    - f_gitignore_global
     - f_gtk3_settings.ini
     - f_gtkrc-2.0.mine
     - f_hedgewars.desktop
