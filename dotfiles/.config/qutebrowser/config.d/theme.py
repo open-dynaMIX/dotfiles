@@ -137,6 +137,10 @@ c.tabs.title.format = '{perc}{audio}{current_title}{title_sep}{host}'
 ## Type: FormatString
 # c.tabs.title.format_pinned = '{index}'
 
+## Number of close tab actions to remember, per window (-1 for no maximum).
+## Type: Int
+# c.tabs.undo_stack_size = 100
+
 ## When to show the tab bar.
 ## Type: String
 ## Valid values:
