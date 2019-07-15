@@ -335,6 +335,7 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ##   - false
 ##   - ask
 # c.content.notifications = 'ask'
+c.content.notifications = False
 
 ## Enable pdf.js to view PDF files in the browser. Note that the files
 ## can still be downloaded by clicking the download button in the pdf.js
