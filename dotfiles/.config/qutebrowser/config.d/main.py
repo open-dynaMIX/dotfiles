@@ -193,7 +193,7 @@ c.content.default_encoding = 'utf-8'
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
-# c.content.dns_prefetch = True
+# c.content.dns_prefetch = False
 
 ## Expand each subframe to its contents. This will flatten all the frames
 ## to become one scrollable page.
