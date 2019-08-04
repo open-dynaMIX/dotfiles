@@ -392,14 +392,15 @@ exec_always --no-startup-id guake && xdotool key F12 # run guake and hide it.
 # make left handed
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 
-# setup touchpad on ant
 {%@@ if profile == "ant" @@%}
+# setup touchpad on ant
 # make it left handed
 exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1 4 5 6 7
 # enable touch to click
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 305 1
 # set touchpad accel speed
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" 296 0.17500
+
 exec --no-startup-id hamster
 {%@@ endif @@%}
 
