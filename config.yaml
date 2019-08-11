@@ -30,6 +30,9 @@ dotfiles:
   d_nemo_actions:
     dst: ~/.local/share/nemo/actions
     src: .local/share/nemo/actions
+  d_oh_my_zsh_plugins:
+    src: .oh-my-zsh/plugins
+    dst: ~/.oh-my-zsh/plugins
   d_qutebrowser:
     dst: ~/.config/qutebrowser/
     src: .config/qutebrowser/
@@ -142,6 +145,7 @@ profiles:
     - d_i3
     - d_mpv
     - d_nemo_actions
+    - d_oh_my_zsh_plugins
     - d_qutebrowser
     - d_syncit
     - d_termite
@@ -181,6 +185,7 @@ profiles:
     - d_i3
     - d_mpv
     - d_nemo_actions
+    - d_oh_my_zsh_plugins
     - d_qutebrowser
     - d_syncit
     - d_termite
