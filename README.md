@@ -78,7 +78,7 @@ Add `export QT_QPA_PLATFORMTHEME=qt5ct` and `export QT_AUTO_SCREEN_SCALE_FACTOR=
 
 # Set some default applications
 ``` bash
-xdg-settings set default-web-browser qutebrowser.desktop
+xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
 xdg-mime default nemo.desktop inode/directory
 xdg-mime default org.pwmt.zathura-pdf-poppler.desktop application/pdf
 ```

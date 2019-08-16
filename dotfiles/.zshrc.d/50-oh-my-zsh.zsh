@@ -58,11 +58,7 @@ ZSH_CUSTOM=~/.oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python pyenv docker docker-compose history-substring-search per-directory-history)
-
-# per-directory-history config
-HISTORY_BASE=~/.oh-my-zsh/history
-PER_DIRECTORY_HISTORY_TOGGLE=^H
+plugins=(git python pyenv docker docker-compose history-substring-search)
 
 # User configuration
 PATH="${PATH}:$(ruby -e "puts Gem.user_dir")/bin:$HOME/.bin"
@@ -90,5 +86,3 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-
-_per-directory-history-set-global-history && _per_directory_history_is_global=true
