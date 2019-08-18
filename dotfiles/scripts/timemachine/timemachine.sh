@@ -14,8 +14,8 @@ error () {
 IP="{{@@ env['backup_host'] @@}}"
 MAC="{{@@ env['backup_host_mac'] @@}}"
 
-ping -c 1 "$IP" > /dev/null 2>&1 || error
-fetched_mac="$(arp -n | grep "$IP" | awk '{print $3}')"
+/usr/bin/ping -c 1 "$IP" > /dev/null 2>&1 || error
+fetched_mac="$(/usr/bin/arp -n | grep "$IP" | awk '{print $3}')"
 if [[ "$fetched_mac" == "" ]] || [[ "$fetched_mac" != "$MAC" ]]; then
     error
 fi
