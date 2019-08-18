@@ -33,9 +33,6 @@ dotfiles:
   d_qutebrowser:
     dst: ~/.config/qutebrowser/
     src: .config/qutebrowser/
-  d_syncit:
-    dst: ~/scripts/syncit/
-    src: scripts/syncit/
   d_termite:
     dst: ~/.config/termite
     src: .config/termite
@@ -106,9 +103,12 @@ dotfiles:
   f_screenrc:
     dst: ~/.screenrc
     src: .screenrc
-  f_syncit.desktop:
-    dst: ~/.local/share/applications/syncit.desktop
-    src: .local/share/applications/syncit.desktop
+  f_timemachine_exclude:
+    src: scripts/timemachine/exclude
+    dst: ~/scripts/timemachine/exclude
+  f_timemachine.sh:
+    src: scripts/timemachine/timemachine.sh
+    dst: ~/scripts/timemachine/timemachine.sh
   f_tremc_settings.cfg:
     dst: ~/.config/tremc/settings.cfg
     src: .config/tremc/settings.cfg
@@ -143,7 +143,6 @@ profiles:
     - d_mpv
     - d_nemo_actions
     - d_qutebrowser
-    - d_syncit
     - d_termite
     - d_vim
     - d_yay
@@ -166,7 +165,8 @@ profiles:
     - f_radio.sh
     - f_rofi_config
     - f_screenrc
-    - f_syncit.desktop
+    - f_timemachine_exclude
+    - f_timemachine.sh
     - f_tremc_settings.cfg
     - f_vimrc
     - f_wrapper.sh
@@ -182,7 +182,6 @@ profiles:
     - d_mpv
     - d_nemo_actions
     - d_qutebrowser
-    - d_syncit
     - d_termite
     - d_vim
     - d_yay
@@ -205,7 +204,8 @@ profiles:
     - f_radio.sh
     - f_rofi_config
     - f_screenrc
-    - f_syncit.desktop
+    - f_timemachine_exclude
+    - f_timemachine.sh
     - f_tremc_settings.cfg
     - f_vimrc
     - f_wrapper.sh

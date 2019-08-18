@@ -1,10 +1,13 @@
 # {{@@ env['dotdrop_warning'] @@}}
 .atom/
 .cache/
+.gem/
 .local/share/Trash/
+.tox/
 .VirtualBox/
 Desktop/
 Downloads/
+Dropbox/
 go/
 lynis.log
 Music/

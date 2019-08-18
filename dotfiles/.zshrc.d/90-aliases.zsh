@@ -29,9 +29,9 @@ alias pa='pacaur'
 alias pprint='python -m json.tool'
 alias radio='~/scripts/radio/radio.sh'
 alias rm='rm -i'
+alias timemachine="~/scripts/timemachine/timemachine.sh"
 alias tv7='mpv --no-resume-playback --playlist="https://tv7api2.tv.init7.net/api/playlist/default.m3u?rp=true"'
 alias seconds='while true; do; date +"%H:%M:%S"; sleep 1; done'
-alias syncit='~/scripts/syncit/syncit.sh'
 alias whereami='pwd'
 alias worms='worms -d 40 -l 16 -n 6'
 {%@@ if profile == "fuckup" @@%}
