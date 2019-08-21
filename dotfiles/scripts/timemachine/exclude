@@ -5,6 +5,7 @@
 .local/share/Trash/
 .tox/
 .VirtualBox/
+__pycache__/
 Desktop/
 Downloads/
 Dropbox/
