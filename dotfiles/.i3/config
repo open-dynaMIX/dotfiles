@@ -215,7 +215,7 @@ bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 
-bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -c Firefox -s Navigator
+bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -c firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
 bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -c qutebrowser -l 15
