@@ -430,12 +430,14 @@ c.content.plugins = True
 ## Type: Bool
 # c.content.windowed_fullscreen = False
 
-## Whether load requests should be monitored for cross-site scripting
-## attempts. Suspicious scripts will be blocked and reported in the
-## inspector's JavaScript console. Enabling this feature might have an
-## impact on performance.
+## Monitor load requests for cross-site scripting attempts. Suspicious
+## scripts will be blocked and reported in the inspector’s JavaScript
+## console. Note that bypasses for the XSS auditor are widely known and
+## it can be abused for cross-site info leaks in some scenarios,
+## see: https://www.chromium.org/developers/design-documents/xss-auditor
+## This setting supports URL patterns.
 ## Type: Bool
-# c.content.xss_auditing = True
+# c.content.xss_auditing = False
 
 ## The directory to save downloads to. If unset, a sensible os-specific
 ## default is used.
