@@ -266,7 +266,7 @@ bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 {%@@ if profile == "fuckup" @@%}
 bindsym $mod+i workspace $ws_im
 {%@@ elif profile == "ant" @@%}
-bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Rambox -l 5
+bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Hamsket -l 5
 {%@@ endif @@%}
 
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
@@ -368,8 +368,8 @@ for_window [class="Firefox"] focus
 assign [class="Skype"] $ws_im
 for_window [class="Skype"] focus
 assign [class="Pidgin"] $ws_im
-assign [class="Rambox"] $ws_im
-for_window [class="Rambox"] focus
+assign [class="Hamsket"] $ws_im
+for_window [class="Hamsket"] focus
 assign [class="Gimp"] $ws_gimp
 for_window [class="Gimp"] focus
 
