@@ -92,6 +92,10 @@ c.prompt.radius = 0
 ## Type: String
 # c.tabs.favicons.show = 'always'
 
+## Maximum stack size to remember for tab switches (-1 for no maximum).
+## Type: Int
+# c.tabs.focus_stack_size = 10
+
 ## Padding around text for tabs
 ## Type: Padding
 # c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
@@ -136,6 +140,11 @@ c.tabs.title.format = '{perc}{audio}{current_title}{title_sep}{host}'
 ## placeholders like for `tabs.title.format` are defined.
 ## Type: FormatString
 # c.tabs.title.format_pinned = '{index}'
+
+## Show tooltips on tabs. Note this setting only affects windows opened
+## after it has been set.
+## Type: Bool
+# c.tabs.tooltips = True
 
 ## Number of close tab actions to remember, per window (-1 for no maximum).
 ## Type: Int
