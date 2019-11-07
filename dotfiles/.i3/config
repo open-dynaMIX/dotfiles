@@ -334,6 +334,7 @@ for_window [title="Clementine image viewer"] floating enable
 for_window [class="Pidgin" title="File Transfers"] floating enable
 for_window [class="Pinentry"] floating enable
 for_window [class="Firefox" title="Install user style"] floating enable
+for_window [class="java-lang-Thread"] floating enable  # pycharm splash screen
 for_window [title="Developer Tools - "] floating disable
 #for_window [class="Skype" window_role="ConversationsWindow"] sticky enable
 
