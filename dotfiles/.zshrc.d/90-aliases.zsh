@@ -48,6 +48,7 @@ alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebr
 if which docker > /dev/null 2>&1; then
     alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
     alias dclean='docker stop $(docker ps -q)'
+    alias dpurge='docker volume ls --format '{{.Name}}' | grep -E "[A-Fa-f0-9]{64}" | xargs docker volume rm'
 fi
 if which tremc > /dev/null 2>&1; then
     alias bt='tremc'
