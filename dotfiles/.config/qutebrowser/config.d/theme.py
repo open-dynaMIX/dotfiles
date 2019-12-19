@@ -265,6 +265,16 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## Type: QssColor
 # c.colors.completion.scrollbar.fg = 'white'
 
+## Background color of the context menu.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.bg = None
+
+## Foreground color of the context menu.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.fg = None
+
 ## Background color for the download bar.
 ## Type: QssColor
 # c.colors.downloads.bar.bg = 'black'

@@ -15,6 +15,11 @@ c.fonts.completion.category = 'bold 12pt monospace'
 # c.fonts.completion.entry = '10pt monospace'
 c.fonts.completion.entry = '12pt monospace'
 
+## Font used for the context menu.
+## If set to null, the Qt default is used.
+## Type: Font
+# c.fonts.contextmenu = None
+
 ## Font used for the debugging console.
 ## Type: QtFont
 # c.fonts.debug_console = '10pt monospace'
