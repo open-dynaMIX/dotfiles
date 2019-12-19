@@ -411,6 +411,7 @@ c.colors.messages.warning.border = PURPLE
 ## Background color of the statusbar in caret mode.
 ## Type: QssColor
 # c.colors.statusbar.caret.bg = 'purple'
+c.colors.statusbar.caret.bg = PURPLE
 
 ## Foreground color of the statusbar in caret mode.
 ## Type: QssColor
