@@ -232,9 +232,20 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ##   - same-domain: Only send the Referer for the same domain. This will still protect your privacy, but shouldn't break any sites.
 # c.content.headers.referer = 'same-domain'
 
-## User agent to send. Unset to send the default.
-## Type: String
-# c.content.headers.user_agent = None
+## User agent to send.
+## The following placeholders are defined:
+##  - {os_info}: Something like "X11; Linux x86_64".
+##  - {webkit_version}: The underlying WebKit version (set to a fixed value with QtWebEngine).
+##  - {qt_key}: "Qt" for QtWebKit, "QtWebEngine" for QtWebEngine.
+##  - {qt_version}: The underlying Qt version.
+##  - {upstream_browser_key}: "Version" for QtWebKit, "Chrome" for QtWebEngine.
+##  - {upstream_browser_version}: The corresponding Safari/Chrome version.
+##  - {qutebrowser_version}: The currently running qutebrowser version.
+## The default value is equal to the unchanged user agent of QtWebKit/QtWebEngine.
+## Note that the value read from JavaScript is always the global value.
+## This setting supports URL patterns.
+## Type: FormatString
+# c.content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}"
 
 ## Whether host blocking is enabled.
 ## Type: Bool
@@ -391,6 +402,11 @@ c.content.plugins = True
 ## On QtWebEngine, this setting requires Qt 5.11 or newer.
 ## On QtWebKit, this setting is unavailable.
 # c.content.register_protocol_handler = 'ask'
+
+## Enable quirks (such as faked user agent headers) needed to get specific
+## sites to work properly. This setting requires a restart.
+## Type: Bool
+# c.content.site_specific_quirks = True
 
 ## Validate SSL handshakes.
 ## Type: BoolAsk
@@ -619,6 +635,13 @@ c.messages.timeout = 5000
 ## running QtWebEngine on Wayland.
 ## Type: String
 # c.qt.force_platform = None
+
+## Force a Qt platformtheme to use. This sets the `QT_QPA_PLATFORMTHEME`
+## environment variable which controls dialogs like the filepicker.
+## By default, Qt determines the platform theme based on the desktop
+## environment. This setting requires a restart.
+## Type: String
+# c.qt.force_platformtheme = None
 
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers. This setting requires a

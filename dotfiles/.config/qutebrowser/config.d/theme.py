@@ -268,12 +268,23 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## Background color of the context menu.
 ## If set to null, the Qt default is used.
 ## Type: QssColor
-# c.colors.contextmenu.bg = None
+# c.colors.contextmenu.menu.bg = None
 
 ## Foreground color of the context menu.
 ## If set to null, the Qt default is used.
 ## Type: QssColor
-# c.colors.contextmenu.fg = None
+# c.colors.contextmenu.menu.fg = None
+
+## Background color of the context menu’s selected item.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.bg = None
+c.colors.contextmenu.selected.bg = PURPLE
+
+## Foreground color of the context menu’s selected item.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.fg = None
 
 ## Background color for the download bar.
 ## Type: QssColor
