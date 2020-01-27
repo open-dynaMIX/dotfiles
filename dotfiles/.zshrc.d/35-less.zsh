@@ -9,4 +9,4 @@ if [[ -f /usr/bin/src-hilite-lesspipe.sh ]]; then
 fi
 
 # default less options
-export LESS='-i -M -R -S -W -z-4'
+export LESS='-F -i -M -R -S -W -z-4'
