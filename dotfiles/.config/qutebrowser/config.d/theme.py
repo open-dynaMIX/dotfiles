@@ -614,12 +614,12 @@ c.colors.tabs.selected.odd.bg = PURPLE
 ## Type: QtColor
 # c.colors.webpage.bg = 'white'
 
-## Force prefer-color-scheme: dark colors for websites.
+## Force prefers-color-scheme: dark colors for websites.
 ## Type: Bool
 ## On QtWebEngine, this setting requires Qt 5.14 or newer.
 ## On QtWebKit, this setting is unavailable.
-# c.colors.webpage.force_dark_color_scheme = False
-c.colors.webpage.force_dark_color_scheme = True
+# c.colors.webpage.prefers_color_scheme_dark = False
+c.colors.webpage.prefers_color_scheme_dark = True
 
 ## CSS border value for hints.
 ## Type: String
