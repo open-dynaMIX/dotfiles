@@ -1,9 +1,36 @@
 # {{@@ env['dotdrop_warning'] @@}}
 # flake8: noqa: E266
 
+from urllib.parse import urlencode
+
 
 c = c  # noqa
 config = config  # noqa
+
+
+def get_ddg():
+    ddg_config = {
+        "k1": "-1",
+        "kah": "ch-de",
+        "kaj": "m",
+        "kak": "-1",
+        "kal": "-1",
+        "kam": "osm",
+        "kao": "-1",
+        "kap": "-1",
+        "kaq": "-1",
+        "kau": "-1",
+        "kav": "1",
+        "kax": "-1",
+        "kg": "p",
+        "kk": "-1",
+        "kp": "-2",
+        "ks": "l"
+    }
+    return f"https://start.duckduckgo.com/?q={{}}&{urlencode(ddg_config)}"
+
+
+ddg = get_ddg()
 
 ## Definitions of search engines which can be used via the address bar.
 ## Maps a searchengine name (such as `DEFAULT`, or `ddg`) to a URL with a
@@ -15,17 +42,18 @@ config = config  # noqa
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
-ENGINES = {'DEFAULT': 'https://www.google.com/search?q={}',
+ENGINES = {'DEFAULT': ddg,
            'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
-           'ddg': 'https://start.duckduckgo.com/?q={}&kae=d&kak=-1&kal=-1&kao=-1&kaq=-1&kl=ch-de&kp=-2&k1=-1&kk=-1&kaj=m&kam=osm&kax=-1&kap=-1&ia=web',
+           'ddg': ddg,
+           'g': 'https://www.google.com/search?q={}',
            'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
            'w': 'https://en.wikipedia.org/wiki/{}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
            'yt': 'https://www.youtube.com/results?search_query={}'}
+
 # Add some searchengines from dotdrop .env-file
-for engine in "{{@@ env['qutebrowser_search_engines'] @@}}".split('&SPLOT&'):
-    if engine:
-        ENGINES[engine.split('&SPLIT&')[0]] = engine.split('&SPLIT&')[1]
+ENGINES.update({{@@ env['qutebrowser_search_engines'] @@}})
+
 c.url.searchengines = ENGINES
