@@ -11,7 +11,9 @@ config = config  # noqa
 def get_ddg():
     ddg_config = {
         "k1": "-1",
-        "k7": "060606",
+        "k7": "111111",
+        "k8":"b8b8b8",
+        "k9":"b8b8b8",
         "ka": "Fira Code",
         "kae": "d",
         "kah": "ch-de",
@@ -25,11 +27,12 @@ def get_ddg():
         "kau": "-1",
         "kav": "1",
         "kax": "-1",
-        "kg": "p",
+        "kg": "g",
         "kk": "-1",
         "kp": "-2",
         "kt": "Fira Sans",
         "ku": "1",
+        "kx":"c6c6c6",
     }
     return f"https://start.duckduckgo.com/?q={{}}&{urlencode(ddg_config)}"
 
