@@ -1,7 +1,7 @@
 # Dotfiles
 I manage my dotfiles using [dotdrop](https://github.com/deadc0de6/dotdrop).
 
-# Packages
+## Packages
 A not exhaustive list of things I use for my GUI systems:
  - [Ario](http://ario-player.sourceforge.net/)
  - [AwOken](https://alecive.deviantart.com/art/AwOken-163570862)
@@ -59,17 +59,17 @@ A not exhaustive list of things I use for my GUI systems:
  - [zsh-pure-prompt](https://github.com/sindresorhus/pure)
  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-# Install
+## Install
 
 ``` shell
 yay -S ario awoken-icons dotdrop dunst otf-font-awesome guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus mpc oh-my-zsh-git otf-fira-code pdfjs powerline powerline-fonts py3status qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen termite time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
 ```
 
-# py3status
+## py3status
 
 ![i3bar with py3status screenshot](screenshots/i3bar_py3status.png "i3bar with py3status screenshot")
 
-# Configuring theme
+## Configuring theme
 To have a uniform look for gtk, qt4 and qt5, the theme needs to be configured in
 
  - lxappearance
