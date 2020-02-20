@@ -210,7 +210,7 @@ c.content.default_encoding = 'utf-8'
 
 ## Value to send in the `Accept-Language` header.
 ## Type: String
-# c.content.headers.accept_language = 'en-US,en'
+# c.content.headers.accept_language = 'en-US,en;q=0.9'
 c.content.headers.accept_language = 'en-US,en;q=0.5'
 
 ## Set custom headers for qutebrowser HTTP requests.

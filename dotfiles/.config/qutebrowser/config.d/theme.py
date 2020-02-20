@@ -446,7 +446,7 @@ c.colors.statusbar.caret.bg = PURPLE
 
 ## Background color of the statusbar in private browsing + command mode.
 ## Type: QssColor
-# c.colors.statusbar.command.private.bg = 'grey'
+# c.colors.statusbar.command.private.bg = 'darkslategray'
 c.colors.statusbar.command.private.bg = 'red'
 
 ## Foreground color of the statusbar in private browsing + command mode.
