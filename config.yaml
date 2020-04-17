@@ -100,6 +100,9 @@ dotfiles:
   f_rofi_config:
     dst: ~/.config/rofi/config
     src: .config/rofi/config
+  f_screenlayout_switcher:
+    dst: ~/scripts/screenlayout_switcher.sh
+    src: scripts/screenlayout_switcher.sh
   f_screenrc:
     dst: ~/.screenrc
     src: .screenrc
@@ -164,6 +167,7 @@ profiles:
     - f_pythonrc
     - f_radio.sh
     - f_rofi_config
+    - f_screenlayout_switcher
     - f_screenrc
     - f_timemachine_exclude
     - f_timemachine.sh
@@ -203,6 +207,7 @@ profiles:
     - f_pythonrc
     - f_radio.sh
     - f_rofi_config
+    - f_screenlayout_switcher
     - f_screenrc
     - f_timemachine_exclude
     - f_timemachine.sh

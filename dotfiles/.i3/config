@@ -207,10 +207,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 2 toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
-bindsym XF86HomePage exec --no-startup-id systemctl suspend
+#bindsym XF86HomePage exec --no-startup-id systemctl suspend
 bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
-bindsym XF86Explorer exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
 bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
+bindsym XF86Explorer exec --no-startup-id ~/scripts/screenlayout_switcher.sh
+bindsym XF86Display exec --no-startup-id ~/scripts/screenlayout_switcher.sh
 bindsym Print exec --no-startup-id $scrot  # All screens
 bindsym Mod1+Sys_Req exec --no-startup-id $scrot -u  # Focused window
 bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
