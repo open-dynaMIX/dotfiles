@@ -61,7 +61,7 @@ ZSH_CUSTOM=~/.oh-my-zsh
 plugins=(git python pyenv docker docker-compose history-substring-search)
 
 # User configuration
-PATH="${PATH}:$(ruby -e "puts Gem.user_dir")/bin:$HOME/.bin"
+PATH="$HOME/.bin:${PATH}:$(ruby -e "puts Gem.user_dir")/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

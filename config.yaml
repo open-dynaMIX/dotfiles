@@ -121,6 +121,9 @@ dotfiles:
   f_wrapper.sh:
     dst: ~/scripts/wrapper.sh
     src: scripts/wrapper.sh
+  f_xdg-open:
+    dst: ~/.bin/xdg-open
+    src: .bin/xdg-open
   f_xinitrc:
     dst: ~/.xinitrc
     src: .xinitrc
@@ -174,6 +177,7 @@ profiles:
     - f_tremc_settings.cfg
     - f_vimrc
     - f_wrapper.sh
+    - f_xdg-open
     - f_xinitrc
     - f_xmodmap
     - f_xresources
@@ -214,6 +218,7 @@ profiles:
     - f_tremc_settings.cfg
     - f_vimrc
     - f_wrapper.sh
+    - f_xdg-open
     - f_xinitrc
     - f_xmodmap
     - f_xresources
