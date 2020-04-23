@@ -416,6 +416,22 @@ c.content.plugins = True
 ##   - ask
 # c.content.ssl_strict = 'ask'
 
+## How navigation requests to URLs with unknown schemes are handled.
+## This setting supports URL patterns.
+## Type: String
+## Valid values:
+##   - disallow: Disallows all navigation requests to URLs with unknown
+##               schemes.
+##   - allow-from-user-interaction: Allows navigation requests to URLs with
+##                                  unknown schemes that are issued from
+##                                  user-interaction (like a mouse-click), whereas
+##                                  other navigation requests (for example from
+##                                  JavaScript) are suppressed.
+##   - allow-all: Allows all navigation requests to URLs with unknown schemes.
+## On QtWebEngine, this setting requires Qt 5.11 or newer.
+## On QtWebKit, this setting is unavailable.
+# c.content.unknown_url_scheme_policy = "allow-from-user-interaction"
+
 ## A list of user stylesheet filenames to use.
 ## Type: List of File, or File
 # c.content.user_stylesheets = []
@@ -441,10 +457,15 @@ c.content.plugins = True
 ## On QtWebKit, this setting is unavailable.
 # c.content.webrtc_ip_handling_policy = 'all-interfaces'
 
+## Set fullscreen notification overlay timeout in milliseconds. If set to 0,
+## no overlay will be displayed.
+## Type: Int
+# c.content.fullscreen.overlay_timeout = 3000
+
 ## Limit fullscreen to the browser window (does not expand to fill the
 ## screen).
 ## Type: Bool
-# c.content.windowed_fullscreen = False
+# c.content.fullscreen.window = False
 
 ## Monitor load requests for cross-site scripting attempts. Suspicious
 ## scripts will be blocked and reported in the inspector’s JavaScript
@@ -709,6 +730,12 @@ c.messages.timeout = 5000
 ## character.
 ## Type: Bool
 # c.search.incremental = True
+
+## Wrap around at the top and bottom of the page when advancing through text
+## matches using :search-next and :search-prev.
+## Type: Bool
+## On QtWebEngine, this setting requires Qt 5.14 or newer.
+# c.search.wrap = True
 
 ## The name of the session to save by default. If this is set to null,
 ## the session which was last loaded is saved.

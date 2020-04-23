@@ -60,9 +60,17 @@ c.hints.chars = 'werasdfyxc'
 ## Type: List of Regex
 # c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
 
+## Padding (in pixels) for hints.
+## Type: Padding
+# c.hints.padding = {'top': 0, 'bottom': 0, 'left': 3, 'right': 3}
+
 ## A comma-separated list of regexes to use for 'prev' links.
 ## Type: List of Regex
 # c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
+
+## Rounding radius (in pixels) for the edges of hints.
+## Type: Int
+# c.hints.radius = 3
 
 ## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for
 ## number hints.
