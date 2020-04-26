@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <!-- {{@@ env['dotdrop_warning'] @@}} -->
 <ario-profiles>
-  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd1_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" {%@@ if profile == "fuckup" @@%}current="true" {%@@ endif @@%}type="0">{{@@ env['mpd1_name'] @@}}</profile>
-  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd2_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" {%@@ if profile == "ant" @@%}current="true" {%@@ endif @@%}type="0">{{@@ env['mpd2_name'] @@}}</profile>
-  <profile host="{{@@ env['mpd_host'] @@}}" port="{{@@ env['mpd3_port'] @@}}" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" type="0">{{@@ env['mpd3_name'] @@}}</profile>
+  <profile host="192.168.0.48" port="6600" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" current="true" type="0">office</profile>
 </ario-profiles>
