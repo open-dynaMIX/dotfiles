@@ -97,6 +97,9 @@ dotfiles:
   f_radio.sh:
     dst: ~/scripts/radio/radio.sh
     src: scripts/radio/radio.sh
+  f_radios.xml:
+    src: .config/ario/radios/radios.xml
+    dst: ~/.config/ario/radios/radios.xml
   f_rofi_config:
     dst: ~/.config/rofi/config
     src: .config/rofi/config
@@ -169,6 +172,7 @@ profiles:
     - f_pypirc
     - f_pythonrc
     - f_radio.sh
+    - f_radios.xml
     - f_rofi_config
     - f_screenlayout_switcher
     - f_screenrc
@@ -210,6 +214,7 @@ profiles:
     - f_pypirc
     - f_pythonrc
     - f_radio.sh
+    - f_radios.xml
     - f_rofi_config
     - f_screenlayout_switcher
     - f_screenrc
