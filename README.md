@@ -50,7 +50,6 @@ A not exhaustive list of things I use for my GUI systems:
  - [xdotool](https://github.com/jordansissel/xdotool)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
  - [youtube-dl](https://github.com/rg3/youtube-dl)
- - [z](https://github.com/rupa/z)
  - [zathura](https://github.com/pwmt/zathura)
  - [zathura-pdf-poppler](https://github.com/pwmt/zathura-pdf-poppler)
  - [zsh](https://www.zsh.org/)
@@ -59,11 +58,12 @@ A not exhaustive list of things I use for my GUI systems:
  - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
  - [zsh-pure-prompt](https://github.com/sindresorhus/pure)
  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+ - [zsh-z](https://github.com/agkozak/zsh-z/tree/e138de57cd59ed09c3d55ff544ff8f79d2dc4ac1)
 
 ## Install
 
 ``` shell
-yay -S ario awoken-icons dotdrop dunst otf-font-awesome guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus mpc oh-my-zsh-git otf-fira-code pacman-contrib pdfjs powerline powerline-fonts py3status qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen termite time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl z zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting
+yay -S ario awoken-icons dotdrop dunst otf-font-awesome guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus mpc oh-my-zsh-git otf-fira-code pacman-contrib pdfjs powerline powerline-fonts py3status qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen termite time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status

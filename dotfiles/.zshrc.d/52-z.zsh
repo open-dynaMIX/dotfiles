@@ -3,6 +3,6 @@
 # {{@@ env['dotdrop_warning'] @@}}
 #
 
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+[[ -r "/usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh" ]] && source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
-_Z_EXCLUDE_DIRS=("$HOME/Desktop/TEMP")
+ZSHZ_EXCLUDE_DIRS=("$HOME/Desktop/TEMP")
