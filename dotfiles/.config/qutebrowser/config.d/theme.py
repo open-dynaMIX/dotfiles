@@ -265,6 +265,16 @@ c.colors.completion.item.selected.fg = '#ffffff'
 ## Type: QssColor
 # c.colors.completion.scrollbar.fg = 'white'
 
+## Background color of disabled items in the context menu.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.disabled.bg = None
+
+## Foreground color of disabled items in the context menu.
+## If set to null, the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.disabled.fg = None
+
 ## Background color of the context menu.
 ## If set to null, the Qt default is used.
 ## Type: QssColor
