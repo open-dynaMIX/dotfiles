@@ -54,6 +54,7 @@ ENGINES = {'DEFAULT': ddg,
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
            'ddg': ddg,
+           'deepl': "https://www.deepl.com/en/translator#{}",  # Expects a string like `en/de/something`
            'g': 'https://www.google.com/search?q={}',
            'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
            'w': 'https://en.wikipedia.org/wiki/{}',
