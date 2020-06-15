@@ -13,3 +13,5 @@
     cleanup-branches = !git fetch --all --prune && git branch -d $(git branch --merged=origin/master | grep -vE `git rev-parse --abbrev-ref HEAD`'|master' )
 [core]
     excludesfile = /home/{{@@ env['USER'] @@}}/.gitignore_global
+[pull]
+    rebase = true
