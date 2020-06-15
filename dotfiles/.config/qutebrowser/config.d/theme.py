@@ -624,6 +624,75 @@ c.colors.tabs.selected.odd.bg = PURPLE
 ## Type: QtColor
 # c.colors.webpage.bg = 'white'
 
+## Which algorithm to use for modifying how colors are rendered with
+## darkmode.
+## Type: String
+## Valid values:
+##   - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value.
+##   - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
+##   - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
+# c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+
+## Contrast for dark mode. This only has an effect when
+## `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
+## `brightness-rgb`.
+## Type: Float
+# c.colors.webpage.darkmode.contrast = 0.0
+
+## Render all web contents using a dark theme. Example configurations
+## from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
+## inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
+## "With selective image inversion": Set
+## `colors.webpage.darkmode.policy.images` to `smart`.  - "With selective
+## inversion of non-image elements": Set
+## `colors.webpage.darkmode.threshold.text` to 150 and
+## `colors.webpage.darkmode.threshold.background` to 205.  - "With
+## selective inversion of everything": Combines the two variants   above.
+## Type: Bool
+# c.colors.webpage.darkmode.enabled = False
+
+## Render all colors as grayscale. This only has an effect when
+## `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
+## `brightness-rgb`.
+## Type: Bool
+# c.colors.webpage.darkmode.grayscale.all = False
+
+## Desaturation factor for images in dark mode. If set to 0, images are
+## left as-is. If set to 1, images are completely grayscale. Values
+## between 0 and 1 desaturate the colors accordingly.
+## Type: Float
+# c.colors.webpage.darkmode.grayscale.images = 0.0
+
+## Which images to apply dark mode to.
+## Type: String
+## Valid values:
+##   - always: Apply dark mode filter to all images.
+##   - never: Never apply dark mode filter to any images.
+##   - smart: Apply dark mode based on image content.
+# c.colors.webpage.darkmode.policy.images = 'never'
+
+## Which pages to apply dark mode to.
+## Type: String
+## Valid values:
+##   - always: Apply dark mode filter to all frames, regardless of content.
+##   - smart: Apply dark mode filter to frames based on background color.
+# c.colors.webpage.darkmode.policy.page = 'smart'
+
+## Threshold for inverting background elements with dark mode. Background
+## elements with brightness above this threshold will be inverted, and
+## below it will be left as in the original, non-dark-mode page. Set to
+## 256 to never invert the color or to 0 to always invert it. Note: This
+## behavior is the opposite of `colors.webpage.darkmode.threshold.text`!
+## Type: Int
+# c.colors.webpage.darkmode.threshold.background = 0
+
+## Threshold for inverting text with dark mode. Text colors with
+## brightness below this threshold will be inverted, and above it will be
+## left as in the original, non-dark-mode page. Set to 256 to always
+## invert text color or to 0 to never invert text color.
+## Type: Int
+# c.colors.webpage.darkmode.threshold.text = 256
+
 ## Force prefers-color-scheme: dark colors for websites.
 ## Type: Bool
 ## On QtWebEngine, this setting requires Qt 5.14 or newer.
