@@ -57,6 +57,8 @@ ENGINES = {'DEFAULT': ddg,
            'deepl': "https://www.deepl.com/en/translator#{}",  # Expects a string like `en/de/something`
            'g': 'https://www.google.com/search?q={}',
            'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
+           'maps': 'https://www.google.ch/maps/place/{}',
+           'osm': 'https://www.openstreetmap.org/search?query={}',
            'w': 'https://en.wikipedia.org/wiki/{}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
            'yt': 'https://www.youtube.com/results?search_query={}'}
