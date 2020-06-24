@@ -66,11 +66,20 @@ c.prompt.radius = 0
 ##   - when-searching: Show the scrollbar when searching for text in the
 ##                     webpage. With the QtWebKit backend, this is equal to
 ##                     never.
-# c.scrolling.bar = 'when-searching'
+##   - overlay: Show an overlay scrollbar. With Qt < 5.11 or on macOS, this is
+##                     unavailable and equal to when-searching; with the
+##                     QtWebKit backend, this is equal to never.
+##                     Enabling/disabling overlay scrollbars requires a restart.
+# c.scrolling.bar = 'overlay'
 
-## Hide the statusbar unless a message is shown.
-## Type: Bool
-# c.statusbar.hide = False
+## When to show the statusbar.
+## Type: String
+## Valid values:
+##   - always: Always show the statusbar.
+##   - always: Always show the statusbar.
+##   - never: Always hide the statusbar.
+##   - in-mode: Show the statusbar when in modes other than normal mode.
+# c.statusbar.show = "always"
 
 ## Padding for the statusbar.
 ## Type: Padding

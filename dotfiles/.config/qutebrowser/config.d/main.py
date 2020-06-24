@@ -193,7 +193,7 @@ c.content.default_encoding = 'utf-8'
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
-# c.content.dns_prefetch = False
+# c.content.dns_prefetch = True
 
 ## Expand each subframe to its contents. This will flatten all the frames
 ## to become one scrollable page.
@@ -587,10 +587,14 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Int
 # c.input.partial_timeout = 5000
 
+## Enable back and forward buttons on the mouse.
+## Type: Bool
+# c.input.mouse.back_forward_buttons = True
+
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
 ## Type: Bool
-# c.input.rocker_gestures = False
+# c.input.mouse.rocker_gestures = False
 
 ## Enable Spatial Navigation. Spatial navigation consists in the ability
 ## to navigate between focusable elements in a Web page, such as
@@ -610,6 +614,31 @@ c.editor.command = ['subl', '-a', '{}']
 ## Time from pressing a key to seeing the keyhint dialog (ms).
 ## Type: Int
 # c.keyhint.delay = 500
+
+## Level for console (stdout/stderr) logs. Ignored if the --loglevel or
+## --debug CLI flags are used.
+## Type: LogLevel
+## Valid values:
+##   - vdebug
+##   - debug
+##   - info
+##   - warning
+##   - error
+##   - critical
+## Default: info
+# c.logging.level.console = "info"
+
+## Level for in-memory logs.
+## Type: LogLevel
+## Valid values:
+##   - vdebug
+##   - debug
+##   - info
+##   - warning
+##   - error
+##   - critical
+## Default: debug
+# c.logging.level.ram = "debug"
 
 # Time (in ms) to show messages in the statusbar for. Set to 0 to never
 # clear messages.

@@ -68,9 +68,13 @@ c.fonts.default_size = "12pt"
 ## Type: Font
 # c.fonts.statusbar = 'default_size default_family'
 
-## Font used in the tab bar.
-## Type: QtFont
-# c.fonts.tabs = 'default_size default_family'
+## Font used for selected tabs.
+## Type: Font
+# c.fonts.tabs.selected = 'default_size default_family'
+
+## Font used for unselected tabs.
+## Type: Font
+# c.fonts.tabs.unselected = 'default_size default_family'
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
