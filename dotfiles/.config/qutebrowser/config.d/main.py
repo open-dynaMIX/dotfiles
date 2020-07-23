@@ -309,13 +309,35 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ## Type: Bool
 # c.content.local_storage = True
 
-## Allow websites to record audio/video.
+## Allow websites to record audio.
+## This setting supports URL patterns.
 ## Type: BoolAsk
 ## Valid values:
 ##   - true
 ##   - false
 ##   - ask
-# c.content.media_capture = 'ask'
+## This setting is only available with the QtWebEngine backend.
+# c.content.media.audio_capture = 'ask'
+
+## Allow websites to record audio and video.
+## This setting supports URL patterns.
+## Type: BoolAsk
+## Valid values:
+##   - true
+##   - false
+##   - ask
+## This setting is only available with the QtWebEngine backend.
+# c.content.media.audio_video_capture = 'ask'
+
+## Allow websites to record video.
+## This setting supports URL patterns.
+## Type: BoolAsk
+## Valid values:
+##   - true
+##   - false
+##   - ask
+## This setting is only available with the QtWebEngine backend.
+# c.content.media.video_capture = 'ask'
 
 ## Allow websites to lock your mouse pointer.
 ## This setting supports URL patterns.
