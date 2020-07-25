@@ -67,3 +67,23 @@ choice = f\"{string.ascii_letters}{string.digits}{string.punctuation}\"
 print(''.join([random.SystemRandom().choice(choice) for i in range("$range")]))
 """
 }
+
+
+pyenv-clean() {
+    if [ -z ${PYENV_VIRTUAL_ENV+x} ]; then
+        echo "Not in virtualenv. Doing nothing"
+        return 0
+    fi
+    freeze=($(pip freeze))
+    for dep in ${freeze[@]}; do
+        echo $dep
+    done
+    echo
+
+    read "rm?Do you want to remove those packages? [y/n]: "
+    case $rm in
+        [YyJj]|"" ) pip uninstall $freeze -y;;
+        [Nn] ) return 0;;
+        * ) echo "Please answer yes or no.";;
+    esac
+}
