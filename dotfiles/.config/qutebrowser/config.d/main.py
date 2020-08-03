@@ -92,7 +92,7 @@ c.auto_save.session = True
 
 ## How to format timestamps (e.g. for the history completion).
 ## Type: TimestampTemplate
-# c.completion.timestamp_format = '%Y-%m-%d'
+# c.completion.timestamp_format = '%Y-%m-%d %H:%M'
 
 ## Execute the best-matching command on a partial match.
 ## Type: Bool
