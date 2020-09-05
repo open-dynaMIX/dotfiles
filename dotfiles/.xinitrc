@@ -39,7 +39,7 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-eval $(/usr/bin/gnome-keyring-daemon --start)
+eval $(ssh-agent)
 export SSH_AUTH_SOCK
 
 {%@@ if profile == "fuckup" @@%}
