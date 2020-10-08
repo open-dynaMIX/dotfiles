@@ -672,13 +672,15 @@ c.colors.tabs.selected.odd.bg = PURPLE
 ## Type: Float
 # c.colors.webpage.darkmode.grayscale.images = 0.0
 
-## Which images to apply dark mode to.
+## Which images to apply dark mode to. WARNING: With QtWebengine 5.15.0, this
+## setting can cause frequent renderer process crashes due to a bug in Qt.
+## Thus, the smart setting is ignored and treated like never in that case.
 ## Type: String
 ## Valid values:
 ##   - always: Apply dark mode filter to all images.
 ##   - never: Never apply dark mode filter to any images.
 ##   - smart: Apply dark mode based on image content.
-# c.colors.webpage.darkmode.policy.images = 'never'
+# c.colors.webpage.darkmode.policy.images = 'smart'
 
 ## Which pages to apply dark mode to.
 ## Type: String
