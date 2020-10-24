@@ -60,9 +60,6 @@ ZSH_CUSTOM=~/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git python pyenv docker docker-compose history-substring-search)
 
-# User configuration
-PATH="$HOME/.bin:${PATH}:$(ruby -e "puts Gem.user_dir")/bin"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
