@@ -11,6 +11,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 alias ..='cd ..'
 alias amiinscreen='echo $STY'
+alias b='buku --suggest --deep'
 alias cal='cal -m'
 alias cp='cp -i'
 alias dcbl='docker-compose build --pull'
