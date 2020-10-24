@@ -101,8 +101,8 @@ dotfiles:
     src: .config/ario/radios/radios.xml
     dst: ~/.config/ario/radios/radios.xml
   f_rofi_config:
-    dst: ~/.config/rofi/config
-    src: .config/rofi/config
+    dst: ~/.config/rofi/config.rasi
+    src: .config/rofi/config.rasi
   f_screenlayout_switcher:
     dst: ~/scripts/screenlayout_switcher.sh
     src: scripts/screenlayout_switcher.sh
