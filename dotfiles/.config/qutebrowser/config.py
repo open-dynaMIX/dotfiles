@@ -10,6 +10,8 @@ import os
 
 
 config = config  # noqa
+config.load_autoconfig(False)
+
 
 CONF_DIR = os.path.expanduser("~/.config/qutebrowser/config.d/")
 for file in os.listdir(CONF_DIR):
