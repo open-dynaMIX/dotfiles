@@ -4,7 +4,7 @@
 # Open all urls that start with "https://meet." in chromium
 
 if echo "$1" | grep -q "^https://meet\."; then
-    raiseorlaunch -w  -c Chromium -e "chromium $1"
+    chromium --new-window $1
 else
     /usr/bin/xdg-open "$1"
 fi
