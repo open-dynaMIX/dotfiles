@@ -20,4 +20,4 @@ if [[ "$fetched_mac" == "" ]] || [[ "$fetched_mac" != "$MAC" ]]; then
     error
 fi
 
-"${HOME}"/scripts/timemachine/rsync-time-backup/rsync_tmbackup.sh "${HOME}"/ {{@@ env['backup_user'] @@}}@"$IP":/home/{{@@ env['backup_user'] @@}}/backups/{{@@ env['model'] @@}}/ "${HOME}"/scripts/timemachine/exclude
+"${HOME}"/scripts/timemachine/rsync-time-backup/rsync_tmbackup.sh "${HOME}"/ {{@@ env['backup_user'] @@}}@"$IP":/home/{{@@ env['backup_user'] @@}}/backups/{{@@ model @@}}/ "${HOME}"/scripts/timemachine/exclude

@@ -52,6 +52,6 @@ fi
 if [[ "$1" =~ ^(--unclut|--both)$ ]]; then
     if $unclutrun; then
         echo "Start unclutter"
-        unclutter {{@@ env['unclutter_args'] @@}} &
+        unclutter {{@@ unclutter_args @@}} &
     fi
 fi

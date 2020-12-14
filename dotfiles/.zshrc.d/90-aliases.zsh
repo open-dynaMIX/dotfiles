@@ -42,7 +42,7 @@ alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -
 {%@@ elif profile == "ant" @@%}
 alias caluma='cd ~/code/caluma/'
 {%@@ endif @@%}
-{%@@ if env['has_x'] @@%}
+{%@@ if has_x @@%}
 alias xkill='xkill -button 1'
 alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
 {%@@ endif @@%}

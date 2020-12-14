@@ -200,9 +200,9 @@ set $raiseorlaunch raiseorlaunch
 bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
 bindsym XF86PowerOff exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
 bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse_internal'] @@}} +4db
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ env['audio_device_pulse_internal'] @@}} -4db
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ env['audio_device_pulse_internal'] @@}} toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} +4db
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} -4db
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ audio_device_pulse_internal @@}} toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 2 toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
@@ -258,13 +258,11 @@ bindsym $mod+Mod1+Left focus output left
 bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
-{%@@ if env['intellij'] == "true" @@%}
 bindsym $mod+p exec --no-startup-id $raiseorlaunch -W $ws_pycharm -c jetbrains-pycharm -e pycharm -l 35
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
-{%@@ endif @@%}
 
-{%@@ if env['multiple_keylayouts'] == "true" @@%}
+{%@@ if multiple_keylayouts @@%}
 bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
 bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
 {%@@ endif @@%}
@@ -423,11 +421,7 @@ exec --no-startup-id xcompmgr -c -n # real transparency (this needs xcompmgr to 
 exec --no-startup-id xset b off
 exec --no-startup-id xset s off    # disable screen blanking
 exec --no-startup-id xset -dpms    # disable screen blanking
-exec --no-startup-id unclutter {{@@ env['unclutter_args'] @@}}
-
-{%@@ if env['has_dropbox'] == "true" @@%}
-exec --no-startup-id dropbox
-{%@@ endif @@%}
+exec --no-startup-id unclutter {{@@ unclutter_args @@}}
 
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet

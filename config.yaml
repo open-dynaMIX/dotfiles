@@ -15,6 +15,17 @@ config:
   longkey: false
   showdiff: true
   workdir: ~/.config/dotdrop
+variables:
+  audio_device_pulse_internal: 0
+  audio_device_pulse_hdmi: 1
+  has_x: true
+  i3lock_wallpaper: "~/.i3/wallpapers/makepkgnotwarallblack.png"
+  iface_eth: ""
+  iface_lte: ""
+  iface_wifi: ""
+  model: ""
+  multiple_keylayouts: true
+  unclutter_args: "-noevents -notclass Nemo Main.py Feh Thunderbird Hedgewars Keepassx GCompris XTerm i3bar"
 dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
@@ -146,6 +157,12 @@ dotfiles:
     src: .zshrc
 profiles:
   ant:
+    variables:
+      audio_device_pulse_internal: 1
+      i3lock_wallpaper: "~/.i3/wallpapers/ant.png"
+      iface_eth: "enp0s31f6"
+      iface_wifi: "wlp4s0"
+      model: "T460"
     dotfiles:
     - d_gtk_theme
     - d_i3
@@ -188,6 +205,8 @@ profiles:
     - f_zathurarc
     - f_zshrc
   fuckup:
+    variables:
+      model: "T450s"
     dotfiles:
     - d_gtk_theme
     - d_i3

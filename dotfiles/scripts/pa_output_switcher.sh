@@ -28,8 +28,8 @@ fi
 
 
 declare -A sink_names=(
-    [speakers]="{{@@ env['audio_device_pulse_internal'] @@}}"
-    [hdmi]="{{@@ env['audio_device_pulse_hdmi'] @@}}"
+    [speakers]="{{@@ audio_device_pulse_internal @@}}"
+    [hdmi]="{{@@ audio_device_pulse_hdmi @@}}"
 )
 
 sink=${sink_names[$1]:-$1}
