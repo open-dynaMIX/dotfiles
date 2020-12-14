@@ -167,6 +167,10 @@ profiles:
     - fuckup
   fuckup:
     variables:
+      audio_device_pulse_hdmi: 2
+      iface_eth: "enp0s25"
+      iface_lte: "wwp0s20u4"
+      iface_wifi: "wlp3s0"
       model: "T450s"
     dotfiles:
     - ALL
