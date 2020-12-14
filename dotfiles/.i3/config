@@ -226,7 +226,7 @@ bindsym --release Ctrl+Print exec --no-startup-id $scrot -s  # Select rectangle
 bindsym $mod+f exec --no-startup-id $raiseorlaunch -W $ws_ff -c firefox -s Navigator
 bindsym $mod+Mod1+f exec --no-startup-id firefox
 bindsym $mod+shift+f move container to workspace $ws_ff; workspace $ws_ff
-bindsym $mod+w exec --no-startup-id $raiseorlaunch -W $ws_qb -c qutebrowser -l 15
+bindsym $mod+w exec --no-startup-id $raiseorlaunch -w $ws_qb -c qutebrowser -l 15
 bindsym $mod+Mod1+w exec --no-startup-id qutebrowser
 bindsym $mod+shift+w move container to workspace $ws_qb; workspace $ws_qb
 bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
@@ -242,7 +242,7 @@ bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 
 #bindsym $mod+q exec --no-startup-id $raiseorlaunch -W 4 -C -c Termite
 
-bindsym $mod+s exec --no-startup-id $raiseorlaunch -W $ws_subl -c Sublime_text -s sublime_text -e subl
+bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
 bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Termite -t vim_notes -l 1 -e "~/.i3/vim_notes.sh"
@@ -258,7 +258,7 @@ bindsym $mod+Mod1+Left focus output left
 bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
-bindsym $mod+p exec --no-startup-id $raiseorlaunch -W $ws_pycharm -c jetbrains-pycharm -e pycharm -l 35
+bindsym $mod+p exec --no-startup-id $raiseorlaunch -w $ws_pycharm -c jetbrains-pycharm -e pycharm -l 35
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
 
