@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 import os
 import sys

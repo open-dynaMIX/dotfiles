@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 
 SOURCE="${BASH_SOURCE[0]}"

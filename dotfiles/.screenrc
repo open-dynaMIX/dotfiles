@@ -2,7 +2,7 @@
 #
 # /etc/screenrc
 # Konfigurationsdatei fuer screen
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 ########################################################################
 

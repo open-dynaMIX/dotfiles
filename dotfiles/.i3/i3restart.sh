@@ -1,5 +1,5 @@
 #!/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 
 function hack_no_transparency {

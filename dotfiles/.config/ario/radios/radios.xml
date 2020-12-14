@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="no"?>
-<!-- {{@@ env['dotdrop_warning'] @@}} -->
+<!-- {{@@ header() @@}} -->
 <ario-radios>
   <radio url="http://stream.rabe.ch/livestream/rabe-mid.mp3">RaBe</radio>
   <radio url="http://stream.drumandbass.fm:9002">DrumandBass.FM</radio>

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 # Open all urls that start with "https://meet." in chromium
 

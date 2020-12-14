@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/40-arch.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # enable command-not-found hook

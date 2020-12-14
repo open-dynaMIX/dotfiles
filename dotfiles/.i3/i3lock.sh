@@ -1,5 +1,5 @@
 #!/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 # suspend message display
 killall -SIGUSR1 dunst

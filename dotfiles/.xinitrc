@@ -1,5 +1,5 @@
 #!/bin/sh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap

@@ -1,4 +1,4 @@
-/* {{@@ env['dotdrop_warning'] @@}} */
+/* {{@@ header() @@}} */
 * {
   background-clip: padding-box;
   -GtkToolButton-icon-spacing: 4;

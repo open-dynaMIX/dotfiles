@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 # IDE specific configurations
 .idea/

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 SSH_AUTH_SOCK="/run/user/$(id -u)/keyring/ssh"

@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/20-config.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # The following lines were added by compinstall

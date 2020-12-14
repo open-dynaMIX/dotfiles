@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 Ctrl+w [hjkl]         --> navigate windows
 Ctrl+[hjkl]           --> navigate windows

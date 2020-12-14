@@ -1,2 +1,2 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 gtk-can-change-accels=1

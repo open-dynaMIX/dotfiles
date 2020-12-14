@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/80-transparency.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 {%@@ if has_x @@%}

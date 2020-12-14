@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- {{@@ env['dotdrop_warning'] @@}} -->
+<!-- {{@@ header() @@}} -->
 <ario-profiles>
   <profile host="192.168.0.48" port="6600" timeout="5000" password="{{@@ env['mpd_pass'] @@}}" current="true" type="0">office</profile>
 </ario-profiles>

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 cd ${HOME}/.screenlayout/ || exit 1
 

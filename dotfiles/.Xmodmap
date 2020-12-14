@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 clear lock
 keycode 66 = Super_L

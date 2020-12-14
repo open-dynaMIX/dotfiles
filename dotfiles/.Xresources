@@ -1,4 +1,4 @@
-! {{@@ env['dotdrop_warning'] @@}}
+! {{@@ header() @@}}
 
 XTerm*allowBoldFonts:       true
 xterm*borderWidth:          0

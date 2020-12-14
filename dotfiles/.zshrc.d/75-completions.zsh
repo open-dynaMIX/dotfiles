@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/75-completions.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 

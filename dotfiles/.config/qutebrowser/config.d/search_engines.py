@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 # flake8: noqa: E266
 
 from urllib.parse import urlencode

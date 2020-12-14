@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/90-aliases.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 if [[ $EUID -ne 0 ]]; then

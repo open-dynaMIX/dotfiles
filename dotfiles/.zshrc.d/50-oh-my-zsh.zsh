@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/50-oh-my-zsh.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # oh my zsh

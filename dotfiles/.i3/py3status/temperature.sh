@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 hergiswil=$(curl -q "https://www.wiewarm.ch/api/bad/Schwimmbad_Hergiswil_?cacheScrew=592518" 2>/dev/null | jq -r '.becken | ."Vierwaldstättersee".temp')
 reuss=$(curl -q https://www.hydrodaten.admin.ch/graphs/2152/temperature_2152.csv 2>/dev/null | tail -n 1 | cut -d "," -f 2)

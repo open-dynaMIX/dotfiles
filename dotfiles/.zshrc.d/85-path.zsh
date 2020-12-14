@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/85-path.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # PATH

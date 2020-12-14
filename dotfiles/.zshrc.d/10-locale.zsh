@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/10-locale.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 if locale -a | grep -q "en_US.utf8"; then

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 IFS=$'\n'
 repo_dirty=("$(checkupdates)")

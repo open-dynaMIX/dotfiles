@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 [Nemo Action]
 Active=true
 Name=_bak

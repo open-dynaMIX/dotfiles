@@ -1,5 +1,5 @@
 #!/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 if echo "$QUTE_URL" | grep "youtube.com"; then
     vlc "$QUTE_URL"

@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/70-magic.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 

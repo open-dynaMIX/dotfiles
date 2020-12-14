@@ -1,6 +1,6 @@
 #
 # ~/.zshrc
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # load all config files

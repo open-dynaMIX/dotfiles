@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 # This file loads all the configfiles from ~/.config/qutebrowser/config.d/
 # flake8: noqa: E266
 ## Documentation:

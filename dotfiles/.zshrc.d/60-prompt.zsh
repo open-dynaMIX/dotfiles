@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/60-prompt.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # Pure prompt

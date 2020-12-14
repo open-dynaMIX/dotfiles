@@ -1,5 +1,5 @@
 #!/bin/bash
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 # Vokabeln von http://www.vokabeln.de/v5/vorschau/Griechisch_Alltag.htm
 # bis und mit Basiswortschatz: Abschnitt 1 bis 10: Abschnitt 10

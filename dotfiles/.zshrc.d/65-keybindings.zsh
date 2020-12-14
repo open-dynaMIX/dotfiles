@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/65-keybindings.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 

@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/35-less.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # enable syntax highlight in less

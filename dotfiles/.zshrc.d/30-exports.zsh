@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/30-exports.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 if [ "$TERM" = "xterm" ]; then

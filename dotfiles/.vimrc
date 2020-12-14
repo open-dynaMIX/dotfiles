@@ -1,4 +1,4 @@
-" {{@@ env['dotdrop_warning'] @@}}
+" {{@@ header() @@}}
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

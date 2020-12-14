@@ -1,6 +1,6 @@
 #
 # ~/.zshrc.d/55-autosuggestions.zsh
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 #
 
 # Fix slow pasting

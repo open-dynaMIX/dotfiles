@@ -1,4 +1,4 @@
-// {{@@ env['dotdrop_warning'] @@}}
+// {{@@ header() @@}}
 
 configuration {
     modi: "drun,run,window,combi";

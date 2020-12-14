@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 [user]
     email = {{@@ env['git_email'] @@}}

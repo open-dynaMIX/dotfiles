@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 # based on cb-exit used in CrunchBang Linux <http://crunchbanglinux.org/>
 

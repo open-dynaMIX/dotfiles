@@ -1,4 +1,4 @@
-# {{@@ env['dotdrop_warning'] @@}}
+# {{@@ header() @@}}
 
 # Block Facebook
 127.0.0.1 www.facebook.com
