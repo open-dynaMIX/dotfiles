@@ -163,8 +163,8 @@ profiles:
       iface_eth: "enp0s31f6"
       iface_wifi: "wlp4s0"
       model: "T460"
-    include:
-    - fuckup
+    dotfiles:
+    - ALL
   fuckup:
     variables:
       audio_device_pulse_hdmi: 2
