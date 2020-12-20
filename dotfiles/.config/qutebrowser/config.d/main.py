@@ -375,6 +375,7 @@ c.content.notifications = False
 ## viewer.
 ## Type: Bool
 # c.content.pdfjs = False
+c.content.pdfjs = True
 
 ## Allow websites to request persistent storage quota via
 ## navigator.webkitPersistentStorage.requestQuota.
