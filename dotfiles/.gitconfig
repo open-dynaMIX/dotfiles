@@ -15,3 +15,5 @@
     excludesfile = /home/{{@@ env['USER'] @@}}/.gitignore_global
 [pull]
     rebase = true
+[init]
+    defaultBranch = main
