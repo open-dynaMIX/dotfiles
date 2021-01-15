@@ -247,10 +247,6 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ## Type: FormatString
 # c.content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}"
 
-## Whether host blocking is enabled.
-## Type: Bool
-# c.content.host_blocking.enabled = True
-
 ## Enable or disable hyperlink auditing (`<a ping>`).
 ## Type: Bool
 # c.content.hyperlink_auditing = False
@@ -702,6 +698,12 @@ c.messages.timeout = 5000
 ## list) will work. This setting requires a restart.
 ## Type: List of String
 # c.qt.args = []
+
+## Additional environment variables to set. Setting an environment variable to
+## null/None will unset it.
+## This setting requires a restart.
+## Type: Dict
+# c.qt.environ = {}
 
 ## Force a Qt platform to use. This sets the `QT_QPA_PLATFORM`
 ## environment variable and is useful to force using the XCB plugin when
