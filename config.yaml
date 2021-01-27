@@ -14,7 +14,6 @@ config:
   link_on_import: nolink
   longkey: false
   showdiff: true
-  workdir: ~/.config/dotdrop
 variables:
   audio_device_pulse_internal: 0
   audio_device_pulse_hdmi: 1
