@@ -59,6 +59,12 @@ c.auto_save.session = True
 ## Type: Int
 # c.completion.delay = 0
 
+## Default filesystem autocomplete suggestions for :open. The elements of this
+## list show up in the completion window under the Filesystem category when
+## the command line contains :open but no argument.
+## Type: List of String
+# c.completion.favorite_paths = []
+
 ## Height (in pixels or as percentage of the window) of the completion.
 ## Type: PercOrInt
 # c.completion.height = '50%'
@@ -75,7 +81,8 @@ c.auto_save.session = True
 ##   - quickmarks
 ##   - bookmarks
 ##   - history
-# c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history']
+##   - filesystem
+# c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
 ## Move on to the next part when there's only one possible completion
 ## left.
@@ -545,6 +552,30 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Encoding
 # c.editor.encoding = 'utf-8'
 
+## Handler for selecting file(s) in forms. If external, then the commands
+## specified by fileselect.single_file.command and
+## fileselect.multiple_files.command are used to select one or multiple files
+## respectively.
+## Type: String
+## Valid values:
+##   - default: Use the default file selector.
+##   - external: Use an external command.
+# c.fileselect.handler = "default"
+
+## Command (and arguments) to use for selecting multiple files in forms. The
+## command should write the selected file paths to the specified file,
+## separated by newlines. The following placeholders are defined: * {}:
+## Filename of the file to be written to.
+## Type: ShellCommand
+# c.fileselect.multiple_files.command = ['xterm', '-e', 'ranger', '--choosefiles={}']
+
+## Command (and arguments) to use for selecting a single file in forms. The
+## command should write the selected file path to the specified file. The
+## following placeholders are defined: * {}: Filename of the file to be
+## written to.
+## Type: ShellCommand
+# c.fileselect.single_file.command = ['xterm', '-e', 'ranger', '--choosefile={}']
+
 ## The maximum time in minutes between two history items for them to be
 ## considered being from the same browsing session. Items with less time
 ## between them are grouped when being displayed in `:history`. Use -1 to
@@ -590,7 +621,7 @@ c.editor.command = ['subl', '-a', '{}']
 ## to, or the URL you are navigating from.
 ## This setting supports URL patterns.
 ## Type: Bool
-# c.input.insert_mode.leave_on_load = True
+# c.input.insert_mode.leave_on_load = False
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
@@ -604,7 +635,7 @@ c.editor.command = ['subl', '-a', '{}']
 ## current input forms only partial matches, the keystring will be
 ## cleared after this time.
 ## Type: Int
-# c.input.partial_timeout = 5000
+# c.input.partial_timeout = 0
 
 ## Enable back and forward buttons on the mouse.
 ## Type: Bool
@@ -852,8 +883,7 @@ c.session.lazy_restore = True
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
-# c.tabs.background = False
-c.tabs.background = True
+# c.tabs.background = True
 
 ## On which mouse button to close tabs.
 ## Type: String

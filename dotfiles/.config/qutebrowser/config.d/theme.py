@@ -10,7 +10,7 @@ config = config  # noqa
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
 ## Type: PercOrInt
-# c.tabs.width = '20%'
+# c.tabs.width = '15%'
 
 ## Width (in pixels) of the progress indicator (0 to disable).
 ## Type: Int
