@@ -17,6 +17,7 @@ set_abbrevations() {
       "Cml"   "${last_commit%?}__CURSOR__\""
       "Pu"    "${push_command} __CURSOR__"
       "Re"    "grep -rniC 0 \"__CURSOR__\" ./"
+      "Ree"   "grep -rniC 0 --exclude=\*.map --exclude-dir={node_modules,dist} \"__CURSOR__\" ./"
     )
 }
 
