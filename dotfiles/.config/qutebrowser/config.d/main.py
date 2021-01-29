@@ -49,6 +49,16 @@ c.auto_save.session = True
 ##   - webkit: Use QtWebKit (based on WebKit, similar to Safari)
 # c.backend = 'webengine'
 
+## When to show a changelog after qutebrowser was upgraded.
+## Type: String
+## Valid values:
+##    - major: Show changelog for major upgrades (e.g. v2.0.0 → v3.0.0).
+##    - minor: Show changelog for major and minor upgrades (e.g. v2.0.0 → v2.1.0).
+##    - patch: Show changelog for major, minor and patch upgrades (e.g. v2.0.0 → v2.0.1).
+##    - never: Never show changelog after upgrades.
+# c.changelog_after_upgrade = "minor"
+c.changelog_after_upgrade = "patch"
+
 ## How many commands to save in the command history. 0: no history / -1:
 ## unlimited
 ## Type: Int
@@ -693,7 +703,7 @@ c.editor.command = ['subl', '-a', '{}']
 # Time (in ms) to show messages in the statusbar for. Set to 0 to never
 # clear messages.
 # Type: Int
-# c.messages.timeout = 2000
+# c.messages.timeout = 3000
 c.messages.timeout = 5000
 
 ## How to open links in an existing instance if a new one is launched.
@@ -797,6 +807,15 @@ c.messages.timeout = 5000
 ## Default: process-per-site-instance
 ## This setting is only available with the QtWebEngine backend.
 # c.qt.process_model = 'process-per-site-instance'
+
+## Delete the QtWebEngine Service Worker directory on every start. This
+## workaround can help with certain crashes caused by an unknown QtWebEngine
+## bug related to Service Workers. Those crashes happen seemingly immediately
+## on Windows; after one hour of operation on other systems. Note however that
+## enabling this option can lead to data loss on some pages (as Service Worker
+## data isn’t persisted) and will negatively impact start-up time.
+## Type: Bool
+# c.qt.workarounds.remove_service_workers = False
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.

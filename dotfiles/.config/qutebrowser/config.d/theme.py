@@ -429,7 +429,7 @@ c.colors.messages.warning.border = PURPLE
 
 ## Foreground color a warning message.
 ## Type: QssColor
-# c.colors.messages.warning.fg = 'white'
+# c.colors.messages.warning.fg = 'black'
 
 ## Background color for prompts.
 ## Type: QssColor
