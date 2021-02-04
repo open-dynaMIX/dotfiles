@@ -631,7 +631,7 @@ c.editor.command = ['subl', '-a', '{}']
 ## to, or the URL you are navigating from.
 ## This setting supports URL patterns.
 ## Type: Bool
-# c.input.insert_mode.leave_on_load = False
+# c.input.insert_mode.leave_on_load = True
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool

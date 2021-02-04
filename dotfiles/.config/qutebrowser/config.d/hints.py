@@ -42,7 +42,7 @@ c.hints.chars = 'werasdfyxc'
 
 ## Leave hint mode when starting a new page load.
 ## Type: Bool
-# c.hints.leave_on_load = True
+# c.hints.leave_on_load = False
 
 ## Minimum number of chars used for hint strings.
 ## Type: Int
