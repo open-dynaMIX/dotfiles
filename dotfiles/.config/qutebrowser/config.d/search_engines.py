@@ -59,6 +59,7 @@ ENGINES = {'DEFAULT': ddg,
            'gh': 'https://github.com/search?utf8=%E2%9C%93&q={}&type=',
            'maps': 'https://www.google.ch/maps/place/{}',
            'osm': 'https://www.openstreetmap.org/search?query={}',
+           'srf': 'https://www.srf.ch/play/suche?query={}',
            'w': 'https://en.wikipedia.org/wiki/{}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
            'yt': 'https://www.youtube.com/results?search_query={}'}
