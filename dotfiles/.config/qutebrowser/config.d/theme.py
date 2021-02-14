@@ -713,12 +713,20 @@ c.colors.tabs.selected.odd.bg = PURPLE
 ## Type: Int
 # c.colors.webpage.darkmode.threshold.text = 256
 
-## Force prefers-color-scheme: dark colors for websites.
-## Type: Bool
+## Value to use for prefers-color-scheme: for websites. The "light" value is
+## only available with QtWebEngine 5.15.2+. On older versions, it is the same
+## as "auto". The "auto" value is broken on QtWebEngine 5.15.2 due to a Qt
+## bug. There, it will fall back to "light" unconditionally.
+## This setting requires a restart.
+## Type: String
+## Valid values:
+##   - auto: Use the system-wide color scheme setting.
+##   - light: Force a light theme.
+##   - dark: Force a dark theme.
 ## On QtWebEngine, this setting requires Qt 5.14 or newer.
 ## On QtWebKit, this setting is unavailable.
-# c.colors.webpage.prefers_color_scheme_dark = False
-c.colors.webpage.prefers_color_scheme_dark = True
+# c.colors.webpage.preferred_color_scheme = "auto"
+c.colors.webpage.preferred_color_scheme = "dark"
 
 ## CSS border value for hints.
 ## Type: String
