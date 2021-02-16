@@ -25,6 +25,7 @@ variables:
   model: ""
   multiple_keylayouts: true
   unclutter_args: "-noevents -notclass Nemo Main.py Feh Thunderbird Hedgewars Keepassx GCompris XTerm i3bar"
+  xrandr_force_on_change: '["HDMI1", "eDP1"]'
 dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
