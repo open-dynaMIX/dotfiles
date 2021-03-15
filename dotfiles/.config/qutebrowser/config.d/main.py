@@ -808,6 +808,16 @@ c.messages.timeout = 5000
 ## This setting is only available with the QtWebEngine backend.
 # c.qt.process_model = 'process-per-site-instance'
 
+## Work around locale parsing issues in QtWebEngine 5.15.3. With some locales,
+## QtWebEngine 5.15.3 is unusable without this workaround. In affected
+## scenarios, QtWebEngine will log "Network service crashed, restarting
+## service." and only display a blank page. However, It is expected that
+## distributions shipping QtWebEngine 5.15.3 follow up with a proper fix soon,
+## so it is disabled by default.
+## This setting is only available with the QtWebEngine backend.
+## Type: Bool
+# c.qt.workarounds.locale = False
+
 ## Delete the QtWebEngine Service Worker directory on every start. This
 ## workaround can help with certain crashes caused by an unknown QtWebEngine
 ## bug related to Service Workers. Those crashes happen seemingly immediately
