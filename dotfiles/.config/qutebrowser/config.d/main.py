@@ -647,6 +647,14 @@ c.editor.command = ['subl', '-a', '{}']
 ## Type: Int
 # c.input.partial_timeout = 0
 
+## Whether the underlying Chromium should handle media keys. On Linux,
+## disabling this also disables Chromium’s MPRIS integration.
+## This setting requires a restart.
+## On QtWebEngine, this setting requires Qt 5.14 or newer.
+## On QtWebKit, this setting is unavailable.
+## Type: Bool
+# c.input.media_keys = True
+
 ## Enable back and forward buttons on the mouse.
 ## Type: Bool
 # c.input.mouse.back_forward_buttons = True
