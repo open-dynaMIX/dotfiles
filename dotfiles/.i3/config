@@ -80,7 +80,7 @@ bindsym Ctrl+$mod+Up move workspace to output up
 bindsym Ctrl+$mod+Right move workspace to output right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+shift+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -273,6 +273,7 @@ bindsym $mod+shift+i move container to workspace $ws_im; workspace $ws_im
 bindsym $mod+i workspace $ws_im
 {%@@ elif profile == "ant" @@%}
 bindsym $mod+i exec --no-startup-id $raiseorlaunch -w $ws_im -c Hamsket -l 5
+bindsym $mod+h exec --no-startup-id $raiseorlaunch -c Hamster
 {%@@ endif @@%}
 
 #bindsym $mod+c exec --no-startup-id $raiseorlaunch -r -c XTerm -e "xterm -e /bin/bash -l -c 'cmus'"
