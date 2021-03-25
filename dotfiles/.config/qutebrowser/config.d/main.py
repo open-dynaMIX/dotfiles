@@ -442,15 +442,36 @@ c.content.plugins = True
 ## Enable quirks (such as faked user agent headers) needed to get specific
 ## sites to work properly. This setting requires a restart.
 ## Type: Bool
-# c.content.site_specific_quirks = True
+# c.content.site_specific_quirks.enabled = True
 
-## Validate SSL handshakes.
-## Type: BoolAsk
+## Disable a list of named quirks.
+## Type: FlagList
 ## Valid values:
-##   - true
-##   - false
-##   - ask
-# c.content.ssl_strict = 'ask'
+##   - ua-whatsapp
+##   - ua-google
+##   - ua-slack
+##   - js-whatsapp-web
+##   - js-string-replaceall
+##   - js-globalthis
+##   - js-object-fromentries
+##   - misc-krunker
+##   - misc-mathml-darkmode
+##   - Default: empty
+# c.content.site_specific_quirks.skip = []
+
+## How to proceed on TLS certificate errors.
+## This setting supports URL patterns.
+## Type: String
+## Valid values:
+##   - ask: Ask how to proceed for every certificate error (unless
+##     non-overridable due to HSTS).
+##   - ask-block-thirdparty: Ask how to proceed for normal page loads, but
+##     silently block resource loads.
+##   - block: Automatically block loading on certificate errors.
+##   - load-insecurely: Force loading pages despite certificate errors. This
+##     is insecure and should be avoided. Instead of using this, consider fixing the underlying issue or importing a self-signed certificate via certutil (or Chromium) instead.
+## Default: ask
+# c.content.tls.certificate_errors = "ask"
 
 ## How navigation requests to URLs with unknown schemes are handled.
 ## This setting supports URL patterns.
@@ -561,6 +582,19 @@ c.editor.command = ['subl', '-a', '{}']
 ## Encoding to use for the editor.
 ## Type: Encoding
 # c.editor.encoding = 'utf-8'
+
+## Command (and arguments) to use for selecting a single folder in forms. The
+## command should write the selected folder path to the specified file or
+## stdout. The following placeholders are defined: * {}: Filename of the file
+## to be written to. If not contained in any argument, the standard output of
+## the command is read instead.
+## Type: ShellCommand
+## Default:
+##   - xterm
+##   - -e
+##   - ranger
+##   - --choosedir={}
+# c.fileselect.folder.command = ['xterm', '-e', 'ranger', '--choosedir={}']
 
 ## Handler for selecting file(s) in forms. If external, then the commands
 ## specified by fileselect.single_file.command and
