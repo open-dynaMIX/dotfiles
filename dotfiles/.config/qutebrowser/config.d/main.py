@@ -500,7 +500,7 @@ c.content.plugins = True
 ##   - misc-krunker
 ##   - misc-mathml-darkmode
 ##   - Default: empty
-# c.content.site_specific_quirks.skip = []
+# c.content.site_specific_quirks.skip = ['js-string-replaceall']
 
 ## How to proceed on TLS certificate errors.
 ## This setting supports URL patterns.
