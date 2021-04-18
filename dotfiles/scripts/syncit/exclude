@@ -1,8 +1,14 @@
 # {{@@ header() @@}}
 .atom/
 .cache/
+.config/Signal/
 .gem/
+.gradle/
+.local/share/multimc/
 .local/share/Trash/
+.local/share/virtualenv/
+.minecraft/
+.npm/
 .PyCharm*/system/remote_sources/
 .tox/
 .VirtualBox/

@@ -120,12 +120,9 @@ dotfiles:
   f_screenrc:
     dst: ~/.screenrc
     src: .screenrc
-  f_timemachine_exclude:
-    src: scripts/timemachine/exclude
-    dst: ~/scripts/timemachine/exclude
-  f_timemachine.sh:
-    src: scripts/timemachine/timemachine.sh
-    dst: ~/scripts/timemachine/timemachine.sh
+  f_syncit_exclude:
+    dst: ~/scripts/syncit/exclude
+    src: scripts/syncit/exclude
   f_tremc_settings.cfg:
     dst: ~/.config/tremc/settings.cfg
     src: .config/tremc/settings.cfg

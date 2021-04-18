@@ -39,7 +39,6 @@ A not exhaustive list of things I use for my GUI systems:
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
  - [rofi](https://github.com/DaveDavenport/rofi)
  - [rofi-dmenu](https://aur.archlinux.org/packages/rofi-dmenu/)
- - [rsync-time-backup](https://github.com/laurent22/rsync-time-backup)
  - [screen](https://www.gnu.org/software/screen/)
  - [simple-mpv-webui](https://github.com/open-dynaMIX/simple-mpv-webui)
  - [streamwall](https://github.com/open-dynaMIX/streamwall)
@@ -88,12 +87,4 @@ Add `export QT_QPA_PLATFORMTHEME=qt5ct` and `export QT_AUTO_SCREEN_SCALE_FACTOR=
 xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
 xdg-mime default nemo.desktop inode/directory
 xdg-mime default org.pwmt.zathura-pdf-poppler.desktop application/pdf
-```
-
-## rsync-time-backup
-Clone project into `~/scripts/timemachine/`.
-
-Add this cronjob:
-```
-0 */1 * * * "${HOME}"/scripts/timemachine/timemachine.sh
 ```
