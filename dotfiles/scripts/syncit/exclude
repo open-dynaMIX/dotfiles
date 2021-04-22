@@ -13,11 +13,13 @@
 .tox/
 .VirtualBox/
 __pycache__/
+code/dumps/
 Downloads/
 Dropbox/
 go/
 lynis.log
 Music/
+node_modules/
 NextCloud/
 Nextcloud/
 .pyenv/
