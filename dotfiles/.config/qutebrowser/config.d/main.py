@@ -689,6 +689,7 @@ c.editor.command = ['subl', '-a', '{}']
 ##   - auto: Forward unbound non-alphanumeric keys.
 ##   - none: Don't forward any keys.
 # c.input.forward_unbound_keys = 'auto'
+c.input.forward_unbound_keys = 'all'
 
 ## Enter insert mode if an editable element is clicked.
 ## Type: Bool
@@ -702,6 +703,7 @@ c.editor.command = ['subl', '-a', '{}']
 ## after loading the page.
 ## Type: Bool
 # c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = True
 
 ## Leave insert mode when starting a new page load. Patterns may be
 ## unreliable on this setting, and they may match the url you are navigating
@@ -1063,6 +1065,7 @@ c.tabs.last_close = 'startpage'
 ##   - restore: Restore previously saved mode.
 ##   - normal: Always revert to normal mode.
 # c.tabs.mode_on_change = 'normal'
+c.tabs.mode_on_change = 'restore'
 
 ## Force pinned tabs to stay at fixed URL.
 ## Type: Bool
