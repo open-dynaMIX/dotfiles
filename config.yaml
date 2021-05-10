@@ -18,13 +18,14 @@ variables:
   audio_device_pulse_internal: 0
   audio_device_pulse_hdmi: 1
   has_x: true
-  i3lock_wallpaper: "~/.i3/wallpapers/makepkgnotwarallblack.png"
-  iface_eth: ""
-  iface_lte: ""
-  iface_wifi: ""
-  model: ""
+  i3lock_wallpaper: ~/.i3/wallpapers/makepkgnotwarallblack.png
+  iface_eth: ''
+  iface_lte: ''
+  iface_wifi: ''
+  model: ''
   multiple_keylayouts: true
-  unclutter_args: "-noevents -notclass Nemo Main.py Feh Thunderbird Hedgewars Keepassx GCompris XTerm i3bar"
+  unclutter_args: -noevents -notclass Nemo Main.py Feh Thunderbird Hedgewars Keepassx
+    GCompris XTerm i3bar
   xrandr_force_on_change: '["HDMI1", "eDP1"]'
 dotfiles:
   d_gtk_theme:
@@ -156,18 +157,18 @@ profiles:
   ant:
     variables:
       audio_device_pulse_internal: 1
-      i3lock_wallpaper: "~/.i3/wallpapers/ant.png"
-      iface_eth: "enp0s31f6"
-      iface_wifi: "wlp4s0"
-      model: "T460"
+      i3lock_wallpaper: ~/.i3/wallpapers/ant.png
+      iface_eth: enp0s31f6
+      iface_wifi: wlp4s0
+      model: T460
     dotfiles:
     - ALL
   fuckup:
     variables:
       audio_device_pulse_hdmi: 2
-      iface_eth: "enp0s25"
-      iface_lte: "wwp0s20u4"
-      iface_wifi: "wlp3s0"
-      model: "T450s"
+      iface_eth: enp0s25
+      iface_lte: wwp0s20u4
+      iface_wifi: wlp3s0
+      model: T450s
     dotfiles:
     - ALL
