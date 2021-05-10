@@ -35,7 +35,7 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec --no-startup-id xterm -u8
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -240,12 +240,10 @@ bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo
 bindsym $mod+Mod1+n exec --no-startup-id nemo
 bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 
-#bindsym $mod+q exec --no-startup-id $raiseorlaunch -W 4 -C -c Termite
-
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
-bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Termite -t vim_notes -l 1 -e "~/.i3/vim_notes.sh"
+bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Alacritty -t vim_notes -l 1 -e "~/.i3/vim_notes.sh"
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
 bindsym $mod+g exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox https://www.google.com/search?q="%s"' -P 'Searchterm: '
@@ -353,7 +351,7 @@ no_focus [class="jetbrains-pycharm"]
 
 # borders
 for_window [class="(?i)xterm"] border none
-for_window [class="Termite"] border none
+for_window [class="Alacritty"] border none
 for_window [class="Atom"] border none
 for_window [class="Nemo"] border none
 for_window [class="Thunar"] border none

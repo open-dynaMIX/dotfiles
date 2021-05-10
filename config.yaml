@@ -45,9 +45,6 @@ dotfiles:
   d_qutebrowser:
     dst: ~/.config/qutebrowser/
     src: .config/qutebrowser/
-  d_termite:
-    dst: ~/.config/termite
-    src: .config/termite
   d_vim:
     dst: ~/.vim
     src: .vim
@@ -57,6 +54,9 @@ dotfiles:
   d_zshrc.d:
     dst: ~/.zshrc.d/
     src: .zshrc.d/
+  f_alacritty.yml:
+    src: .config/alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
   f_ario_profiles.xml:
     dst: ~/.config/ario/profiles/profiles.xml
     src: .config/ario/profiles/profiles.xml
