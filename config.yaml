@@ -100,6 +100,9 @@ dotfiles:
   f_pa_output_switcher.sh:
     dst: ~/scripts/pa_output_switcher.sh
     src: scripts/pa_output_switcher.sh
+  f_profile:
+    src: .profile
+    dst: ~/.profile
   f_pypirc:
     dst: ~/.pypirc
     src: .pypirc
@@ -150,6 +153,9 @@ dotfiles:
   f_zathurarc:
     dst: ~/.config/zathura/zathurarc
     src: .config/zathura/zathurarc
+  f_zprofile:
+    src: .zprofile
+    dst: ~/.zprofile
   f_zshrc:
     dst: ~/.zshrc
     src: .zshrc

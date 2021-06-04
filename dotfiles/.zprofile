@@ -1,0 +1,3 @@
+# {{@@ header() @@}}
+
+source $HOME/.profile
