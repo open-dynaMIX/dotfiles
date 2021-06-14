@@ -4985,11 +4985,6 @@ UnityPanelWidget,
   border: 1px solid #171819;
   border-bottom: none; }
 
-.termite {
-    padding: 2px;
-    border: 1px solid #4c4c4c;
-}
-
 @define-color theme_fg_color #F3F3F5;
 @define-color theme_text_color #F3F3F5;
 @define-color theme_bg_color #353638;

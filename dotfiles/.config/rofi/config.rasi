@@ -10,7 +10,7 @@ configuration {
     location: 1;
     fixed-num-lines: true;
     show-icons: true;
-    terminal: "termite";
+    terminal: "alacritty";
     disable-history: false;
     sort: false;
     case-sensitive: false;
