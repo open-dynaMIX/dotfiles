@@ -449,6 +449,16 @@ c.content.pdfjs = True
 # c.content.plugins = False
 c.content.plugins = True
 
+## Request websites to minimize non-essentials animations and motion. This
+## results in the prefers-reduced-motion CSS media query to evaluate to reduce
+## (rather than no-preference). On Windows, if this setting is set to False,
+## the system-wide animation setting is considered.
+## This setting requires a restart.
+## On QtWebEngine, this setting requires Qt 5.14 or newer.
+## On QtWebKit, this setting is unavailable.
+## Type: Bool
+# c.content.prefers_reduced_motion = False
+
 ## Whether the background color and images are also drawn when the page
 ## is printed.
 ## Type: Bool
