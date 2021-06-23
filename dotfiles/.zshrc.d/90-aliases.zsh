@@ -99,3 +99,7 @@ gotest() {
 }
 
 alias got='gotest'
+
+hgrep() {
+    history | grep -E "$1"
+}
