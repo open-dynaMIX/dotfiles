@@ -3,7 +3,6 @@
 # {{@@ header() @@}}
 #
 
-# enable command-not-found hook
-# this needs the packages 'pkgfile' & 'command-not-found'
-. /usr/share/doc/pkgfile/command-not-found.zsh
-[ -r /etc/profile.d/cnf.sh ] && . /etc/profile.d/cnf.sh
+# enable find-the-command hook
+# this needs the packages 'find-the-command'
+source /usr/share/doc/find-the-command/ftc.zsh

@@ -11,6 +11,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [dotdrop](https://github.com/deadc0de6/dotdrop)
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
+ - [find-the-command](https://github.com/agura-lex/find-the-command)
  - [Fira Code](https://github.com/tonsky/FiraCode)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
  - [Guake](https://github.com/Guake/guake)
@@ -66,7 +67,7 @@ A not exhaustive list of things I use for my GUI systems:
 ## Install
 
 ``` shell
-yay -S alacritty ario awoken-icons buku dotdrop dunst otf-font-awesome guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
+yay -S alacritty ario awoken-icons buku dotdrop dunst otf-font-awesome find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status
