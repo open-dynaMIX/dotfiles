@@ -447,6 +447,10 @@ c.colors.messages.warning.border = PURPLE
 ## Type: QssColor
 # c.colors.prompts.selected.bg = 'grey'
 
+## Foreground color for the selected item in filename prompts.
+## Type: QssColor
+# c.colors.prompts.selected.fg = 'white'
+
 ## Background color of the statusbar in caret mode.
 ## Type: QssColor
 # c.colors.statusbar.caret.bg = 'purple'
