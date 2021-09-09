@@ -621,6 +621,14 @@ c.content.plugins = True
 ##   - bottom
 # c.downloads.position = 'top'
 
+## Automatically abort insecure (HTTP) downloads originating from secure
+## (HTTPS) pages. For per-domain settings, the relevant URL is the URL
+## initiating the download, not the URL the download itself is coming from.
+## It’s not recommended to set this setting to false globally.
+## This setting supports URL patterns.
+## Type: Bool
+# c.downloads.prevent_mixed_content = True
+
 ## Number of milliseconds to wait before removing finished downloads. If
 ## set to -1, downloads are never removed.
 ## Type: Int

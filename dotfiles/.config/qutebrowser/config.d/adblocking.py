@@ -20,6 +20,12 @@ config = config  # noqa
 ## Type: Bool
 # c.content.blocking.enabled = True
 
+## Block subdomains of blocked hosts. Note: If only a single subdomain is
+## blocked but should be allowed, consider using content.blocking.whitelist
+## instead.
+## Type: Bool
+# c.content.blocking.hosts.block_subdomains = True
+
 ## List of URLs to host blocklists for the host blocker.  Only used when
 ## the simple host-blocker is used (see `content.blocking.method`).  The
 ## file can be in one of the following formats:  - An `/etc/hosts`-like
