@@ -2,11 +2,7 @@
 
 configuration {
     modi: "drun,run,window,combi";
-    width: 100;
-    lines: 5;
-    columns: 5;
     font: "Droid Sans Mono 12";
-    bw: 0;
     location: 1;
     fixed-num-lines: true;
     show-icons: true;
@@ -16,14 +12,17 @@ configuration {
     case-sensitive: false;
     combi-modi: "drun,run,window";
     matching: "normal";
-    line-margin: 0;
-    line-padding: 1;
-    // Separator style (none, dash, solid)
-    separator-style: "solid";
-    hide-scrollbar: true;
-    color-normal: "#000000, #d5d5d5, #000000, #470f77, #d5d5d5";
-    color-urgent: "#000000, #d5d5d5, #000000, #77003d, #d5d5d5";
-    color-active: "#000000, #d5d5d5, #000000, #007763, #d5d5d5";
-    color-window: "#000000, #000000, #d5d5d5";
-    display-combi: "";
+}
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+listview {
+    lines:      5;
+    columns:    5;
+    fixed-columns: true;
+    scrollbar:  false;
+}
+
+window {
+    width:      100%;
 }
