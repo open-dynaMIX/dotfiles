@@ -1,28 +1,35 @@
 // {{@@ header() @@}}
 
 configuration {
-    modi: "drun,run,window,combi";
-    font: "Droid Sans Mono 12";
-    location: 1;
-    fixed-num-lines: true;
-    show-icons: true;
-    terminal: "alacritty";
-    disable-history: false;
-    sort: false;
-    case-sensitive: false;
-    combi-modi: "drun,run,window";
-    matching: "normal";
+    modi:              "drun,run,window,combi";
+    font:              "Droid Sans Mono 12";
+    location:          1;
+    fixed-num-lines:   true;
+    show-icons:        true;
+    terminal:          "alacritty";
+    disable-history:   false;
+    sort:              false;
+    case-sensitive:    false;
+    combi-modi:        "drun,run,window";
+    matching:          "normal";
 }
 
 @theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
 
+* {
+    gruvbox-dark-bg2:  #470f77;
+    border-color:      #000;
+    separatorcolor:    #fff;
+    gruvbox-dark-fg1:  #fff;
+}
+
 listview {
-    lines:      5;
-    columns:    5;
-    fixed-columns: true;
-    scrollbar:  false;
+    lines:             5;
+    columns:           5;
+    fixed-columns:     true;
+    scrollbar:         false;
 }
 
 window {
-    width:      100%;
+    width:             100%;
 }
