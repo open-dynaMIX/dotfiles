@@ -18,7 +18,6 @@ configuration {
 
 * {
     gruvbox-dark-bg2:  #470f77;
-    border-color:      #000;
     separatorcolor:    #fff;
     gruvbox-dark-fg1:  #fff;
 }
@@ -26,10 +25,13 @@ configuration {
 listview {
     lines:             5;
     columns:           5;
-    fixed-columns:     true;
+    fixed-columns:     false;
     scrollbar:         false;
+    spacing:           0;
 }
 
 window {
     width:             100%;
+    border:            0;
+    padding:           0;
 }
