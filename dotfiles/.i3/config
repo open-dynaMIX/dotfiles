@@ -295,6 +295,7 @@ for_window [class="Pidgin" window_role="conversation"] floating enable
 for_window [class="Main.py" instance="guake"] floating enable
 for_window [class="GCompris"] floating enable
 for_window [title="Unlock Database - KeePassXC"] floating enable
+for_window [title="Auto-Type - KeePassXC"] resize set 400 300  # all of a sudden this is necessary
 for_window [class="Arandr"] floating enable
 for_window [class="Firefox" instance="Browser"] floating enable
 for_window [title="Preferences$"] floating enable
