@@ -18,6 +18,7 @@ variables:
   audio_device_pulse_internal: 0
   audio_device_pulse_hdmi: 1
   has_x: true
+  aus_time: false
   i3lock_wallpaper: ~/.i3/wallpapers/makepkgnotwarallblack.png
   iface_eth: ''
   iface_lte: ''
@@ -167,6 +168,7 @@ profiles:
       iface_eth: enp0s31f6
       iface_wifi: wlp4s0
       model: T460
+      aus_time: true
     dotfiles:
     - ALL
   fuckup:
