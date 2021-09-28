@@ -1,37 +1,44 @@
 // {{@@ header() @@}}
 
 configuration {
-    modi:              "drun,run,window,combi";
-    font:              "Droid Sans Mono 12";
-    location:          1;
-    fixed-num-lines:   true;
-    show-icons:        true;
-    terminal:          "alacritty";
-    disable-history:   false;
-    sort:              false;
-    case-sensitive:    false;
-    combi-modi:        "drun,run,window";
-    matching:          "normal";
+    modi:                        "drun,run,window,combi";
+    font:                        "Droid Sans Mono 12";
+    location:                    1;
+    fixed-num-lines:             true;
+    show-icons:                  true;
+    terminal:                    "alacritty";
+    disable-history:             false;
+    sort:                        false;
+    case-sensitive:              false;
+    combi-modi:                  "drun,run,window";
+    matching:                    "normal";
 }
 
 @theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
 
 * {
-    gruvbox-dark-bg2:  #470f77;
-    separatorcolor:    #fff;
-    gruvbox-dark-fg1:  #fff;
+    gruvbox-dark-bg2:            #470f77;
+    separatorcolor:              #fff;
+    gruvbox-dark-fg1:            #fff;
+
+    active-background:           @active-background;
+    active-foreground:           @gruvbox-dark-fg1;
+    alternate-active-background: @gruvbox-dark-bg0;
+    alternate-active-foreground: @foreground;
+    selected-active-background:  @gruvbox-dark-bg2;
+    selected-active-foreground:  @gruvbox-dark-fg1;
 }
 
 listview {
-    lines:             5;
-    columns:           5;
-    fixed-columns:     false;
-    scrollbar:         false;
-    spacing:           0;
+    lines:                       5;
+    columns:                     5;
+    fixed-columns:               false;
+    scrollbar:                   false;
+    spacing:                     0;
 }
 
 window {
-    width:             100%;
-    border:            0;
-    padding:           0;
+    width:                       100%;
+    border:                      0;
+    padding:                     0;
 }
