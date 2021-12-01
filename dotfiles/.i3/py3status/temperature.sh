@@ -15,7 +15,7 @@ function get_temp_hergi {
 
 function get_temp_reuss {
     resp=$(get_temp "https://www.hydrodaten.admin.ch/lhg/az/dwh/csv/BAFU_2152_Wassertemperatur.csv" "Range: bytes=-32")
-    echo "$resp" | cut -d "," -f 2
+    echo "$resp" | tail -n 1 | cut -d "," -f 2
 }
 
 function notification {
