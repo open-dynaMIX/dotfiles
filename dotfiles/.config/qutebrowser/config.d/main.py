@@ -738,11 +738,12 @@ c.input.insert_mode.auto_load = True
 ## Type: Bool
 # c.input.links_included_in_focus_chain = True
 
-## Timeout (in milliseconds) for partially typed key bindings. If the
-## current input forms only partial matches, the keystring will be
-## cleared after this time.
-## Type: Int
-# c.input.partial_timeout = 0
+## Interpret number prefixes as counts for bindings. This enables for vi-like
+## bindings that can be prefixed with a number to indicate a count. Disabling
+## it allows for emacs-like bindings where number keys are passed through
+## (according to input.forward_unbound_keys) instead.
+## Type: Bool
+# c.input.match_counts = True
 
 ## Whether the underlying Chromium should handle media keys. On Linux,
 ## disabling this also disables Chromium’s MPRIS integration.
@@ -760,6 +761,12 @@ c.input.insert_mode.auto_load = True
 ## menu.
 ## Type: Bool
 # c.input.mouse.rocker_gestures = False
+
+## Timeout (in milliseconds) for partially typed key bindings. If the
+## current input forms only partial matches, the keystring will be
+## cleared after this time.
+## Type: Int
+# c.input.partial_timeout = 0
 
 ## Enable Spatial Navigation. Spatial navigation consists in the ability
 ## to navigate between focusable elements in a Web page, such as
