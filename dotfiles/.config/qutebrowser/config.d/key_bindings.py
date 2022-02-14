@@ -81,7 +81,7 @@ config.bind(',n', f'config-cycle --temp content.user_stylesheets ~/Linux/solariz
 # config.bind('D', 'tab-close -o')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
-config.bind('G', 'spawn --userscript ~/.config/qutebrowser/userscripts/ddg2g.py')
+# config.bind('G', 'spawn --userscript ~/.config/qutebrowser/userscripts/ddg2g.py')
 # config.bind('H', 'back')
 # config.bind('J', 'tab-next')
 # config.bind('K', 'tab-prev')
