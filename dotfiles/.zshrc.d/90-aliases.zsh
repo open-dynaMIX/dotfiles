@@ -103,3 +103,35 @@ alias got='gotest'
 hgrep() {
     history | grep -E "$1"
 }
+
+new_song() {
+    if [ $# -gt 0 ]; then
+        amount="$1"
+    else
+        amount=3
+    fi
+
+    if [ $# -gt 1 ]; then
+        use_flats="False"
+    else
+        use_flats="True"
+    fi
+
+    python -c """\
+import random
+
+NOTES = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+FLATS = ['C#', 'D#', 'F#', 'G#', 'A#']
+
+def generate(n=3, notes=NOTES):
+    result = []
+    for i in range(n):
+        next = random.choice(notes)
+        result.append(next)
+        notes.remove(next)
+    return result
+
+notes = NOTES + FLATS if $use_flats else NOTES
+print(', '.join(generate($amount, notes)))
+"""
+}
