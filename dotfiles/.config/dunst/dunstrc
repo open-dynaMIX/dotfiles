@@ -33,16 +33,16 @@
     geometry = "400x5-25+25"
 
     # Show how many messages are currently hidden (because of geometry).
-    indicate_hidden = yes
+    indicate_hidden = true
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
-    shrink = yes
+    shrink = true
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 7
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -76,7 +76,7 @@
     separator_color = frame
 
     # Sort messages by urgency.
-    sort = yes
+    sort = true
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -139,10 +139,10 @@
 
     # Split notifications into multiple lines if they don't fit into
     # geometry.
-    word_wrap = yes
+    word_wrap = true
 
     # Ignore newlines '\n' in notifications.
-    ignore_newline = no
+    ignore_newline = false
 
     # Merge multiple notifications with the same content
     stack_duplicates = true
@@ -151,7 +151,7 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = true
 
     ### Icons ###
 
@@ -161,18 +161,20 @@
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
 
+    enable_recursive_icon_lookup = true
+    icon_theme = AwOkenWhite
+
     # Paths to default icons.
-    icon_folders = /home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/actions/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/apps/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/categories/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/categories/clear/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/devices/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/drive-harddisk/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/emblems/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/emotes/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/mimetypes/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/places/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/start-here/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/status/:/home/{{@@ env['USER'] @@}}/.local/share/icons/AwOkenWhite/clear/128x128/stock/
     #icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
-    sticky_history = yes
+    sticky_history = true
 
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 50
 
     ### Misc/Advanced ###
 
@@ -181,7 +183,7 @@
     #dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/chromium
+    browser = /usr/bin/qutebrowser
     #browser = /usr/bin/firefox -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
@@ -219,29 +221,6 @@
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
-
-[shortcuts]
-
-    # Shortcuts are specified as [modifier+][modifier+]...key
-    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
-    # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
-
-    # Close notification.
-    close = ctrl+space
-
-    # Close all notifications.
-    close_all = ctrl+shift+space
-
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+section
-    #history = ctrl+grave
-
-    # Context menu.
-    context = ctrl+shift+period
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
@@ -304,7 +283,7 @@
 #[history-ignore]
 #    # This notification will not be saved in history
 #    summary = "foobar"
-#    history_ignore = yes
+#    history_ignore = true
 
 #[signed_on]
 #    appname = Pidgin

@@ -260,6 +260,10 @@ bindsym $mod+p exec --no-startup-id $raiseorlaunch -w $ws_pycharm -c jetbrains-p
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
 
+bindsym $mod+section exec --no-startup-id dunstctl history-pop
+bindsym $mod+Shift+section exec --no-startup-id dunstctl close
+bindsym $mod+Mod1+degree exec --no-startup-id dunstctl action
+
 {%@@ if multiple_keylayouts @@%}
 bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
 bindsym $mod+Greek_zeta exec --no-startup-id ~/scripts/keylayouttoggle.sh
