@@ -122,12 +122,14 @@ import random
 
 NOTES = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 FLATS = ['C#', 'D#', 'F#', 'G#', 'A#']
+KEYS = ['minor', 'major']
 
 def generate(n=3, notes=NOTES):
     result = []
     for i in range(n):
+        key = random.choice(KEYS)
         next = random.choice(notes)
-        result.append(next)
+        result.append(f'{next} {key}')
         notes.remove(next)
     return result
 
