@@ -753,6 +753,15 @@ c.input.insert_mode.auto_load = True
 ## Type: Bool
 # c.input.media_keys = True
 
+## Mode to change to when focusing on a tab/URL changes.
+## This setting supports URL patterns.
+## Type: String
+## Valid values:
+##   - normal
+##   - insert
+##   - passthrough
+# c.input.mode_override = None
+
 ## Enable back and forward buttons on the mouse.
 ## Type: Bool
 # c.input.mouse.back_forward_buttons = True
