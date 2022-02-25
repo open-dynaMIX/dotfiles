@@ -262,7 +262,7 @@ bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pych
 
 bindsym $mod+section exec --no-startup-id dunstctl history-pop
 bindsym $mod+Shift+section exec --no-startup-id dunstctl close
-bindsym $mod+Mod1+degree exec --no-startup-id dunstctl action
+bindsym $mod+Mod1+section exec --no-startup-id dunstctl action
 
 {%@@ if multiple_keylayouts @@%}
 bindsym $mod+y exec --no-startup-id ~/scripts/keylayouttoggle.sh
