@@ -145,7 +145,7 @@ bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 bindsym $mod+Shift+e reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 #bindsym $mod+Shift+r restart
-bindsym $mod+Shift+r exec --no-startup-id ~/.i3/i3restart.sh
+bindsym $mod+Shift+r exec --no-startup-id ~/.config/i3/i3restart.sh
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -197,9 +197,9 @@ set $raiseorlaunch raiseorlaunch
 # Do not forget to disable this bindsym in guake itself
 # bindsym F12 exec --no-startup-id guake-toggle
 
-bindsym $mod+ctrl+l exec --no-startup-id ~/.i3/i3lock.sh
-bindsym XF86PowerOff exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
-bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.i3/i3exit.py # needs polkit installed
+bindsym $mod+ctrl+l exec --no-startup-id ~/.config/i3/i3lock.sh
+bindsym XF86PowerOff exec --no-startup-id  ~/.config/i3/i3exit.py # needs polkit installed
+bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.config/i3/i3exit.py # needs polkit installed
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} +4db
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} -4db
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ audio_device_pulse_internal @@}} toggle
@@ -243,7 +243,7 @@ bindsym $mod+shift+n move container to workspace $ws_files; workspace $ws_files
 bindsym $mod+s exec --no-startup-id $raiseorlaunch -w $ws_subl -c Sublime_text -s sublime_text -e subl
 bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
-bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Alacritty -t vim_notes -l 1 -e "~/.i3/vim_notes.sh"
+bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Alacritty -t vim_notes -l 1 -e "~/.config/i3/vim_notes.sh"
 
 bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
 bindsym $mod+g exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox https://www.google.com/search?q="%s"' -P 'Searchterm: '
@@ -441,7 +441,7 @@ focus_follows_mouse no
 # finds out, if available)
 bar {
   position top
-  status_command py3status --dbus-notify -c ~/.i3/i3status.conf  # -l ~/status.log
+  status_command py3status --dbus-notify -c ~/.config/i3/i3status.conf  # -l ~/status.log
   workspace_buttons yes
   strip_workspace_numbers no
   tray_output primary

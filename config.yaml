@@ -1,7 +1,7 @@
 actions:
   dunst-restart: killall dunst; notify-send -t 2000 -i face-sick "Dunst restarted"
   font-cache-refresh: fc-cache -f -v
-  i3-restart: ~/.i3/i3restart.sh
+  i3-restart: ~/.config/i3/i3restart.sh
   reload-xresources: xrdb -merge ~/.Xresources
 config:
   backup: true
@@ -19,7 +19,7 @@ variables:
   audio_device_pulse_hdmi: 1
   has_x: true
   aus_time: false
-  i3lock_wallpaper: ~/.i3/wallpapers/makepkgnotwarallblack.png
+  i3lock_wallpaper: ~/.config/i3/wallpapers/makepkgnotwarallblack.png
   iface_eth: ''
   iface_lte: ''
   iface_wifi: ''
@@ -34,8 +34,8 @@ dotfiles:
   d_i3:
     actions:
     - i3-restart
-    dst: ~/.i3/
-    src: .i3/
+    dst: ~/.config/i3/
+    src: .config/i3/
   d_mpv:
     dst: ~/.config/mpv/
     src: .config/mpv/
@@ -163,7 +163,7 @@ profiles:
   ant:
     variables:
       audio_device_pulse_internal: 1
-      i3lock_wallpaper: ~/.i3/wallpapers/ant.png
+      i3lock_wallpaper: ~/.config/i3/wallpapers/ant.png
       iface_eth: enp0s31f6
       iface_wifi: wlp4s0
       model: T460

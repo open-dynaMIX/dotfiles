@@ -6,7 +6,7 @@ Before=sleep.target
 User=fabio
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/i3lock -t -c 000000 -i /home/fabio/.i3/wallpapers/makepkgnotwarallblack.png
+ExecStart=/usr/bin/i3lock -t -c 000000 -i /home/fabio/.config/i3/wallpapers/makepkgnotwarallblack.png
 
 [Install]
 WantedBy=sleep.target

@@ -6,7 +6,7 @@
 
 
 IFS='%'
-entry=($(grep -v "^#" ~/.i3/greek/basiswortschatz.csv | shuf | tail -n 1))
+entry=($(grep -v "^#" ~/.config/i3/greek/basiswortschatz.csv | shuf | tail -n 1))
 unset IFS
 echo "German: ${entry[0]}"
 echo "Greek: ${entry[1]}"
