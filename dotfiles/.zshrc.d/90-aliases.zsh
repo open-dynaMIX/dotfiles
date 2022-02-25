@@ -46,7 +46,7 @@ alias caluma='cd ~/code/caluma/'
 {%@@ if has_x @@%}
 alias x='exec startx; exit'
 alias xkill='xkill -button 1'
-alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebrowser-compare-config.py ~/.config/qutebrowser/config.d/'
+alias qutebrowser-compare-config.py='~/code/qutebrowser-compare-config.py/qutebrowser-compare-config.py -dc'
 {%@@ endif @@%}
 if which docker > /dev/null 2>&1; then
     alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)'
