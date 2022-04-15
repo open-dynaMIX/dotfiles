@@ -16,8 +16,8 @@ set_abbrevations() {
       "Cm"    "git commit -am \"__CURSOR__\""
       "Cml"   "${last_commit%?}__CURSOR__\""
       "Pu"    "${push_command} __CURSOR__"
-      "Re"    "grep -rniC 0 \"__CURSOR__\" ./"
-      "Ree"   "grep -rniC 0 --exclude={\*.map,\*.vendor.js,\*.bundle.js,\*.pack.js,\*.pack.\*.js,\*.min.js} --exclude-dir={node_modules,dist} \"__CURSOR__\" ./"
+      "Re"    "grep -rni --exclude={} --exclude-dir={} --include={} -C 0 \"__CURSOR__\" ./"
+      "Ree"   "grep -rniC 0 \"__CURSOR__\" ./"
     )
 }
 
