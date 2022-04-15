@@ -21,26 +21,18 @@ set_abbrevations() {
     )
 }
 
-get_last_commit_cmd() {
-    last_commit=$(fc -nlr 1 -1 | egrep -m 1 "^git commit")
-    if ! [ -n "$last_commit" ]; then
-        last_commit='git commit -am ""'
-    fi
-}
-
 get_git_push_cmd() {
     if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
         if ! git_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
-            git_branch="master"
+            git_branch=$(git_main_branch || echo "main")
         fi
         push_command="git push origin $git_branch"
     else
-        push_command='Pu '
+        push_command='Pu'
     fi
 }
 
 magic-abbrev-expand() {
-    get_last_commit_cmd
     get_git_push_cmd
     set_abbrevations
     local MATCH
