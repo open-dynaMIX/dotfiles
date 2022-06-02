@@ -26,7 +26,9 @@ env:
 
   WINIT_X11_SCALE_FACTOR: '1'
 
-#window:
+window:
+  opacity: 0.85
+
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
