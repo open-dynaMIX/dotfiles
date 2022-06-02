@@ -216,6 +216,7 @@ bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mp
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 #bindsym XF86HomePage exec --no-startup-id systemctl suspend
 bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
+bindsym shift+F12 exec --no-startup-id ~/.config/i3/term_matrix.sh
 bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
 bindsym XF86Explorer exec --no-startup-id ~/scripts/screenlayout_switcher.sh
 bindsym XF86Display exec --no-startup-id ~/scripts/screenlayout_switcher.sh
