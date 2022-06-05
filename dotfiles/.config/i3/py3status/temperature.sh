@@ -27,7 +27,8 @@ function notification {
 }
 
 if [ "${1-normal}" == "--py3status" ]; then
-    get_temp_reuss
+    # get_temp_reuss
+    get_temp_hergi
 else
     notification
 fi
