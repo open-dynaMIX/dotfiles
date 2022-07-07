@@ -164,9 +164,9 @@ profiles:
     variables:
       audio_device_pulse_internal: 1
       i3lock_wallpaper: ~/.config/i3/wallpapers/ant.png
-      iface_eth: enp0s31f6
-      iface_wifi: wlp4s0
-      model: T460
+      iface_eth: enp0s13f0u3u1
+      iface_wifi: wlp0s20f3
+      model: P14s
       aus_time: true
     dotfiles:
     - ALL
