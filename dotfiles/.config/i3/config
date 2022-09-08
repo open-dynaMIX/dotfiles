@@ -329,9 +329,9 @@ for_window [class="SpeedCrunch"] floating enable
 for_window [class="Xterm" title="cmus"] floating enable
 for_window [class="Wine" instance="LPD8 Editor.exe"] floating enable
 for_window [class="Elicit"] floating enable
-for_window [class="Thunderbird" title="Edit"] floating enable
-for_window [class="Thunderbird" title="Write"] floating enable
-for_window [class="Thunderbird" instance="Calendar"] floating enable
+for_window [class="thunderbird" title="Edit"] floating enable
+for_window [class="thunderbird" title="Write"] floating enable
+for_window [class="thunderbird" instance="Calendar"] floating enable
 for_window [class="California"] floating enable
 #for_window [class="Virt-manager"] floating enable
 for_window [class="Virt-manager" title="Virtual Machine Manager|Connection Details"] floating enable
