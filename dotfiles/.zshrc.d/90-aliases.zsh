@@ -138,3 +138,9 @@ notes = NOTES + FLATS if $use_flats else NOTES
 print(', '.join(generate($amount, notes)))
 """
 }
+
+hiking() {
+    venv_name=$(cat "$HOME/.cache/pypoetry/virtualenvs/envs.toml" | grep "hiking" | tr -d '[]')
+    venv_path="$HOME/.cache/pypoetry/virtualenvs/${venv_name}-py3.10/bin/python"
+    XDG_DATA_HOME="$HOME/code/hiking/user_data" "$venv_path" -m hiking $@
+}
