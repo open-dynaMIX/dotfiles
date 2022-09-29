@@ -296,7 +296,7 @@ for_window [class="QjackCtl"] floating enable
 for_window [class="Skype" window_role="ConversationsWindow"] floating enable
 for_window [class="Pidgin" window_role="conversation"] floating enable
 #for_window [class="Gimp"] floating enable
-for_window [class="Main.py" instance="guake"] floating enable
+for_window [class="Guake" instance="guake"] floating enable
 for_window [class="GCompris"] floating enable
 for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [title="Auto-Type - KeePassXC"] resize set 400 300  # all of a sudden this is necessary
@@ -365,6 +365,7 @@ for_window [title="padctl - Mapping"] border none
 for_window [class="Viewnior"] border 1pixel
 for_window [class="qutebrowser"] border none
 for_window [class="mpv"] border none
+for_window [class="Guake" instance="guake"] border none
 
 # transparency
 for_window [class="SpeedCrunch"] exec --no-startup-id sleep .5 && transset-df -a 0.94
