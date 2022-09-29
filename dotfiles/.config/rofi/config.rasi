@@ -21,7 +21,6 @@ configuration {
     separatorcolor:              #fff;
     gruvbox-dark-fg1:            #fff;
 
-    active-background:           @active-background;
     active-foreground:           @gruvbox-dark-fg1;
     alternate-active-background: @gruvbox-dark-bg0;
     alternate-active-foreground: @foreground;
