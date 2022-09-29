@@ -198,8 +198,8 @@ set $raiseorlaunch raiseorlaunch
 # bindsym F12 exec --no-startup-id guake-toggle
 
 bindsym $mod+ctrl+l exec --no-startup-id ~/.config/i3/i3lock.sh
-bindsym XF86PowerOff exec --no-startup-id  ~/.config/i3/i3exit.py # needs polkit installed
-bindsym Ctrl+Mod1+BackSpace exec --no-startup-id  ~/.config/i3/i3exit.py # needs polkit installed
+bindsym XF86PowerOff exec --no-startup-id rofi -show p -modi p:rofi-power-menu
+bindsym Ctrl+Mod1+BackSpace exec --no-startup-id rofi -show p -modi p:rofi-power-menu
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} +4db
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume {{@@ audio_device_pulse_internal @@}} -4db
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute {{@@ audio_device_pulse_internal @@}} toggle
@@ -215,9 +215,9 @@ bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mp
 
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 #bindsym XF86HomePage exec --no-startup-id systemctl suspend
-bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
+bindsym $mod+F12 exec --no-startup-id $raiseorlaunch -r -c qalculate-qt
 bindsym shift+F12 exec --no-startup-id ~/.config/i3/term_matrix.sh
-bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c SpeedCrunch
+bindsym XF86Calculator exec --no-startup-id $raiseorlaunch -r -c qalculate-qt
 bindsym XF86Explorer exec --no-startup-id ~/scripts/screenlayout_switcher.sh
 bindsym XF86Display exec --no-startup-id ~/scripts/screenlayout_switcher.sh
 bindsym Print exec --no-startup-id $scrot  # All screens
@@ -292,7 +292,6 @@ bindsym --whole-window $mod+button2 kill
 bindsym $mod+button3 floating toggle
 
 # floating rules
-for_window [class="I3exit" instance="i3exit"] floating enable
 for_window [class="QjackCtl"] floating enable
 for_window [class="Skype" window_role="ConversationsWindow"] floating enable
 for_window [class="Pidgin" window_role="conversation"] floating enable
@@ -326,6 +325,7 @@ for_window [class="Phoenix" title="Load Image"] floating enable
 for_window [class="feh"] floating enable
 for_window [class="Viewnior"] floating enable
 for_window [class="SpeedCrunch"] floating enable
+for_window [class="qalculate-qt"] floating enable
 for_window [class="Xterm" title="cmus"] floating enable
 for_window [class="Wine" instance="LPD8 Editor.exe"] floating enable
 for_window [class="Elicit"] floating enable
@@ -363,7 +363,6 @@ for_window [class="Nemo"] border none
 for_window [class="Thunar"] border none
 for_window [title="padctl - Mapping"] border none
 for_window [class="Viewnior"] border 1pixel
-for_window [class="I3exit" instance="i3exit"] border 1pixel
 for_window [class="qutebrowser"] border none
 for_window [class="mpv"] border none
 
