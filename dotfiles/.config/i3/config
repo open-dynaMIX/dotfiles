@@ -366,6 +366,7 @@ for_window [class="Viewnior"] border 1pixel
 for_window [class="qutebrowser"] border none
 for_window [class="mpv"] border none
 for_window [class="Guake" instance="guake"] border none
+for_window [class="Hamster" instance="org.gnome.Hamster.GUI"] border none
 
 # transparency
 for_window [class="SpeedCrunch"] exec --no-startup-id sleep .5 && transset-df -a 0.94
