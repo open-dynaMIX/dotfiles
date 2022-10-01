@@ -333,7 +333,6 @@ for_window [class="thunderbird" title="Edit"] floating enable
 for_window [class="thunderbird" title="Write"] floating enable
 for_window [class="thunderbird" instance="Calendar"] floating enable
 for_window [class="California"] floating enable
-#for_window [class="Virt-manager"] floating enable
 for_window [class="Virt-manager" title="Virtual Machine Manager|Connection Details"] floating enable
 for_window [class="M64py"] floating enable
 for_window [class="Blueman-manager"] floating enable
@@ -346,14 +345,19 @@ for_window [class="Pidgin" title="File Transfers"] floating enable
 for_window [class="Pinentry"] floating enable
 for_window [class="Firefox" title="Install user style"] floating enable
 for_window [instance="lpd8 editor.exe"] floating enable
-for_window [class="jetbrains-pycharm" title="win0"] floating enable  # pycharm splash screen
 for_window [title="Developer Tools - "] floating disable
-#for_window [class="Skype" window_role="ConversationsWindow"] sticky enable
 for_window [class="Hydrogen" title="Mixer"] floating enable
+for_window [class="gpxsee"] floating enable
 
 # IntelliJ
 for_window [class="jetbrains-pycharm"] focus_on_window_activation none
 no_focus [class="jetbrains-pycharm"]
+for_window [class="jetbrains-pycharm" title="splash"] border none  # pycharm splash screen
+for_window [class="jetbrains-pycharm" title="splash"] floating enable  # pycharm splash screen
+
+# Jitsi
+for_window [floating_from="auto" title=" is sharing your screen.$"] border none
+no_focus   [floating_from="auto" title=" is sharing your screen.$"]
 
 # borders
 for_window [class="(?i)xterm"] border none
