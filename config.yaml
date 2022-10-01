@@ -66,6 +66,9 @@ dotfiles:
   f_bira_custom.zsh-theme:
     dst: ~/.oh-my-zsh/themes/bira_custom.zsh-theme
     src: .oh-my-zsh/themes/bira_custom.zsh-theme
+  f_custom_power_menu:
+    dst: ~/scripts/custom_rofi_power_menu.sh
+    src: scripts/custom_rofi_power_menu.sh
   f_dunstrc:
     actions:
     - dunst-restart

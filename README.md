@@ -41,7 +41,6 @@ A not exhaustive list of things I use for my GUI systems:
  - [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
  - [rofi](https://github.com/DaveDavenport/rofi)
  - [rofi-dmenu](https://aur.archlinux.org/packages/rofi-dmenu/)
- - [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
  - [screen](https://www.gnu.org/software/screen/)
  - [simple-mpv-webui](https://github.com/open-dynaMIX/simple-mpv-webui)
  - [streamwall](https://github.com/open-dynaMIX/streamwall)
@@ -68,7 +67,7 @@ A not exhaustive list of things I use for my GUI systems:
 ## Install
 
 ``` shell
-yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu rofi-power-menu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
+yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status
