@@ -153,6 +153,9 @@ dotfiles:
     - reload-xresources
     dst: ~/.Xresources
     src: .Xresources
+  f_yt_ads_js:
+    dst: ~/.local/share/qutebrowser/greasemonkey/yt_ads.js
+    src: .local/share/qutebrowser/greasemonkey/yt_ads.js
   f_zathurarc:
     dst: ~/.config/zathura/zathurarc
     src: .config/zathura/zathurarc
