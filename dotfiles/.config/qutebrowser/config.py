@@ -55,8 +55,9 @@ config.load_autoconfig(False)
 c.aliases = {'q': 'close',
              'qa': 'quit',
              'wq': 'quit --save',
-             'youtube-dl': 'spawn youtube-dl -o "$HOME/Downloads/%(title)s-%(id)s.%(ext)s" {url}',
+             'youtube-dl': 'spawn yt-dlp -o "$HOME/Downloads/%(title)s-%(id)s.%(ext)s" {url}',
              'vlc': 'spawn --userscript ~/.config/qutebrowser/userscripts/videos_vlc.sh'}
+c.aliases["yt-dlp"] = c.aliases["youtube-dl"]
 
 ## Always restore open sites when qutebrowser is reopened.
 ## Type: Bool

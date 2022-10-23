@@ -53,7 +53,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
  - [xdotool](https://github.com/jordansissel/xdotool)
  - [xterm](https://invisible-island.net/xterm/xterm.html)
- - [youtube-dl](https://github.com/rg3/youtube-dl)
+ - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
  - [zathura](https://github.com/pwmt/zathura)
  - [zathura-pdf-poppler](https://github.com/pwmt/zathura-pdf-poppler)
  - [zsh](https://www.zsh.org/)
@@ -67,7 +67,7 @@ A not exhaustive list of things I use for my GUI systems:
 ## Install
 
 ``` shell
-yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm youtube-dl zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
+yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm yt-dlp zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status
