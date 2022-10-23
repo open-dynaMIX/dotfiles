@@ -246,6 +246,29 @@ c.url.searchengines = ENGINES
 # c.content.blocking.method = 'auto'
 c.content.blocking.method = 'both'
 
+
+## List of URLs to ABP-style adblocking rulesets.
+## Only used when Brave’s ABP-style adblocker is used
+## (see content.blocking.method).
+## You can find an overview of available lists here:
+## https://adblockplus.org/en/subscriptions - note that the special
+## subscribe.adblockplus.org links aren’t handled by qutebrowser, you will
+## instead need to find the link to the raw .txt file (e.g. by extracting it
+## from the location parameter of the subscribe URL and URL-decoding it).
+## Type: List of Url
+# c.content.blocking.adblock.lists = [
+#     "https://easylist.to/easylist/easylist.txt",
+#     "https://easylist.to/easylist/easyprivacy.txt",
+# ]
+c.content.blocking.adblock.lists = [
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+    "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+    "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt",
+    "https://www.i-dont-care-about-cookies.eu/abp/",
+    "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+]
+
 ##############################################################################
 # THEME
 ##############################################################################
