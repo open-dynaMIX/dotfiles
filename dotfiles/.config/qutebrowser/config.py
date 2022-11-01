@@ -478,6 +478,7 @@ config.bind('cc', 'spawn --userscript ~/.config/qutebrowser/userscripts/dict.cc.
 config.bind('<Ctrl-Shift-PgUp>', 'tab-move -')
 config.bind('<Ctrl-Shift-PgDown>', 'tab-move +')
 config.bind('m', 'spawn mpv {url}')
+config.bind('gt', 'open -t https://translate.google.com/translate?sl=auto&tl=en&hl=en&u={url}&client=webapp')
 
 ## Bindings for caret mode
 config.bind('<LEFT>', 'scroll left', mode='caret')
