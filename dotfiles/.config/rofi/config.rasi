@@ -2,7 +2,7 @@
 
 configuration {
     modi:                        "drun,run,window,combi";
-    font:                        "Droid Sans Mono 12";
+    font:                        "Droid Sans Mono {{@@ font_size @@}}";
     location:                    1;
     fixed-num-lines:             true;
     show-icons:                  true;
