@@ -137,6 +137,9 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: .vimrc
+  f_webui.conf:
+    src: .config/mpv/script-opts/webui.conf
+    dst: ~/.config/mpv/script-opts/webui.conf
   f_wrapper.sh:
     dst: ~/scripts/wrapper.sh
     src: scripts/wrapper.sh
