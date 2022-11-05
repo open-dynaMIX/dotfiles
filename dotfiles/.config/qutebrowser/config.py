@@ -125,6 +125,22 @@ c.content.pdfjs = True
 # c.content.plugins = False
 c.content.plugins = True
 
+# Allow JavaScript to read from or write to the clipboard. With QtWebEngine,
+# writing the clipboard as response to a user interaction is always allowed.
+# This setting supports URL patterns.
+# Type: String
+# Valid values:
+#  - none: Disable access to clipboard.
+#  - access: Allow reading from and writing to the clipboard.
+#  - access-paste: Allow accessing the clipboard and pasting clipboard content.
+#c.content.javascript.clipboard = "none"
+with (
+    config.pattern("https://github.com/*") as p1,
+    config.pattern("https://*.mozilla.org/*") as p2,
+):
+    for p in [p1, p2]:
+        p.content.javascript.clipboard = "access"
+
 ## The editor (and arguments) to use for the `open-editor` command. `{}`
 ## gets replaced by the filename of the file to be edited.
 ## Type: ShellCommand
