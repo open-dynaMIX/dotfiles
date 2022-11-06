@@ -17,17 +17,18 @@ config:
 variables:
   audio_device_pulse_internal: 0
   audio_device_pulse_hdmi: 1
-  has_x: true
   aus_time: false
+  font_size: 12
+  has_x: true
   i3lock_wallpaper: ~/.config/i3/wallpapers/makepkgnotwarallblack.png
   iface_eth: ''
   iface_lte: ''
   iface_wifi: ''
   model: ''
   multiple_keylayouts: true
+  separate_home: false
   unclutter_args: -noevents -notclass Nemo Main.py Feh Thunderbird Hedgewars Keepassx
     GCompris XTerm i3bar
-  font_size: 12
 dotfiles:
   d_gtk_theme:
     dst: ~/.themes/My_Fancy_Theme/
@@ -188,5 +189,6 @@ profiles:
       iface_lte: wwp0s20u4
       iface_wifi: wlp3s0
       model: T450s
+      separate_home: true
     dotfiles:
     - ALL
