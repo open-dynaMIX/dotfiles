@@ -75,11 +75,14 @@ yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvi
 ![i3bar with py3status screenshot](screenshots/i3bar_py3status.png "i3bar with py3status screenshot")
 
 ## Configuring theme
+
+https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications
+
 To have a uniform look for gtk, qt4 and qt5, the theme needs to be configured in
 
  - lxappearance
- - qtconfig-qt4
  - qt5ct
+ - qt6ct & qt6gtk2
 
 Add `export QT_QPA_PLATFORMTHEME=qt5ct` and `export QT_AUTO_SCREEN_SCALE_FACTOR=0` to `.xinitrc`.
 
