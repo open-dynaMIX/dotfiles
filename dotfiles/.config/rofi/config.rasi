@@ -4,7 +4,7 @@ configuration {
     modi:                        "drun,run,window,combi";
     font:                        "Droid Sans Mono {{@@ font_size @@}}";
     location:                    1;
-    fixed-num-lines:             true;
+    fixed-num-lines:             false;
     show-icons:                  true;
     terminal:                    "alacritty";
     disable-history:             false;
