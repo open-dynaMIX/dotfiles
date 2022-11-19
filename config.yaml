@@ -179,7 +179,7 @@ profiles:
       iface_wifi: wlp0s20f3
       model: P14s
       aus_time: true
-      font_size: 12.5
+      font_size: 11
     dotfiles:
     - ALL
   fuckup:
