@@ -234,8 +234,8 @@ bindsym $mod+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c Chromium
 #bindsym $mod+c workspace $ws_chromium
 bindsym $mod+Mod1+c exec --no-startup-id chromium
 bindsym $mod+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
-bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
-bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c Thunderbird -s Mail
+bindsym XF86Mail exec --no-startup-id $raiseorlaunch -w $ws_mail -c thunderbird -s Mail
+bindsym $mod+t exec --no-startup-id $raiseorlaunch -w $ws_mail -c thunderbird -s Mail
 bindsym $mod+shift+t move container to workspace $ws_mail; workspace $ws_mail
 bindsym $mod+n exec --no-startup-id $raiseorlaunch -w $ws_files -c Nemo -s nemo
 bindsym $mod+Mod1+n exec --no-startup-id nemo
@@ -380,8 +380,8 @@ for_window [title="^vim_notes$"] exec --no-startup-id sleep .5 && transset-df -a
 bindsym $mod+b border toggle
 
 # force to workspace and (in some cases, if it works) directly focus new windows
-assign [class="Thunderbird"] $ws_mail
-for_window [class="Thunderbird"] focus
+assign [class="thunderbird"] $ws_mail
+for_window [class="thunderbird"] focus
 for_window [class="Atom"] focus
 for_window [class="Firefox"] focus
 assign [class="Skype"] $ws_im
