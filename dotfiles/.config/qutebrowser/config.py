@@ -246,7 +246,9 @@ ENGINES = {'DEFAULT': 'https://www.google.com/search?q={}',
            'srf': 'https://www.srf.ch/play/suche?query={}',
            'w': 'https://en.wikipedia.org/wiki/{}',
            'wd': 'https://de.wikipedia.org/w/index.php?title=Spezial:Suche&search={}',
-           'yt': 'https://www.youtube.com/results?search_query={}'}
+           'yt': 'https://www.youtube.com/results?search_query={}',
+           'synonym': 'https://www.openthesaurus.de/synonyme/{}',
+           'deepl': 'https://www.deepl.com/translator#{}'}
 
 # Add some searchengines from dotdrop .env-file
 ENGINES.update({{@@ env['qutebrowser_search_engines'] @@}})
