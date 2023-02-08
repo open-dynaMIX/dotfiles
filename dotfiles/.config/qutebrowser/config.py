@@ -120,6 +120,15 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 # c.content.pdfjs = False
 c.content.pdfjs = True
 
+## What to display in the download filename input.
+## Type: String
+## Valid values:
+##  - path: Show only the download path.
+##  - filename: Show only download filename.
+##  - both: Show download path and filename.
+# c.downloads.location.suggestion = "path"
+c.downloads.location.suggestion = "both"
+
 ## Enables or disables plugins in Web pages.
 ## Type: Bool
 # c.content.plugins = False
