@@ -421,6 +421,7 @@ exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Acce
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Left Handed Enabled" 1
 
 exec --no-startup-id hamster
+exec --no-startup-id nextcloud
 {%@@ endif @@%}
 
 exec --no-startup-id ~/code/streamwall/src/streamwall/streamwall.sh -tbn
@@ -436,7 +437,6 @@ exec --no-startup-id unclutter {{@@ unclutter_args @@}}
 
 #exec --no-startup-id dispwin ~/Linux/thinkpad/colour_profile/from_internet/ThinkPad_T450s_FHD_LP140WF3_SPD1_01.icm
 #exec --no-startup-id blueman-applet
-#exec --no-startup-id owncloud
 exec --no-startup-id i3-msg workspace 1
 
 # custom config
