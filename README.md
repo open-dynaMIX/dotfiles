@@ -17,6 +17,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [Guake](https://github.com/Guake/guake)
  - [gvim](http://www.vim.org/)
  - [hamsket](https://github.com/TheGoddessInari/hamsket)
+ - [headsetcontrol](https://github.com/Sapd/HeadsetControl)
  - [i3ipc-python](https://github.com/acrisci/i3ipc-python)
  - [i3](https://github.com/i3/i3)
  - [i3lock](https://github.com/i3/i3lock)
@@ -68,7 +69,7 @@ A not exhaustive list of things I use for my GUI systems:
 ## Install
 
 ``` shell
-yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus nextcloud-client noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm yt-dlp zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
+yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command guake gvim hamsket-nightly-bin headsetcontrol i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus nextcloud-client noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm yt-dlp zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status
