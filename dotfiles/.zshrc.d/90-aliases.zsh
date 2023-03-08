@@ -34,7 +34,9 @@ alias rm='rm -i'
 alias timemachine="~/scripts/timemachine/timemachine.sh"
 alias tv7='mpv --no-resume-playback --playlist="https://tv7api2.tv.init7.net/api/playlist/default.m3u?rp=true"'
 alias seconds='while true; do; date +"%H:%M:%S"; sleep 1; done'
+alias sudo='sudo '
 alias syncit='rsync -avxe ssh --delete --delete-excluded --exclude-from=$HOME/scripts/syncit/exclude $HOME/ {{@@ env['backup_user'] @@}}@{{@@ env['backup_host'] @@}}:/home/{{@@ env['backup_user'] @@}}/backups/{{@@ model @@}}/'
+alias watch='watch '
 alias whereami='pwd'
 alias worms='worms -d 40 -l 16 -n 6'
 {%@@ if profile == "fuckup" @@%}
@@ -43,6 +45,7 @@ alias gphoto-capture='echo "gphoto2 --capture-image-and-download --interval 20 -
 alias ffmpeg-convert='echo "ffmpeg -f image2 -i image%5d.jpg -vf scale=-1:1080 -qscale 1 output.mkv (-qscale can be a value 1-31 (best-worst))"'
 {%@@ elif profile == "ant" @@%}
 alias caluma='cd ~/code/caluma/'
+alias k='kubectl'
 {%@@ endif @@%}
 {%@@ if has_x @@%}
 alias x='exec startx; exit'
