@@ -1,0 +1,12 @@
+# This dotfile is managed using dotdrop
+
+[Desktop Entry]
+Name=QNetflix
+GenericName=Netflix
+Comment=Netflix as qutebrwser app
+Categories=Network;AudioVideo;Player;
+Exec=/usr/bin/qutebrowser --config-py {{@@ env['HOME'] @@}}/.config/qutebrowser/config_netflix.py --basedir {{@@ env['HOME'] @@}}/.local/share/qnetflix ":fullscreen --enter" ":mode-enter passthrough" https://netflix.com
+StartupNotify=true
+Terminal=false
+Type=Application
+

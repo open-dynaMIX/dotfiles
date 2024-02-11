@@ -105,6 +105,9 @@ dotfiles:
   f_pa_output_switcher.sh:
     dst: ~/scripts/pa_output_switcher.sh
     src: scripts/pa_output_switcher.sh
+  f_qnetflix.desktop:
+    dst: ~/.local/share/applications/qnetflix.desktop
+    src: .local/share/applications/qnetflix.desktop
   f_profile:
     src: .profile
     dst: ~/.profile
