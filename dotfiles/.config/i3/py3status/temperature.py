@@ -30,19 +30,25 @@ def main():
     html = BeautifulSoup(response.content, features="lxml")
     spans = html.find_all(custom_selector)
 
-    next_will_match = False
-    result = None
+    next_value = None
+    result = {"Vierwaldstättersee": None, "Reuss": None}
     for span in spans:
-        if next_will_match:
-            result = span.get_text()
-            break
-        if span.get_text() == "Vierwaldstättersee":
-            next_will_match = True
+        text = span.get_text().split(",")[0]
+        if text in result.keys():
+            next_value = text
+            continue
 
-    print(f"{result}°C")
+        if next_value:
+            result[next_value] = text
+            next_value = None
+
+    see = result["Vierwaldstättersee"]
+    fluss = result["Reuss"]
+
+    print(f"{see}°C")
     if not args.py3status:
         os.system(
-            f'notify-send -t 5000 -i plugin-water "Vierwaldstättersee" "{result}°C"'
+            f'notify-send -t 5000 -i plugin-water "Vierwaldstättersee: {see}°C\nReuss: {fluss}°C"'
         )
 
 
