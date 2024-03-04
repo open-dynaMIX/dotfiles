@@ -257,7 +257,7 @@ bindsym $mod+Mod1+Left focus output left
 bindsym $mod+Mod1+Right focus output right
 bindsym $mod+Shift+period sticky toggle
 
-bindsym $mod+p exec --no-startup-id $raiseorlaunch -w $ws_pycharm -c jetbrains-pycharm -e pycharm -l 35
+bindsym $mod+p exec --no-startup-id $raiseorlaunch -w $ws_pycharm -c jetbrains-pycharm -e pycharm-professional -l 35
 bindsym $mod+Mod1+p exec --no-startup-id pycharm
 bindsym $mod+shift+p move container to workspace $ws_pycharm; workspace $ws_pycharm
 
