@@ -20,3 +20,4 @@ c.statusbar.show = "never"
 c.scrolling.bar = "never"
 c.auto_save.session = False
 c.content.notifications.enabled = True
+c.content.autoplay = True
