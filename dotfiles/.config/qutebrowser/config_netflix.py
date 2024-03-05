@@ -21,3 +21,4 @@ c.scrolling.bar = "never"
 c.auto_save.session = False
 c.content.notifications.enabled = True
 c.content.autoplay = True
+c.input.mode_override = "passthrough"
