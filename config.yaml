@@ -18,7 +18,7 @@ variables:
   audio_device_pulse_internal: 0
   audio_device_pulse_hdmi: 1
   aus_time: false
-  font_size: 12
+  font_size: 11
   has_x: true
   i3lock_wallpaper: ~/.config/i3/wallpapers/makepkgnotwarallblack.png
   iface_eth: ''
