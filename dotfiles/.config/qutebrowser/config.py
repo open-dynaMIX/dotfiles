@@ -146,8 +146,9 @@ c.content.plugins = True
 with (
     config.pattern("https://github.com/*") as p1,
     config.pattern("https://*.mozilla.org/*") as p2,
+    config.pattern("https://www.sbb.ch/*") as p3,
 ):
-    for p in [p1, p2]:
+    for p in [p1, p2, p3]:
         p.content.javascript.clipboard = "access"
 
 ## The editor (and arguments) to use for the `open-editor` command. `{}`
