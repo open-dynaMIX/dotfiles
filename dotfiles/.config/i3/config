@@ -470,6 +470,6 @@ bar {
 
 ## colorclass <border> <background> <text> <indicator>
 client.focused #000000 #000000 #ffffff #000000
-client.focused_inactive #3e3e3e #3e3e3e #ffffff #484e50
-client.unfocused #181818 #181818 #888888 #292d2e
+client.focused_inactive #181818 #181818 #888888 #292d2e
+client.unfocused #3e3e3e #3e3e3e #ffffff #484e50
 client.urgent #2f343a #470f77 #ffffff #470f77
