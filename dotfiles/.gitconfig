@@ -20,4 +20,5 @@
     defaultBranch = main
 [rebase]
     autoStash = true
+    updateRefs = true
 
