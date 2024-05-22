@@ -234,7 +234,7 @@ c.url.start_pages = [STARTPAGE]
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
-ENGINES = {'DEFAULT': 'https://www.google.com/search?q={}',
+ENGINES = {'DEFAULT': 'https://www.google.com/search?q={}&udm=14',  # `udm=14` triggers a websearch without the google clutter
            'a': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
            'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
            'cc': 'https://www.dict.cc/?s={}',
