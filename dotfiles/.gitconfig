@@ -12,6 +12,7 @@
     mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
     cleanup-branches = !git fetch --all --prune && git branch -d $(git branch --merged=origin/master | grep -vE `git rev-parse --abbrev-ref HEAD`'|master' )
     stahs = "stash"
+    please = push --force-with-lease
 [core]
     excludesfile = /home/{{@@ env['USER'] @@}}/.gitignore_global
 [pull]
