@@ -11,6 +11,7 @@ A not exhaustive list of things I use for my GUI systems:
  - [dotdrop](https://github.com/deadc0de6/dotdrop)
  - [Droid Sans Mono](http://www.droidfonts.com/)
  - [dunst](https://github.com/dunst-project/dunst)
+ - [Ferdium](https://github.com/ferdium/ferdium-app)
  - [find-the-command](https://github.com/agura-lex/find-the-command)
  - [Fira Code](https://github.com/tonsky/FiraCode)
  - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
@@ -18,7 +19,6 @@ A not exhaustive list of things I use for my GUI systems:
  - [zsh-fzf-plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
  - [Guake](https://github.com/Guake/guake)
  - [gvim](http://www.vim.org/)
- - [hamsket](https://github.com/TheGoddessInari/hamsket)
  - [headsetcontrol](https://github.com/Sapd/HeadsetControl)
  - [i3ipc-python](https://github.com/acrisci/i3ipc-python)
  - [i3](https://github.com/i3/i3)
@@ -71,7 +71,7 @@ A not exhaustive list of things I use for my GUI systems:
 ## Install
 
 ``` shell
-yay -S alacritty ario awoken-icons buku dotdrop dunst find-the-command fzf zsh-fzf-plugin-git guake gvim hamsket-nightly-bin headsetcontrol i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus nextcloud-client noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm yt-dlp zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
+yay -S alacritty ario awoken-icons buku dotdrop dunst ferdium-bin find-the-command fzf zsh-fzf-plugin-git guake gvim headsetcontrol i3ipc-python-git i3-wm i3lock i3status libnotify lxappearance nemo nemo-fileroller nemo-python nemo-seahorse-nonautilus nextcloud-client noto-fonts-emoji mpc oh-my-zsh-git otf-fira-code otf-font-awesome otf-symbola pacman-contrib pdfjs powerline powerline-fonts py3status python-adblock qt5ct qt5-styleplugins qutebrowser-git raiseorlaunch rofi rofi-dmenu screen time transset-df ttf-droid unclutter-patched viewnior xcompmgr xdotool xterm yt-dlp zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-pure-prompt zsh-syntax-highlighting zsh-z-git
 ```
 
 ## py3status
