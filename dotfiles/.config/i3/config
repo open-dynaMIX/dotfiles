@@ -422,7 +422,6 @@ exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Acce
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Left Handed Enabled" 1
 
 exec --no-startup-id hamster
-exec --no-startup-id nextcloud
 exec --no-startup-id headsetcontrol -s 40
 {%@@ endif @@%}
 
