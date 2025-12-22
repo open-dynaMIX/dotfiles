@@ -246,8 +246,6 @@ bindsym $mod+Mod1+s exec --no-startup-id subl
 bindsym $mod+shift+s move container to workspace $ws_subl; workspace $ws_subl
 bindsym $mod+period exec --no-startup-id $raiseorlaunch -r -c Alacritty -t vim_notes -l 1 -e "~/.config/i3/vim_notes.sh"
 
-bindsym $mod+u exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox -new-tab %s' -P 'URL: '
-bindsym $mod+g exec --no-startup-id i3-input -F 'exec --no-startup-id i3-msg "workspace FF" && firefox https://www.google.com/search?q="%s"' -P 'Searchterm: '
 bindsym $mod+Next workspace next
 bindsym $mod+Prior workspace prev
 bindsym $mod+Tab workspace back_and_forth
@@ -329,9 +327,9 @@ for_window [class="qalculate-qt"] floating enable
 for_window [class="Xterm" title="cmus"] floating enable
 for_window [class="Wine" instance="LPD8 Editor.exe"] floating enable
 for_window [class="Elicit"] floating enable
-for_window [class="thunderbird" title="Edit"] floating enable
-for_window [class="thunderbird" title="Write"] floating enable
-for_window [class="thunderbird" instance="Calendar"] floating enable
+for_window [class="Thunderbird" title="Edit"] floating enable
+for_window [class="Thunderbird" title="Write"] floating enable
+for_window [class="Thunderbird" instance="Calendar"] floating enable
 for_window [class="California"] floating enable
 for_window [class="Virt-manager" title="Virtual Machine Manager|Connection Details"] floating enable
 for_window [class="M64py"] floating enable
