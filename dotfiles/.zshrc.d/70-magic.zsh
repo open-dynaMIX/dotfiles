@@ -18,6 +18,7 @@ set_abbrevations() {
       "Pu"    "${push_command} __CURSOR__"
       "Re"    "grep -rni --exclude={} --exclude-dir={} --include={} -C 0 \"__CURSOR__\" ./"
       "Ree"   "grep -rniC 0 \"__CURSOR__\" ./"
+      "ssh"   "ßh"
     )
 }
 
