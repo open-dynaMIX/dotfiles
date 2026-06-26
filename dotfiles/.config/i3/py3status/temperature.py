@@ -16,39 +16,36 @@ def parse_args():
     return args
 
 
-def custom_selector(tag):
-    return (
-        tag.name == "span"
-        and tag.has_attr("class")
-        and bool(set(["gewaesser", "wasser_temp"]) & set(tag.get("class")))
-    )
-
-
 def main():
     args = parse_args()
-    response = requests.get("https://meteonews.ch/de/Wassersport/M06650000/Luzern")
-    html = BeautifulSoup(response.content, features="lxml")
-    spans = html.find_all(custom_selector)
-
-    next_value = None
+    response = requests.get("https://meteonews.ch/de/Wetter/G2659811/Luzern")
+    soup = BeautifulSoup(response.content, "html.parser")
+    water_bodies = {
+        "Vierwaldstättersee": "292",
+        "Reuss": "219"
+    }
     result = {"Vierwaldstättersee": None, "Reuss": None}
-    for span in spans:
-        text = span.get_text().split(",")[0]
-        if text in result.keys():
-            next_value = text
-            continue
 
-        if next_value:
-            result[next_value] = text
-            next_value = None
+    for name, water_id in water_bodies.items():
+        # Find the container block safely by its system ID
+        container = soup.find(attrs={"data-chart-id": "ModuleChartWaterTemperature", "data-water-id": water_id})
 
-    see = result["Vierwaldstättersee"]
-    fluss = result["Reuss"]
+        if container:
+            # Find the tag explicitly containing the label "heute"
+            heute_tag = container.find(string=lambda text: text and "heute" in text.lower())
+            if heute_tag:
+                # The temperature value is sitting right next to it in the sibling block
+                temperature = heute_tag.find_next(class_="data-value").text.strip()
+                result[name] = temperature
+            else:
+                print(f"Could not find today's data text for {name}")
+        else:
+            print(f"Container for {name} missing.")
 
-    print(f"{see}°C")
+    print(result['Vierwaldstättersee'])
     if not args.py3status:
         os.system(
-            f'notify-send -t 5000 -i plugin-water "Vierwaldstättersee: {see}°C\nReuss: {fluss}°C"'
+            f'notify-send -t 5000 -i plugin-water "Vierwaldstättersee: {result['Vierwaldstättersee']}\nReuss: {result['Reuss']}"'
         )
 
 
