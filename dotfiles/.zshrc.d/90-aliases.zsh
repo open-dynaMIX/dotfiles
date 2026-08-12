@@ -35,6 +35,7 @@ alias timemachine="~/scripts/timemachine/timemachine.sh"
 alias tv7='mpv --no-resume-playback --playlist="https://tv7api2.tv.init7.net/api/playlist/default.m3u?rp=true"'
 alias seconds='while true; do; date +"%H:%M:%S"; sleep 1; done'
 alias sudo='sudo '
+alias ßh='ssh'
 alias syncit='rsync -avxe ssh --delete --delete-excluded --exclude-from=$HOME/scripts/syncit/exclude $HOME/ {{@@ env['backup_user'] @@}}@{{@@ env['backup_host'] @@}}:/home/{{@@ env['backup_user'] @@}}/backups/{{@@ model @@}}/'
 alias watch='watch '
 alias whereami='pwd'
