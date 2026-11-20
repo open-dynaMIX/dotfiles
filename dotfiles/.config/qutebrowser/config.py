@@ -118,7 +118,7 @@ c.content.headers.accept_language = 'en-US,en;q=0.5'
 ## viewer.
 ## Type: Bool
 # c.content.pdfjs = False
-c.content.pdfjs = True
+c.content.pdfjs = False
 
 ## What to display in the download filename input.
 ## Type: String

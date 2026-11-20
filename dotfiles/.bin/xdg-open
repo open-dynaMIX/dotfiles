@@ -5,7 +5,7 @@
 # chromium.
 
 if echo "$1" | grep -qe "^https://meet\." -e "^https://g\.co/meet/"; then
-    chromium --new-window $1
+    raiseorlaunch -W '' -c firefox -s Navigator -e "firefox --new-window $1"
 else
     /usr/bin/xdg-open "$1"
 fi
