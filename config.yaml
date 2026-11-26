@@ -102,6 +102,9 @@ dotfiles:
   f_netflix.desktop:
     dst: ~/.local/share/applications/netflix.desktop
     src: .local/share/applications/netflix.desktop
+  f_gemini.desktop:
+    dst: ~/.local/share/applications/gemini.desktop
+    src: .local/share/applications/gemini.desktop
   f_pa_output_switcher.sh:
     dst: ~/scripts/pa_output_switcher.sh
     src: scripts/pa_output_switcher.sh

@@ -1,9 +1,9 @@
-# This dotfile is managed using dotdrop
+# {{@@ header() @@}}
 
 [Desktop Entry]
 Name=Netflix
 GenericName=Netflix
-Comment=Netflix as qutebrwser app
+Comment=Netflix as qutebrowser app
 Categories=Network;AudioVideo;Player;
 Exec=/usr/bin/qutebrowser --config-py {{@@ env['HOME'] @@}}/.config/qutebrowser/config_netflix.py --basedir {{@@ env['HOME'] @@}}/.local/share/qnetflix ":fullscreen --enter" https://netflix.com
 StartupNotify=true

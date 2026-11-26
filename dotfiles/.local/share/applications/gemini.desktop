@@ -1,0 +1,11 @@
+# {{@@ header() @@}}
+
+[Desktop Entry]
+Name=Gemini
+GenericName=Gemini
+Comment=Gemini as qutebrowser app
+Categories=Network;
+Exec=/usr/bin/qutebrowser --config-py {{@@ env['HOME'] @@}}/.config/qutebrowser/config_gemini.py --basedir {{@@ env['HOME'] @@}}/.local/share/qgemini https://gemini.google.com/app
+StartupNotify=true
+Terminal=false
+Type=Application
